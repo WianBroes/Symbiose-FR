@@ -61,11 +61,13 @@ Triggered when `👤profil.md` exists.
 7. **Check update** (silencieux) :
    ```bash
    git -C . rev-parse --is-inside-work-tree 2>/dev/null && \
-   git fetch origin 2>/dev/null && \
-   git rev-list HEAD..origin/master --count 2>/dev/null
+   git fetch origin 2>/dev/null
+   BEHIND=$(git rev-list HEAD..origin/master --count 2>/dev/null)
+   AHEAD=$(git rev-list origin/master..HEAD --count 2>/dev/null)
    ```
-   - Si résultat > 0 → afficher sous le greeting : `⬆️ Mise à jour disponible — dis "update" pour l'appliquer.`
-   - Si 0 ou erreur (pas de git, pas de réseau) → skip silencieux, aucun message.
+   - Si `BEHIND` > 0 → afficher sous le greeting : `⬆️ Mise à jour disponible — dis "update" pour l'appliquer.`
+   - Si `AHEAD` > 0 → afficher sous le greeting : `⬆️ Tu as [N] commit(s) local(aux) non poussés sur GitHub.`
+   - Si les deux à 0 ou erreur (pas de git, pas de réseau) → skip silencieux, aucun message.
 8. **Display** TRANSFERT content visibly (below the greeting — shows current session context inline)
 9. Wait for instructions — with profile rules active
 
