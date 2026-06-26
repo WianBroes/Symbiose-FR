@@ -12,6 +12,7 @@ Les skills sont des modules de procédure chargés à la demande. Chaque dossier
 | **dream** | `dream/SKILL.md` | Consolidation des observations (append → compact). Déclenché automatiquement toutes les 10 clôtures, ou manuellement par "fais un dream". |
 | **new-project** | `new-project/SKILL.md` | Créer un nouveau dossier projet selon les conventions vault (numéro, emoji, template, icône). Déclenché par "nouveau projet", "ajouter un dossier", "créer un projet". |
 | **update** | `update/SKILL.md` | Mise à jour de `_SYSTEM/` depuis git. Vérifie, affiche le diff CHANGELOG, applique, migre si nécessaire. Déclenché par "update", "mise à jour". |
+| **mirror** | `mirror/SKILL.md` | Synchronisation FR→EN. Détecte les fichiers manquants ou périmés, traduit à la demande via Claude, valide et commite dans Symbiose-EN. Déclenché par "mirror", "mirror check", "mirror [fichier]". |
 
 ## Utilisation
 

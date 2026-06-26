@@ -77,6 +77,7 @@ Exemples :
 | **dream** | `_SYSTEM/skills/dream/SKILL.md` | "fais un dream", "consolide les observations", "nettoie la memoire" |
 | **new-project** | `_SYSTEM/skills/new-project/SKILL.md` | "nouveau projet", "ajouter un dossier", "créer un projet", "nouveau dossier" |
 | **update** | `_SYSTEM/skills/update/SKILL.md` | "update", "mise à jour", "mettre à jour", "check update" |
+| **mirror** | `_SYSTEM/skills/mirror/SKILL.md` | "mirror", "mirror check", "mirror [fichier]", "synchroniser EN", "traduire [fichier]" |
 
 ---
 
