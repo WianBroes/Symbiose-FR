@@ -1,6 +1,6 @@
 ---
 type: Symbiose.Mirror
-updated: 2026-06-26
+updated: 2026-06-27
 ---
 
 # MIRROR_STATUS — FR → EN
@@ -23,9 +23,9 @@ updated: 2026-06-26
 | `AGENTS.md` | `AGENTS.md` | 50e7766 | ✓ 50e7766 |
 | `CONTRIBUTING.md` | `CONTRIBUTING.md` | 002922b | ✓ 002922b |
 | `SECURITY.md` | `SECURITY.md` | 49c4898 | ✓ 49c4898 |
-| `_SYSTEM/CORE.md` | `_SYSTEM/CORE.md` | 002922b | ⚠️ ~ |
+| `_SYSTEM/CORE.md` | `_SYSTEM/CORE.md` | 002922b | ✓ 002922b |
 | `_SYSTEM/AUTOSTART.md` | `_SYSTEM/AUTOSTART.md` | 8036b04 | ✓ 8036b04 |
-| `_SYSTEM/00_FIRST_STARTUP.md` | `_SYSTEM/00_FIRST_STARTUP.md` | 002922b | ⚠️ ~ |
+| `_SYSTEM/00_FIRST_STARTUP.md` | `_SYSTEM/00_FIRST_STARTUP.md` | 002922b | ✓ 002922b |
 | `_SYSTEM/QUICK_START.md` | `_SYSTEM/QUICK_START.md` | 002922b | ✓ 002922b |
 | `_SYSTEM/CONVENTIONS.md` | `_SYSTEM/CONVENTIONS.md` | 002922b | ✓ 002922b |
 | `_SYSTEM/COMMANDES.md` | `_SYSTEM/COMMANDS.md` | 002922b | ✓ 002922b |
