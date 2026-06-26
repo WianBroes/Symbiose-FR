@@ -8,7 +8,8 @@
 
 | Feature | Palier | Depuis | Sessions |
 |---------|--------|--------|----------|
-| Dream skill (`dream/SKILL.md`) | 🔬 ALPHA | 2026-06-05 | 0 |
+| Dream skill (`dream/SKILL.md`) | 🔬 ALPHA | 2026-06-05 | 1 |
+| Update skill (`skills/update/SKILL.md`) | 🔬 ALPHA | 2026-06-26 | 0 |
 | Kernel v2 (scan-check.sh, mkdir lock) | ✅ RELEASE | 2026-06-25 | — |
 
 ## 🏁 Archivé
