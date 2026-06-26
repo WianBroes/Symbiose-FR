@@ -265,7 +265,8 @@ Toutes les 10 clôtures, `.dream_requested` est posé → l'IA lance un dream de
 ## 9. Snapshot
 
 ```bash
-git add [fichiers _SYSTEM/ modifiés] && git commit -m "session close YYYY-MM-DD" --quiet
+git add [fichiers _SYSTEM/ modifiés]
+git diff --cached --quiet || git commit -m "session close YYYY-MM-DD" --quiet
 ```
 
 > `.claude/` et `01_🧠Profil/` sont gitignorés — ne pas les inclure.
