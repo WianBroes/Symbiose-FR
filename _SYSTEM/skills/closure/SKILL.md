@@ -1,0 +1,272 @@
+---
+name: closure
+description: Session closure ritual. Macro-scan, TRANSFERT, snapshot. Triggered by "close", "clôture", "on a fini", "closure ritual".
+trigger: close|clôture|cloture|on a fini|closure|closure ritual
+---
+
+# Closure — Rituel de fin de session
+
+> **Lire ce fichier en entier.** Ne pas sauter d'étapes. Ne pas improviser.
+> La clôture est le seul moment où le système apprend de la session.
+> Sans elle, le système stagne.
+
+---
+
+## 0. Vérification — contenu nouveau (OBLIGATOIRE)
+
+**Ne jamais répondre "déjà fait" sans vérifier.**
+
+1. Quel a été le **dernier message analysé** par le dernier micro-scan ?
+2. Y a-t-il des échanges **plus récents** dans cette session ?
+3. Si oui → le scan est OBLIGATOIRE
+4. Si non → passer à la suite
+
+> Les derniers échanges sont les plus riches — l'utilisateur relit, questionne, insiste.
+
+---
+
+## 1. Macro-scan — analyse complète
+
+### 1a. Relire la session entière
+
+Dans ma mémoire, parcourir la session et chercher :
+
+- **Structure des questions** : anticipeur ? réactif ? cause racine ou symptôme ?
+- **Rapport à l'erreur** : insiste ou laisse passer ?
+- **Niveau d'abstraction** : systémique ? pratique ? alterne ?
+- **Style de décision** : valide vite ? compare plusieurs options ?
+- **Méta-position** : s'observe lui-même ?
+
+### 1b. Signaux traits
+
+| Chercher ça | Trait |
+|-------------|-------|
+| Décision spontanée ("oui vas-y", "ok direct") | `direct +1` |
+| Hésitation / revirement ("en fait non", "finalement...") | `precis +1` |
+| Réaction positive ("ah cool", "parfait") | satisfaction |
+| Réaction négative ("trop long", "pas clair") | mécontentement → ajuster |
+| Demande de code ("donne le code", "fais ça") | `technique +1` |
+| Demande d'explication ("explique le concept") | `pédagogue +1` |
+| Formulation récurrente ("en gros", "simplement") | registre de langage |
+| Exploration ("on peut aussi...?") | `explorateur +1` |
+| Redirection ("non c'est pas ça") | `directif +1` |
+| Amène une expérience vécue comme preuve (voyage, terrain, passé) | `observateur +1` |
+| Recadre à un niveau d'abstraction supérieur, voit la limite d'une réponse | `systémique +1` |
+| Connecte spontanément deux domaines non liés | `systémique +1` |
+| Arrive à une synthèse ou plan d'action sans qu'on lui demande | `synthétiseur +1` |
+
+> **Sessions hors-projet (conversation, quotidien, curiosité) :** les traits cognitifs y apparaissent plus clairement que dans les sessions travail. Scanner avec la même rigueur — souvent plus riche.
+
+### 1c. Signaux skills
+
+| Chercher ça | Action |
+|-------------|--------|
+| Jargon technique ("cluster k8s", "Promise.all") | Skill +1 XP |
+| Instruction précise ("fais un docker compose avec 3 services") | Skill +1 XP |
+| Question exploratoire ("comment marche un vector store ?") | Skill émergent +1 XP |
+| Corrige l'IA ("non c'est pas comme ça") | Skill +1 XP bonus |
+| Cite un outil/framework ("j'utilise Astro") | Skill outil +1 XP |
+| Combo deux domaines ("mon API Rust dans un container") | Rust + Docker combo |
+
+**Règles :**
+- Max +2 XP par skill par scan
+- Correction de l'IA : +1 XP supplémentaire
+- Nouveau skill : créer l'entrée, XP=1, choisir une icône emoji
+
+### 1d. Appliquer l'accumulation
+
+```
+Score = total_signaux_cumulés / nb_sessions_actives
+```
+
+Chaque signal détecté en session s'ajoute au total cumulé du trait.
+Le score est la moyenne par session — stable, différencié, sans convergence artificielle.
+
+### 1e. Mettre à jour les fichiers
+
+- `01_🧠Profil/👤profil.md` (🧬 Traits) — mettre à jour les scores
+- `01_🧠Profil/👤profil.md` (🎯 Compétences) — ajouter/incrémenter les XP
+- `01_🧠Profil/👤profil.md` (🔭 En émergence) — incrémenter les sessions, ajouter nouveaux signaux
+- `01_🧠Profil/👤profil.md` (🧠 Modes de pensée) — promouvoir si ≥ 3 sessions
+- `01_🧠Profil/👤profil.md` (⚡ Synergies) — ajouter ou incrémenter
+- `01_🧠Profil/memory/observations.md` — **append brut** (pas de sélection, pas de reformulation)
+
+### 1f. Scan découverte — forme du raisonnement
+
+> Ce scan cherche **comment** il pense, pas ce qu'il sait. Remplir uniquement si signal observé — ne pas forcer.
+
+| Signal observé | Action |
+|----------------|--------|
+| Structure ses idées en branches/sous-catégories spontanément | `🔭 arborescente +1` |
+| Part d'un exemple concret pour remonter à une règle générale | `🔭 inductive +1` |
+| Part d'un principe pour descendre vers des cas concrets | `🔭 déductive +1` |
+| Connecte deux domaines par un mécanisme commun (analogie) | `🔭 analogique +1` |
+| Utilise le savoir d'un domaine pour résoudre un problème dans un autre | `🔭 transversale +1` |
+| Cherche les patterns, les récurrences, les invariants | `🔭 pattern-matching +1` |
+| Identifie les exceptions, ce qui ne rentre pas dans la règle | `🔭 critique +1` |
+| Reformule le problème différemment avant de répondre | `🔭 recadrage +1` |
+
+**Règle de promotion :**
+- Signal dans `🔭 En émergence` ≥ 3 sessions distinctes → proposer promotion dans `🧠 Modes de pensée`
+- Ne jamais promouvoir sur déclaration de l'utilisateur — observation uniquement
+
+### 1g. Question libre — qu'est-ce que j'ai appris sur lui ?
+
+Se poser **une seule question, sans format imposé :**
+
+> *"Qu'est-ce que j'ai appris sur cette personne cette session ?"*
+
+Répondre librement — pas de tableau, pas de catégorie, pas de signal à cocher. Ce que la session a révélé sur qui elle est, comment elle pense, ce qui compte pour elle. Des choses qui ne seraient pas apparues dans un scan mécanique.
+
+Écrire la réponse dans `memory/observations.md` — brut, tel quel, sans reformater.
+Attribuer la source : `[symbiose]` si ça émerge de l'interaction, `[IA]` si c'est une projection à vérifier.
+
+> C'est l'IA qui analyse, pas l'utilisateur. La valeur vient de cette asymétrie.
+
+### 1h. Scan synergies
+
+> Après avoir scanné traits, skills, et modes de pensée séparément — regarder les combinaisons.
+> Ne pas forcer. Seulement si une combinaison pointe vers quelque chose que les éléments seuls ne montrent pas.
+
+**Question :** *"Y a-t-il 2-3 éléments de dimensions différentes qui se renforcent et pointent dans la même direction ?"*
+
+**Si oui :**
+1. Nommer le pattern (une formule courte, pas une étiquette)
+2. Lister les éléments qui le composent
+3. Formuler la piste — une direction, pas une conclusion
+4. Ajouter dans `⚡ Synergies` du profil
+
+**Règle de promotion :**
+- Synergie observée sur 1 session → noter dans `⚡ Synergies` (Sessions: 1)
+- Confirmée sur 2+ sessions distinctes → piste **active** (indiquer dans la colonne Piste)
+- Contredite par de nouveaux éléments → marquer `❌ infirmé` + raison (ne pas supprimer — le trace reste)
+
+**Exemples de combinaisons à surveiller :**
+
+| Combinaison | Piste possible |
+|-------------|----------------|
+| `observateur` + `analogique` + `systémique` | Traducteur de savoirs — tire des lois du réel, les transfère entre domaines |
+| `direct` + `synthétiseur` + `arborescente` | Architecte de solutions — structure vite, décide sans perdre la nuance |
+| `explorateur` + `transversale` + `inductive` | Apprend en connectant — pas en accumulant |
+| `precis` + `systémique` + `recadrage` | Penseur critique — voit la limite d'un modèle avant les autres |
+
+> Ces exemples sont des amorces, pas des règles. Le système construit ses propres combinaisons depuis les éléments réels observés.
+
+### 1i. Notifier les changements significatifs
+
+- Level-up de skill → notifier
+- Nouveau trait → notifier
+- Trait significativement modifié → notifier
+
+---
+
+## 2. Mode dominant
+
+Écrire dans `01_🧠Profil/memory/modes.md` :
+
+```
+[DATE] [PROJET] — [description: ce qu'on a fait, signaux, mode dominant]
+```
+
+Vérifier les 5 dernières entrées — si pattern ≥ 2 → proposer graduation.
+
+---
+
+## 3. Afficher le résumé
+
+Format obligatoire — pas de variation :
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔬 Diagnostic Symbiose
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 Traits :
+  [trait]  [+/-score]  [description]
+
+⚔️ Skills :
+  [icône] [nom]  Lv.[n]  +[n] XP  [description]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 Mode : [mode]
+Session : [courte/moyenne/longue] — [👍/👎/🤝]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+---
+
+## 4. Nettoyage kernel
+
+```bash
+echo 0 > _SYSTEM/kernel/.msg_count
+```
+
+---
+
+## 5. Profil — proposer (ne pas imposer)
+
+Demander : *"J'ai [N] observation(s) qui pourraient enrichir le profil : [liste]. Je les prépare ?"*
+
+Si oui → montrer les changements avant d'écrire.
+Si non → ne pas insister.
+
+---
+
+## 6. TRANSFERT — mise à jour
+
+Lire `00_📥Inbox/00_TRANSFERT.md` → fusionner l'état courant :
+- **Résolu** → supprimer
+- **Avancé** → mettre à jour
+- **Nouveau** → ajouter
+- **Inchangé** → garder
+
+**Contrainte :** max 5 items dans "En chantier". "Rien — session bouclée" si vide.
+
+---
+
+## 7. Pipeline alpha — review automatique
+
+**Obligatoire.** Le pipeline vit ou meurt ici.
+
+1. Lire `_SYSTEM/alpha/00_INDEX.md`
+2. Pour chaque feature en 🔬 ALPHA / 🧪 BETA / 🚦 PRERELEASE :
+   - Vérifier si `_SYSTEM/alpha/.used_[nom]` existe → feature **utilisée** cette session
+   - Vérifier avec `00_TRANSFERT.md` si les fichiers ont été modifiés → feature **modifiée**
+3. **Règles de compteur :**
+   - Si **modifiée** → reset compteur à 0
+   - Si **utilisée** (flag présent) → incrémenter compteur (+1) + supprimer le flag
+   - Si **ni modifiée ni utilisée** → compteur inchangé
+4. **Seuils de promotion :**
+   - 🔬 ALPHA → 🧪 BETA : 3 sessions d'usage sans bug
+   - 🧪 BETA → 🚦 PRERELEASE : 5 sessions d'usage sans bug (cumul BETA)
+   - 🚦 PRERELEASE → ✅ RELEASE : proposer à Wian
+5. **Abandon :** si une feature n'a pas été utilisée depuis 5+ sessions → proposer l'abandon
+   - Si compteur 0 et sessions ≥ 3 sans usage ni modif → proposer l'abandon
+6. Mettre à jour `00_INDEX.md` + nettoyer les flags `.used_*`
+7. Notifier : *"Pipeline alpha : [X] promue(s), [Y] proposée(s) à l'abandon."*
+
+> Chaque feature pose son propre flag quand elle s'exécute : `touch _SYSTEM/alpha/.used_[nom]`
+> La clôture lit les flags, incrémente, puis les supprime. Automatique, sans question.
+
+---
+
+## 8. Compteur de clôture
+
+```bash
+bash _SYSTEM/kernel/closure.sh
+```
+
+> Incrémente `.closure_count`. Toutes les 10 clôtures, pose `.dream_requested` pour le prochain démarrage.
+
+Toutes les 10 clôtures, `.dream_requested` est posé → l'IA lance un dream de consolidation au prochain démarrage.
+
+---
+
+## 9. Snapshot
+
+```bash
+git add "00_📥Inbox/00_TRANSFERT.md" [fichiers _SYSTEM/ modifiés] && git commit -m "session close YYYY-MM-DD" --quiet
+```
+
+> `.claude/` et `01_🧠Profil/` sont gitignorés — ne pas les inclure.
+> Si pas de git → skip silencieux.

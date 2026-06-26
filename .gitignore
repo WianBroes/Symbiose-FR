@@ -1,0 +1,64 @@
+# ─── OS ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ─── Symbiose system ──────────────────────────────
+01_🧠Profil/
+00_📥Inbox/
+02_🧬Symbiose/
+03_💻Dev/
+04_🌱Vie/
+05_💰Finances/
+06_📚Recherche/
+07_🎨Creatif/
+_SYSTEM/kernel/.msg_count
+_SYSTEM/kernel/.msg_count.lock*
+_SYSTEM/kernel/.closure_count
+_SYSTEM/kernel/.dream_requested
+
+# ─── Python ─────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# ─── Node ───────────────────────────────────────────
+node_modules/
+dist/
+build/
+*.log
+
+# ─── Editors / Harnesses ────────────────────────────
+.obsidian/
+.zed/
+.vscode/
+.idea/
+.claude/
+.claudian/
+.smart-env/
+.continuerc.json
+
+# ─── Aider ──────────────────────────────────────────
+.aider*
+.aider/
+
+# ─── Pi (config perso) ──────────────────────────────
+.pi/
+!.pi/extensions/symbiose-kernel.ts
+
+# ─── Environnement ──────────────────────────────────
+.env
+.env.local
+*.private
+
+# ─── Pipeline alpha flags ───────────────────────
+_SYSTEM/alpha/.used_*
+
+# ─── Temporaires ────────────────────────────────────
+*.tmp
+*.bak
