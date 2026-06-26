@@ -2,6 +2,14 @@
 
 ---
 
+## 2026-06-26
+
+### Test update skill
+
+- Commit de test créé via GitHub API pour valider le flux update
+
+---
+
 ## 2026-06-25
 
 ### Kernel v2 — support multi-outils
