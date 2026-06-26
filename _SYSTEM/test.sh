@@ -88,8 +88,6 @@ output=$(bash _SYSTEM/kernel/kernel.sh 2>&1) && echo -e "  ${GREEN}✓${NC} kern
 # ─── 5. Cohérence références ─────────────────────────────────────
 echo ""
 echo "━━━ Références croisées ━━━"
-CORE="docs/README.md _SYSTEM/CORE.md"
-
 # Vérifie que CORE.md référence AUTOSTART
 grep -q "AUTOSTART" "_SYSTEM/CORE.md" && echo -e "  ${GREEN}✓${NC} CORE.md référence AUTOSTART" || {
   echo -e "  ${YELLOW}⚠ CORE.md ne référence pas AUTOSTART${NC}"

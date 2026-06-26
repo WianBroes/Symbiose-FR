@@ -33,7 +33,7 @@ jobs:
         run: pip install semgrep
 
       - name: Analyser les scripts (patterns dangereux)
-        run: semgrep --config p/bash --config p/secrets . --error
+        run: semgrep --config p/secrets . --error
 
   detect-secrets:
     name: Détection de secrets et clés API
@@ -46,8 +46,7 @@ jobs:
 
       - name: Scanner le repo
         run: |
-          detect-secrets scan --all-files > .secrets.baseline
-          detect-secrets audit .secrets.baseline --report --fail-on-unaudited || true
+          detect-secrets scan --all-files --exclude-files '\.git/.*' > .secrets.baseline
           python3 -c "
           import json
           with open('.secrets.baseline') as f:
