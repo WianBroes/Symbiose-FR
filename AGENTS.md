@@ -31,6 +31,27 @@ Vérifier si `[scan]` est présent dans le contexte (system-reminder ou hook out
 
 ---
 
+## ⚠️ IMPÉRATIF — Descriptions de commandes
+
+👉 **Pour chaque commande bash soumise à validation :**
+
+La description DOIT :
+- Être en **français**
+- Expliquer **ce que ça fait concrètement** — pas comment ça marche techniquement
+- Être lisible par quelqu'un qui ne code pas
+- Permettre de valider **sans lire la commande brute**
+
+Exemples :
+- ❌ `"Fetch and check commits behind"`
+- ✅ `"Vérifier si des mises à jour sont disponibles sur GitHub"`
+- ❌ `"Rebase local commits on top of origin/master"`
+- ✅ `"Intégrer la mise à jour GitHub en conservant les modifications locales"`
+
+> L'utilisateur voit la commande brute (avec les flags, les options) mais ne la comprend pas forcément.
+> La description est la seule chose sur laquelle il peut s'appuyer pour décider de valider ou non.
+
+---
+
 ## Règles
 
 - **Fermeture** : dis "close" ou "on a fini" → `_SYSTEM/skills/closure/SKILL.md`
