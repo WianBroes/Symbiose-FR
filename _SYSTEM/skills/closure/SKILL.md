@@ -239,7 +239,7 @@ Lire `00_📥Inbox/00_TRANSFERT.md` → fusionner l'état courant :
 4. **Seuils de promotion :**
    - 🔬 ALPHA → 🧪 BETA : 3 sessions d'usage sans bug
    - 🧪 BETA → 🚦 PRERELEASE : 5 sessions d'usage sans bug (cumul BETA)
-   - 🚦 PRERELEASE → ✅ RELEASE : proposer à Wian
+   - 🚦 PRERELEASE → ✅ RELEASE : proposer à l'utilisateur
 5. **Abandon :** si une feature n'a pas été utilisée depuis 5+ sessions → proposer l'abandon
    - Si compteur 0 et sessions ≥ 3 sans usage ni modif → proposer l'abandon
 6. Mettre à jour `00_INDEX.md` + nettoyer les flags `.used_*`
