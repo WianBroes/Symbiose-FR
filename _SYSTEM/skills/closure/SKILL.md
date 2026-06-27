@@ -10,6 +10,8 @@ trigger: close|clôture|cloture|on a fini|closure|closure ritual
 > La clôture est le seul moment où le système apprend de la session.
 > Sans elle, le système stagne.
 
+**Exécution silencieuse.** Toutes les étapes s'exécutent en silence. Un seul bloc propre affiché à la fin (section 3). Pas de texte intermédiaire, pas de confirmation entre les étapes.
+
 ---
 
 ## 0. Vérification — contenu nouveau (OBLIGATOIRE)
@@ -170,6 +172,16 @@ Attribuer la source : `[symbiose]` si ça émerge de l'interaction, `[IA]` si c'
 
 Vérifier les 5 dernières entrées — si pattern ≥ 2 → proposer graduation.
 
+### 2b. Auto-amélioration du mode actif
+
+Pour chaque mode détecté cette session, lire `_SYSTEM/modes/[MODE].md` et se poser 3 questions :
+1. Une règle a-t-elle **manqué** — quelque chose qu'on aurait eu besoin de préciser ?
+2. Une règle était-elle **inutile ou contra-productive** cette session ?
+3. Un **signal de détection nouveau** est-il apparu ?
+
+Si oui → mettre à jour le fichier directement. Annoncer dans le bloc final.
+Si non → skip silencieux.
+
 ---
 
 ## 3. Afficher le résumé
@@ -190,8 +202,15 @@ Format obligatoire — pas de variation :
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📋 Mode : [mode]
 Session : [courte/moyenne/longue] — [👍/👎/🤝]
+
+🗒️ Journal IA :
+  Décisions : [ce qui a été choisi et pourquoi — si non-évident]
+  Non-décisions : [ce qui a été écarté et pourquoi]
+  Méthodes échouées : [approches qui n'ont pas fonctionné cette session]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
+
+> Le journal IA est vide si la session n'a pas produit de décisions notables. Ne pas forcer.
 
 ---
 
@@ -221,6 +240,31 @@ Lire `00_📥Inbox/00_TRANSFERT.md` → fusionner l'état courant :
 - **Inchangé** → garder
 
 **Contrainte :** max 5 items dans "En chantier". "Rien — session bouclée" si vide.
+
+---
+
+## 6b. Questions en suspens
+
+**Détection pendant la session :** repérer les moments où l'utilisateur (ou l'IA) a répondu "je sais pas", "peut-être", "pas sûr", "j'hésite" — signaux naturels d'incertitude non résolue.
+
+**À la clôture :**
+
+1. Si des signaux d'incertitude ont été détectés → proposer : *"Tu as dit 'je sais pas' sur [X]. Je l'ajoute dans les questions en suspens ?"*
+2. Vérifier si `00_📥Inbox/QUESTIONS_EN_SUSPENS.md` existe :
+   - **Si absent et question à ajouter** → créer le fichier, y ajouter la question
+   - **Si présent** → parcourir chaque question ouverte : une piste a-t-elle émergé pendant cette session, même indirectement ? Si oui → noter la piste, signaler dans le bloc final
+   - **Si absent et rien à ajouter** → skip silencieux
+
+> Ce mécanisme repose sur la sédimentation : une réponse à un problème latent remonte quand elle est prête, pas quand on cherche. Rien à retenir, rien à déclencher — le signal "je sais pas" existe déjà dans la conversation naturelle.
+
+**Format du fichier :**
+```markdown
+# Questions en suspens
+
+## [question ou problème ouvert]
+> Ouvert le : [date]
+> Piste : [si une piste a émergé — sinon laisser vide]
+```
 
 ---
 
