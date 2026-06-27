@@ -124,6 +124,23 @@ echo 0 > _SYSTEM/kernel/.closure_count
 
 ---
 
+## Gestion des poches profil (dream)
+
+> Rôle du dream dans le cycle de vie des poches émergentes créées en closure (scan poche).
+> À activer quand au moins 2 poches existent dans `01_🧠Profil/`.
+
+Pendant la Phase 2 du dream, après le scan des observations, vérifier aussi les poches :
+
+1. **Poche dormante** : poche non alimentée depuis 5+ sessions → proposer archivage
+2. **Fusion** : deux poches qui se recoupent fortement → proposer fusion
+3. **Éclatement** : poche devenue trop large (>30 lignes) → proposer division
+4. **Compact** : appliquer la règle lossless aux poches comme aux observations
+5. **Obsolescence** : informations devenues fausses ou caduques → proposer mise à jour
+
+> Ces actions sont proposées, jamais appliquées seules.
+
+---
+
 ## Cycle de vie long-terme
 
 ```

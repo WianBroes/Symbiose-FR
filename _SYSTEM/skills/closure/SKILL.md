@@ -143,6 +143,32 @@ Attribuer la source : `[symbiose]` si ça émerge de l'interaction, `[IA]` si c'
 
 > C'est l'IA qui analyse, pas l'utilisateur. La valeur vient de cette asymétrie.
 
+### 1g. Scan poches émergentes (profil)
+
+> Après avoir écrit les observations en 1f, avant le scan synergies.
+
+**Quand :** à chaque clôture, après avoir append dans `observations.md`.
+
+**Procédure :**
+
+1. Relire les observations **ajoutées cette session** dans `observations.md`
+2. Lister les thèmes qui se dégagent (pas de catégories pré-définies)
+3. Regarder ce qui existe déjà comme poches dans `01_🧠Profil/`
+   → `ls 01_🧠Profil/[0-9]*.md` (fichiers numérotés comme `00_Index.md`, `01_*.md`, etc.)
+4. **Si un thème revient ≥ 3 fois dans les observations de la session**
+   → et qu'il n'a pas encore de poche dédiée
+   → proposer dans le bloc final : *"J'ai [N] observations sur [thème]. Je crée une poche ?"*
+5. **Si validation** → créer le fichier `01_🧠Profil/[NUM]_[Theme].md` + l'indexer dans `00_Index.md`
+   → Copier les observations concernées dans la poche (ne pas les supprimer d'observations.md)
+6. **Si le thème existe déjà** (poche existante) → ne rien faire, les observations y seront ajoutées à la prochaine validation
+7. **Si pas assez de signal** → rien. Les observations restent dans `observations.md` jusqu'à la prochaine session.
+
+**Règle :** jamais de création sans validation. Jamais de poche vide. Zéro catégorie pré-créée.
+
+**Note cycle de vie :** une fois que des poches existent, le dream (tous les 10 cycles) gère la consolidation long-terme — compactage, fusion, éclatement, archivation. Voir `_SYSTEM/skills/dream/SKILL.md` § Gestion des poches profil.
+
+---
+
 ### 1h. Scan synergies
 
 > Après avoir scanné traits, skills, et modes de pensée séparément — regarder les combinaisons.
