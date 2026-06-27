@@ -314,7 +314,7 @@ _SYSTEM/kernel/
 ├── scan-check.sh     ← lit .scan_interval, output [scan] si c'est l'heure
 ├── closure.sh        ← incrémente .closure_count, pose .dream_requested au seuil
 ├── .msg_count        ← compteur partagé entre tous les outils
-├── .scan_interval    ← intervalle en messages (défaut : 10)
+├── .scan_interval    ← intervalle en messages (défaut : 7)
 └── .closure_count    ← compteur de clôtures (géré par closure.sh)
 ```
 

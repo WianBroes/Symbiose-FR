@@ -58,6 +58,6 @@ Les modes sont aussi auto-détectés par les signaux de session (fichiers ouvert
 
 ## Scans automatiques
 
-- **Micro-scan** — toutes les 10 messages (kernel) → met à jour traits/skills si signal détecté
+- **Micro-scan** — toutes les 7 messages (kernel) → met à jour traits/skills si signal détecté
 - **Macro-scan** — à chaque `close` → analyse globale de la session
 - **Dream** — toutes les 10 clôtures → compacte les observations accumulées

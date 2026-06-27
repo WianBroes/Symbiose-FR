@@ -28,79 +28,48 @@
 Brancher un hook équivalent qui appelle les 2 scripts et injecte `[scan]` dans le contexte si stdout le contient.
 
 **Procédure :**
+
 1. `[scan]` détecté → lancer le scan. Sinon → ne rien faire.
-2. Relire les ~5 derniers échanges (dans ma mémoire de session)
-3. Chercher des signaux traits et skills (cf. tableaux ci-dessous)
-4. Écrire les détections directement dans les fichiers
-6. **Si level-up détecté → appliquer immédiatement + notifier :**
-   - Le nouveau niveau change mon comportement pour ce sujet **dès la prochaine réponse**
-   - Ex: 🐍 Python passe Apprenti → Adepte → je peux utiliser le jargon Python tout de suite
-   - Je régénère les règles actives pour ce skill et je les applique sur le champ
+2. **Observer** : relire les ~5 derniers échanges. Regarder aussi ce que j'ai construit en réponse et ce que ça dit des décisions de l'utilisateur.
+3. Se poser une seule question : **"Qu'est-ce qui est notable ici ?"**
+4. Si rien de notable → **ne rien faire**. Zéro est un résultat valide.
+5. Si quelque chose est notable → écrire l'observation brute dans `observations.md` (une ligne, français courant).
+6. **Ensuite seulement** : mapper ce qui a été vu aux compteurs (traits, skills, modes) — voir section 1b.
 
-### Signaux traits (comportement)
+### 1b. Si quelque chose a été observé — incrémenter
 
-| Chercher ça | Exemple | Trait |
-|-------------|---------|-------|
-| Décision spontanée | "oui vas-y", "ok direct" | `direct +1` |
-| Hésitation / revirement | "en fait non", "finalement..." | `precis +1` |
-| Réaction positive | "ah cool", "parfait" | satisfaction |
-| Réaction négative | "trop long", "pas clair" | mécontentement → ajuster |
-| Demande de code | "donne le code", "fais ça" | `technique +1` |
-| Demande d'explication | "explique le concept" | `pédagogue +1` |
-| Formulation récurrente | "en gros", "simplement" | registre de langage |
-| Exploration | "on peut aussi...?" | `explorateur +1` |
-| Redirection | "non c'est pas ça" | `directif +1` |
+**Traits (comportement) :**
+- Comportement déjà référencé dans le profil → +1 signal
+- Comportement nouveau → créer l'entrée (score 0.5, 1 signal)
 
-> Un même signal peut confirmer un trait existant ou en révéler un nouveau.
-
-### Signaux skills (compétence)
-
-| Chercher ça | Exemple | Action |
-|-------------|---------|--------|
-| Jargon technique | "cluster k8s", "Promise.all" | Skill domaine +1 XP |
-| Instruction précise | "fais un docker compose avec 3 services" | Skill domaine +1 XP |
-| Question exploratoire | "comment marche un vector store?" | Skill émergent +1 XP |
-| Corrige l'IA | "non c'est pas comme ça que ça marche" | Skill +1 XP bonus |
-| Cite un outil/framework | "j'utilise Astro", "sous NixOS" | Skill outil +1 XP |
-| Combo deux domaines | "mon API Rust dans un container" | Rust + Docker combo |
-
-### Règles d'incrémentation skills
+**Skills (domaine) :**
+- Compétence déjà référencée → +1 XP
+- Nouveau skill → créer l'entrée, XP=1, choisir un emoji
+- Correction de l'IA par l'utilisateur → +1 XP bonus (même si déjà au max)
 - Max **+2 XP** par skill par micro-scan
-- Correction de l'IA : **+1 XP supplémentaire** (même si déjà à +2)
-- Nouveau skill : créer l'entrée, XP=1, choisir une icône emoji représentative
 
-### Signaux découverte (forme du raisonnement)
-
-> Ne cherche pas CE QU'IL DIT — cherche COMMENT IL PENSE.
-> Collecter uniquement — pas d'interprétation. L'interprétation reste au macro-scan.
-
-| Chercher ça | Exemple | Action |
-|-------------|---------|--------|
-| Part d'un exemple concret pour remonter à une règle générale | "j'ai vu en Inde que..." → règle universelle | `🔭 inductive +1` |
-| Connecte deux domaines par un mécanisme commun | linge humide = cooling tower = jarre Inde | `🔭 analogique +1` |
-| Structure ses idées en branches spontanément | subdivise sans qu'on lui demande | `🔭 arborescente +1` |
-| Utilise un savoir d'un domaine pour résoudre dans un autre | thermique passive → architecture climatique | `🔭 transversale +1` |
-| Reformule le problème avant de répondre | recadre la question reçue | `🔭 recadrage +1` |
-| Cherche les patterns, invariants, récurrences | "c'est toujours pareil quand..." | `🔭 pattern-matching +1` |
-| Identifie l'exception, ce qui résiste à la règle | "sauf si...", "mais là c'est différent parce que" | `🔭 critique +1` |
-| Part d'un principe abstrait pour aller vers le concret | principe → cas d'usage | `🔭 déductive +1` |
-
-**Règles :**
-- Incrémenter le compteur Sessions dans `🔭 En émergence` du profil
-- Si signal nouveau (pas encore dans `🔭`) → créer l'entrée avec Sessions: 1 + observation brute
+**Modes de pensée (🔭 En émergence) :**
+- Mode de pensée déjà vu → +1 session
+- Nouveau mode → créer l'entrée (Sessions: 1 + observation brute)
 - Ne jamais promouvoir vers `🧠 Modes de pensée` depuis le micro-scan — c'est le rôle du macro-scan
 
-### Feedback dans la réponse
+### 1c. Level-up
+
+Si un skill atteint un nouveau niveau → appliquer immédiatement :
+- Le nouveau niveau change mon comportement pour ce sujet **dès la prochaine réponse**
+- Je régénère les règles actives pour ce skill et je les applique sur le champ
+
+### 1d. Feedback dans la réponse
 
 Si quelque chose a été détecté → une ligne en début de réponse :
 ```
 📊 direct +1 · technique +1
-⚔️ 🐍 Python +1 XP
-🔭 analogique +1 · inductive +1
+⚔️ 🐍 Python +1 XP · 💻 Dev +1 XP
 🎉 🐍 Python → Adepte ! (Nv.3) ← appliqué immédiatement
+🔭 critique +1
 ```
 
-Si level-up : le feedback inclut **appliqué immédiatement** pour signaler que le comportement change dès maintenant.
+Si level-up : le feedback inclut **appliqué immédiatement**.
 
 Si rien → pas de feedback.
 
@@ -116,10 +85,11 @@ Si rien → pas de feedback.
 1. **Relire la session entière** — pas juste la fin, pas les micro-scans
 2. Chercher des **patterns globaux** qu'aucun micro-scan ne capte :
    - Évolution du comportement en cours de session
-   - Alternance de modes (ex: exécution rapide → réflexion)
-   - Sujets dominants non évidents localement
-   - Niveau d'autonomie réel (a-t-il fallu valider souvent ?)
-3. Consolider avec les micro-scans déjà écrits dans les fichiers
+   - Alternance de modes
+   - Sujets dominants
+   - Niveau d'autonomie réel
+   - Ce qui a été créé et ce que ça dit
+3. Consolider avec les micro-scans déjà écrits
 4. Mettre à jour les scores
 
 ### 2a. Traits — accumulation simple
@@ -130,7 +100,7 @@ Chaque trait a un score = total des signaux cumulés / nombre de sessions active
 
 | Intensité | Quand |
 |-----------|-------|
-| **+2** | Signal fort, répété, explicite (ex: "trop long" dit 3×) |
+| **+2** | Signal fort, répété, explicite |
 | **+1** | Signal présent mais modéré |
 | **0** | Neutre |
 | **-1** | Signal inverse faible |
@@ -141,8 +111,7 @@ Chaque trait a un score = total des signaux cumulés / nombre de sessions active
 Score = total_signaux / nb_sessions
 ```
 
-Le total des signaux s'incrémente à chaque macro-scan. Le score est la moyenne par session active.
-Pas de convergence artificielle — chaque session pèse autant. Pas de seuil de veille : les traits gardent leur score indéfiniment.
+Pas de convergence artificielle — chaque session pèse autant.
 
 ### 2b. Skills — XP cumulatif
 
@@ -165,7 +134,7 @@ level = floor((sqrt(1 + 8 × XP) - 1) / 2)
 
 ### 2c. Règles actives
 
-Les règles sont générées depuis traits + skills et **appliquées immédiatement** (micro-scan) ou au démarrage de la prochaine session (macro-scan).
+Générées depuis traits + skills et appliquées au démarrage de la prochaine session (ou immédiatement pour un micro-scan level-up).
 
 **Règles traits** — chaque trait avec score > |0.3| génère une ligne :
 ```
@@ -177,48 +146,25 @@ Les règles sont générées depuis traits + skills et **appliquées immédiatem
 | {icône} {skill} | Lv.{n} | {description} |
 ```
 
-**Level-up au macro-scan :** si un skill change de niveau pendant la clôture, la règle est mise à jour pour la prochaine session.
-
-**Level-up au micro-scan :** la règle change immédiatement — le nouveau niveau s'applique à la prochaine réponse.
-
 Ne pas cumuler des règles contradictoires. Si deux règles se contredisent, garder celle avec le score le plus fort.
 
 ### 2d. Méta-analyse — patterns de raisonnement
 
-> Étape distincte des traits et skills. Ne cherche pas "quoi" (comportement de surface) mais "comment" (structure de pensée).
+> Ne cherche pas CE QU'IL DIT — cherche COMMENT IL PENSE.
 
-**Procédure — relire la session entière en cherchant :**
+**Procédure — relire la session entière en s'ouvrant à :**
 
-1. **Structure des questions :**
-   - Pose des "et si" avant l'implémentation ? → anticipeur
-   - Pose des questions correctives après coup ? → réactif
-   - Remonte à la cause racine ou traite le symptôme ?
+- **Structure des questions** — anticipe ou réagit ? Cause ou symptôme ?
+- **Rapport à l'erreur** — laisse passer ou insiste ? L'incident devient amélioration ou simple signal ?
+- **Niveau d'abstraction** — concepts généraux ou cas concrets ? Alterne ?
+- **Style de décision** — valide vite ? Compare plusieurs options ? Corrige avec précision ou laisse des marges ?
+- **Méta-position** — s'observe lui-même ? Commente ses propres patterns ?
 
-2. **Rapport à l'erreur / à l'imprécision :**
-   - Laisse passer ou insiste ? *("rien ne change ?" → "pourquoi tu l'as pas fait ?")*
-   - Transforme l'incident en amélioration système ou le signale seulement ?
-
-3. **Niveau d'abstraction :**
-   - Parle en concepts / architecture / flux ? → pensée systémique
-   - Parle en cas concrets / exemples ? → pensée pratique
-   - Alterne entre les deux ? → adaptable
-
-4. **Style de décision :**
-   - Valide vite quand c'est bon ? *("comme ca c'est bien")* 
-   - A besoin de comparer plusieurs options ? *("inspire toi de AgentLoopV2 et AgentPerso")*
-   - Corrige avec précision ou laisse des marges ?
-
-5. **Méta-position :**
-   - S'observe lui-même et communique ses patterns ? *("surtout que souvent c'est quand c'est fini je regarde et insiste")*
-   - Demande une analyse de son propre comportement ? *("ca te semble anodin ?")*
+> Cette analyse ne produit pas de score. Elle produit une compréhension qui enrichit les observations et affine le portrait.
 
 **Si un pattern se confirme sur ≥2 sessions** → proposer un nouveau trait ou ajuster un existant.
 
-> Cette analyse ne produit pas de score — elle produit une **compréhension** qui enrichit les observations et affine le portrait utilisateur.
-
 ### 2e. Résumé de clôture
-
-Afficher en fin de session. Chaque ligne inclut une brève description (5-10 mots). Pas de box — les emoji cassent les alignements.
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -232,50 +178,40 @@ Afficher en fin de session. Chaque ligne inclut une brève description (5-10 mot
 ⚔️ Skills : stables
   🐍 Python         Lv.3 ⭐⭐⭐  +1 XP   Jargon OK
 
-───────────────────────────────────────────────────────
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🎉 🐍 Python → Adepte !
-───────────────────────────────────────────────────────
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 💡 Retenu :
   [synthèse libre — 2 à 4 lignes]
 
-📋 Mode : [mode] — [courte/moyenne/longue] — [👍/👎/🤝]
+📋 Mode : [mode] — [courte/moyenne/longue]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-**États possibles pour Traits et Skills :**
-- `stables` — rien de nouveau, rien en observation
-- `stables · N en observation` — rien de changé, mais N observations écrites cette session
-- traits listés avec score — si des changements ont eu lieu
-
-**Règles pour les descriptions :**
-- Traits : 3-8 mots, verbe à l'infinitif ou nom
-- Skills : 1-3 mots, niveau de détail ("Jargon OK" / "Équilibre" / "Explique" / "Optimise" / "Challenge")
-- Nouveau skill : pas de niveau/XP, juste "Créé !"
-- `💡 Retenu` : toujours présent. Formulation libre — pas de liste à puces, pas de format imposé. Ce que la session a vraiment appris sur la personne.
+**États possibles :**
+- `stables` — rien de nouveau
+- `stables · N en observation` — N observations écrites cette session
+- Traits listés avec score si changements
 
 ---
 
 ## 3. Application des règles en session
 
-Au démarrage de chaque session (AUTOSTART.md section 3), je lis `👤profil.md` (🧬 Traits + 🎯 Compétences) et je génère les règles actives.
+Au démarrage de chaque session (AUTOSTART.md section 3), je lis `👤profil.md` et je génère les règles actives.
 
 **Procédure au démarrage :**
-1. Lire `01_🧠Profil/👤profil.md` — section 🧬 Traits, extraire les traits avec score > |0.3|
-2. Lire `01_🧠Profil/👤profil.md` — section 🎯 Compétences, extraire les skills avec level ≥ 2
+1. Lire `👤profil.md` — section 🧬 Traits, extraire traits avec score > |0.3|
+2. Lire `👤profil.md` — section 🎯 Compétences, extraire skills avec level ≥ 2
 3. Générer les règles selon le mapping CORE.md section 2b
-4. **Les appliquer pour toute la session** :
-   - Ton ajusté (direct/concis/pédagogue...)
-   - Profondeur par domaine ajustée (niveau de détail selon le level)
-   - Autonomie ajustée (précis/directif → plus de validation)
+4. Les appliquer pour toute la session
 
-> Ces règles sont **actives immédiatement** — pas de délai. Si un skill `🐍 Python` est Adepte, ma première réponse sur Python sera au bon niveau.
+> Ces règles sont actives immédiatement.
 
 **Level-up en cours de session :**
 - Un micro-scan peut faire passer un skill au niveau supérieur
-- Dans ce cas, je **régénère la règle** pour ce skill uniquement et l'applique immédiatement
+- Je régénère la règle pour ce skill uniquement et l'applique immédiatement
 - Les réponses suivantes sur ce domaine reflètent le nouveau niveau
-- Ex: `🐍 Python` passe Apprenti (⭐⭐) → Adepte (⭐⭐⭐) → je passe au jargon technique Python sans explications
 
 ## 4. Scan à la demande
 

@@ -100,7 +100,7 @@ Claude Code détecté. Activer le kernel (micro-scans automatiques) ?
   }
   EOF
   ```
-  Confirmer : *"Kernel activé — micro-scans toutes les 10 messages."*
+  Confirmer : *"Kernel activé — micro-scans toutes les 7 messages."*
 - **Si non** → continuer sans. Le système fonctionne, les scans se font uniquement à la clôture.
 
 **Si `PI_CODING_AGENT` détecté → deux propositions :**
@@ -115,7 +115,7 @@ et sera auto-découverte une fois le projet approuvé.
   2. Non
 ```
 
-- **Si oui** → confirmer : *"Kernel activé — micro-scans toutes les 10 messages. Approuve le projet si PI le demande."*
+- **Si oui** → confirmer : *"Kernel activé — micro-scans toutes les 7 messages. Approuve le projet si PI le demande."*
 - **Si non** → continuer sans. Le système fonctionne, les scans se font uniquement à la clôture.
 
 **b. Extension web-search (recherche DuckDuckGo + lecture de pages) :**

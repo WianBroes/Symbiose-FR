@@ -23,7 +23,7 @@ AUTOSTART.md ── séquence de démarrage
 Session active
     │
     ├── Chaque message → kernel.sh (compteur) + scan-check.sh
-    │       └── tous les 10 messages → [scan] → micro-scan profil
+    │       └── tous les 7 messages → [scan] → micro-scan profil
     │
     ├── Skills chargés à la demande (trigger détecté → lecture SKILL.md)
     │
@@ -41,7 +41,7 @@ _SYSTEM/kernel/
 ├── kernel.sh       ← incrémente .msg_count de façon atomique
 ├── scan-check.sh   ← lit .scan_interval, émet [scan] si c'est l'heure
 ├── .msg_count      ← compteur partagé (ne pas toucher)
-└── .scan_interval  ← intervalle en messages (défaut: 10)
+└── .scan_interval  ← intervalle en messages (défaut: 7)
 ```
 
 Branché via hook `UserPromptSubmit` (Claude Code) ou extension `.pi` (PI).
@@ -68,7 +68,7 @@ Le profil émerge de l'usage — il n'est pas rempli à la main.
 
 **Cycle d'adaptation :**
 1. L'IA observe des signaux pendant la session (style, domaine, rythme)
-2. Micro-scan tous les 10 messages → écrit dans `observations.md`
+2. Micro-scan tous les 7 messages → écrit dans `observations.md`
 3. Macro-scan à la clôture → consolide dans `👤profil.md` (Traits + Compétences)
 4. Au démarrage suivant → l'IA lit le profil et adapte son comportement
 

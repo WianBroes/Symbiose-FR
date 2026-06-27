@@ -1,7 +1,7 @@
 #!/bin/bash
 # scan-check.sh — outputs [scan] if it's time for a micro-scan
 # Usage: bash _SYSTEM/kernel/scan-check.sh
-# Reads interval from .scan_interval (default: 10).
+# Reads interval from .scan_interval (default: 7).
 # Called by PI extension and Claude Code hook after kernel.sh.
 
 set -euo pipefail
