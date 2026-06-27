@@ -32,6 +32,8 @@ trigger: "[scan]" détecté dans une system-reminder (UserPromptSubmit hook)
 | Recadre à un niveau d'abstraction supérieur | `systémique +1` |
 | Connecte deux domaines spontanément | `systémique +1` |
 | Arrive à une synthèse sans qu'on lui demande | `synthétiseur +1` |
+| Décrit un concept visuel complet en une phrase | `👁️ œil +1` |
+| Itère jusqu'à satisfaction esthétique (pas technique) | `👁️ œil +1` |
 
 ## Signaux skills (compétence)
 
@@ -56,6 +58,7 @@ Règles : max +2 XP par skill par scan. Nouveau skill → XP=1, emoji.
 | Cherche patterns / invariants | `🔭 pattern-matching +1` |
 | Identifie l'exception à la règle | `🔭 critique +1` |
 | Principe abstrait → cas concret | `🔭 déductive +1` |
+| Part de l'image mentale, choisit les outils après | `🔭 vision-driven +1` |
 
 Règles : incrémenter Sessions dans `🔭 En émergence`. Nouveau signal → créer entrée (Sessions: 1 + observation brute).
 
