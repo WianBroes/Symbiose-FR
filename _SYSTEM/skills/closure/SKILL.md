@@ -12,6 +12,26 @@ trigger: close|clôture|cloture|on a fini|closure|closure ritual
 
 **Exécution silencieuse.** Toutes les étapes s'exécutent en silence. Un seul bloc propre affiché à la fin (section 3). Pas de texte intermédiaire, pas de confirmation entre les étapes.
 
+## Checklist — afficher en tête du bloc final
+
+```
+✅ Checklist clôture
+- [ ] Macro-scan complet (traits · skills · découverte · synergies · question libre)
+- [ ] Mode dominant noté dans modes.md
+- [ ] Auto-amélioration mode actif (section 2b)
+- [ ] Questions en suspens vérifiées (section 6b)
+- [ ] Profil mis à jour (profil.md — traits, skills, émergence, synergies)
+- [ ] Observations ajoutées (observations.md)
+- [ ] Pipeline alpha révisé (section 7)
+- [ ] TRANSFERT mis à jour (section 6)
+- [ ] Kernel closure.sh exécuté (section 8)
+- [ ] Snapshot git commit (section 9)
+- [ ] Push GitHub
+- [ ] Mirror à vérifier (si fichiers _SYSTEM/ modifiés cette session)
+```
+
+Toutes les cases doivent être cochées avant d'afficher le bloc. Si une étape a été skippée pour une raison valide, la noter explicitement (`~[ ] raison`).
+
 ---
 
 ## 0. Vérification — contenu nouveau (OBLIGATOIRE)
