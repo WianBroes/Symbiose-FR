@@ -199,16 +199,19 @@ Attribuer la source : `[symbiose]` si ça émerge de l'interaction, `[IA]` si c'
 
 ### 1i. Mettre à jour les fichiers
 
-Appliquer toutes les détections des étapes précédentes :
+Appliquer toutes les détections des étapes précédentes, dans cet ordre :
 
-- `01_🧠Profil/👤profil.md` (🧬 Traits) — mettre à jour les scores
-- `01_🧠Profil/👤profil.md` (🎯 Compétences) — ajouter/incrémenter les XP
-- `01_🧠Profil/👤profil.md` (🔭 En émergence) — incrémenter les sessions, ajouter nouveaux signaux
-- `01_🧠Profil/👤profil.md` (🧠 Modes de pensée) — promouvoir si ≥ 3 sessions
-- `01_🧠Profil/👤profil.md` (⚡ Synergies) — ajouter ou incrémenter
-- `01_🧠Profil/memory/observations.md` — **append brut** (pas de sélection, pas de reformulation)
+1. **1b (comportements)** → écrire dans `observations.md` chaque phrase notée, préfixée par `Comportement :`
+2. **1c (domaines)** → écrire dans `observations.md` chaque domaine noté, préfixé par `Domaine :`
+3. **1e (raisonnement)** → écrire dans `observations.md` chaque pattern noté, préfixé par `Raisonnement :`
+4. **1f (question libre)** → écrire dans `observations.md` brut, tel quel
+5. **1g (poches)** → créer le fichier si validé
+6. **1h (synergies)** → ajouter dans `👤profil.md` (⚡ Synergies)
+7. Mettre à jour les scores traits dans `👤profil.md` (🧬 Traits)
+8. Mettre à jour les XP skills dans `👤profil.md` (🎯 Compétences)
+9. Mettre à jour `👤profil.md` (🔭 En émergence) — incrémenter sessions
 
-> C'est ici que tout ce qui a été détecté en 1b-1h est écrit. Si une détection n'a pas encore été écrite, elle l'est maintenant.
+> C'est ici que tout ce qui a été détecté en 1b-1h est écrit. Si une détection n'a pas encore été écrite, elle l'est maintenant. **Pas de détection sans trace écrite.**
 
 ### 1j. Notifier les changements significatifs
 
