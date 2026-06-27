@@ -115,16 +115,7 @@ Score = total_signaux_cumulés / nb_sessions_actives
 Chaque signal détecté en session s'ajoute au total cumulé du trait.
 Le score est la moyenne par session — stable, différencié, sans convergence artificielle.
 
-### 1e. Mettre à jour les fichiers
-
-- `01_🧠Profil/👤profil.md` (🧬 Traits) — mettre à jour les scores
-- `01_🧠Profil/👤profil.md` (🎯 Compétences) — ajouter/incrémenter les XP
-- `01_🧠Profil/👤profil.md` (🔭 En émergence) — incrémenter les sessions, ajouter nouveaux signaux
-- `01_🧠Profil/👤profil.md` (🧠 Modes de pensée) — promouvoir si ≥ 3 sessions
-- `01_🧠Profil/👤profil.md` (⚡ Synergies) — ajouter ou incrémenter
-- `01_🧠Profil/memory/observations.md` — **append brut** (pas de sélection, pas de reformulation)
-
-### 1f. Scan découverte — forme du raisonnement
+### 1e. Scan découverte — forme du raisonnement
 
 > Ce scan cherche **comment** il pense, pas ce qu'il sait. Remplir uniquement si signal observé — ne pas forcer.
 
@@ -158,9 +149,9 @@ Attribuer la source : `[symbiose]` si ça émerge de l'interaction, `[IA]` si c'
 
 ### 1g. Scan poches émergentes (profil)
 
-> Après avoir écrit les observations en 1f, avant le scan synergies.
+> Après la question libre (1f), avant le scan synergies (1h). Les fichiers sont mis à jour en 1i.
 
-**Quand :** à chaque clôture, après avoir append dans `observations.md`.
+**Quand :** à chaque clôture, après la question libre.
 
 **Procédure :**
 
@@ -211,7 +202,20 @@ Attribuer la source : `[symbiose]` si ça émerge de l'interaction, `[IA]` si c'
 
 > Ces exemples sont des amorces, pas des règles. Le système construit ses propres combinaisons depuis les éléments réels observés.
 
-### 1i. Notifier les changements significatifs
+### 1i. Mettre à jour les fichiers
+
+Appliquer toutes les détections des étapes précédentes :
+
+- `01_🧠Profil/👤profil.md` (🧬 Traits) — mettre à jour les scores
+- `01_🧠Profil/👤profil.md` (🎯 Compétences) — ajouter/incrémenter les XP
+- `01_🧠Profil/👤profil.md` (🔭 En émergence) — incrémenter les sessions, ajouter nouveaux signaux
+- `01_🧠Profil/👤profil.md` (🧠 Modes de pensée) — promouvoir si ≥ 3 sessions
+- `01_🧠Profil/👤profil.md` (⚡ Synergies) — ajouter ou incrémenter
+- `01_🧠Profil/memory/observations.md` — **append brut** (pas de sélection, pas de reformulation)
+
+> C'est ici que tout ce qui a été détecté en 1b-1h est écrit. Si une détection n'a pas encore été écrite, elle l'est maintenant.
+
+### 1j. Notifier les changements significatifs
 
 - Level-up de skill → notifier
 - Nouveau trait → notifier
