@@ -47,6 +47,11 @@ _SYSTEM/kernel/
 Branché via hook `UserPromptSubmit` (Claude Code) ou extension `.pi` (PI).
 L'IA reçoit `[scan]` dans le contexte quand c'est l'heure — elle ne gère pas le compteur.
 
+**Installation :**
+- **Claude Code :** `bash _SYSTEM/00_FIRST_STARTUP.md` section 3 — crée `.claude/settings.local.json` automatiquement
+- **PI :** crée l'extension `.pi/extensions/symbiose-kernel.ts` (template dispo dans la section 3 de `00_FIRST_STARTUP.md`)
+- **Autres outils :** le hook doit appeler `bash _SYSTEM/kernel/kernel.sh && bash _SYSTEM/kernel/scan-check.sh` après chaque message utilisateur
+
 ---
 
 ## Profil adaptatif

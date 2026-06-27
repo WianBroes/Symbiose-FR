@@ -14,6 +14,8 @@ count=$(cat "$COUNT" 2>/dev/null || echo 0)
 interval=$(cat "$INTERVAL_FILE" 2>/dev/null || echo 10)
 
 if [ $(( count % interval )) -eq 0 ]; then
+  echo "[scan]"
+  echo ""
   echo "⚠️ SCAN OBLIGATOIRE — Exécuter maintenant, avant de répondre à l'utilisateur :"
   cat "$(dirname "$0")/../../_SYSTEM/skills/scan/SKILL.md"
 fi

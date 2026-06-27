@@ -103,11 +103,25 @@ Claude Code détecté. Activer le kernel (micro-scans automatiques) ?
   Confirmer : *"Kernel activé — micro-scans toutes les 10 messages."*
 - **Si non** → continuer sans. Le système fonctionne, les scans se font uniquement à la clôture.
 
-**Si `PI_CODING_AGENT` détecté → proposer :**
+**Si `PI_CODING_AGENT` détecté → deux propositions :**
+
+**a. Kernel (micro-scans automatiques) :**
 
 ```
-PI détecté. Extension web-search disponible (recherche DuckDuckGo + lecture de pages).
-Installer maintenant ?
+PI détecté. Activer le kernel (micro-scans automatiques) ?
+L'extension est déjà dans le projet (.pi/extensions/symbiose-kernel.ts)
+et sera auto-découverte une fois le projet approuvé.
+  1. Oui (recommandé)
+  2. Non
+```
+
+- **Si oui** → confirmer : *"Kernel activé — micro-scans toutes les 10 messages. Approuve le projet si PI le demande."*
+- **Si non** → continuer sans. Le système fonctionne, les scans se font uniquement à la clôture.
+
+**b. Extension web-search (recherche DuckDuckGo + lecture de pages) :**
+
+```
+Installer l'extension web-search maintenant ?
   1. Oui
   2. Non
 ```

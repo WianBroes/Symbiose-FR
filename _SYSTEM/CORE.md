@@ -385,6 +385,7 @@ Voir `_SYSTEM/skills/_INDEX.md`.
 - **Séparation des projets** : approches différentes = dossiers différents, jamais fusionnés.
 - **Dépendance simple > dette performante** : un fichier de règles bat un modèle de 2GB.
 - **Auto-qualité** : après chaque fichier `.py`/`.js`/`.ts` modifié, lancer le linter et les tests. Corriger les avertissements avant de montrer les résultats.
+- **Push — souveraineté utilisateur** : jamais de `git push` sans confirmation explicite. L'IA doit demander "Je pousse ?" et attendre un "oui", "push" ou "pousse". Les réponses ambiguës ("vas-y", "test", "on y va", "go") ne comptent pas comme validation push — demander une confirmation claire.
 
 ---
 
