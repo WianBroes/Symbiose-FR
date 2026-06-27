@@ -10,6 +10,8 @@ trigger: close|clôture|cloture|on a fini|closure|closure ritual
 > La clôture est le seul moment où le système apprend de la session.
 > Sans elle, le système stagne.
 
+
+
 **Exécution silencieuse.** Toutes les étapes s'exécutent en silence. Un seul bloc propre affiché à la fin (section 3). Pas de texte intermédiaire, pas de confirmation entre les étapes.
 
 ## Checklist — afficher en tête du bloc final
