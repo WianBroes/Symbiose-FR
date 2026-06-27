@@ -10,7 +10,18 @@ trigger: close|clôture|cloture|on a fini|closure|closure ritual
 > La clôture est le seul moment où le système apprend de la session.
 > Sans elle, le système stagne.
 
+## Déclencheur mécanique
 
+Quand l'utilisateur dit "cloture" (ou tout autre trigger) :
+
+1. **Lire ce fichier.** `read _SYSTEM/skills/closure/SKILL.md`. Pas de mémoire, pas de résumé.
+2. **Exécuter la checklist.** Chaque étape dans l'ordre, une par une.
+3. **Ne pas décider.** Si c'est écrit, c'est fait. Si c'est pas écrit, c'est pas fait.
+4. **Ne pas adapter.** Pas de "cette fois c'est particulier". Le rituel est le même à chaque fois.
+
+> La seule exception : une étape qui dit explicitement "skip si X".
+
+---
 
 **Exécution silencieuse.** Toutes les étapes s'exécutent en silence. Un seul bloc propre affiché à la fin (section 3). Pas de texte intermédiaire, pas de confirmation entre les étapes.
 
