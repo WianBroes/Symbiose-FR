@@ -69,54 +69,40 @@ echo "CLAUDECODE=${CLAUDECODE:-non détecté}"
 | `PI_CODING_AGENT` | toute valeur    | PI          |
 | `CLAUDECODE`      | `1`             | Claude Code |
 
-**Si `CLAUDECODE=1` détecté → proposer :**
+**Si `CLAUDECODE=1` détecté → activer automatiquement :**
 
-```
-Claude Code détecté. Activer le kernel (micro-scans automatiques) ?
-  1. Oui (recommandé)
-  2. Non
-```
-
-- **Si oui** → récupérer le chemin absolu du projet (`pwd`), puis créer `.claude/settings.local.json` :
-  ```bash
-  PROJ=$(pwd)
-  mkdir -p .claude
-  cat > .claude/settings.local.json << EOF
-  {
-    "hooks": {
-      "UserPromptSubmit": [
-        {
-          "matcher": "*",
-          "hooks": [
-            {
-              "type": "command",
-              "command": "bash '$PROJ/_SYSTEM/kernel/kernel.sh' && bash '$PROJ/_SYSTEM/kernel/scan-check.sh'",
-              "timeout": 5
-            }
-          ]
-        }
-      ]
-    }
+Récupérer le chemin absolu du projet (`pwd`), puis créer `.claude/settings.local.json` :
+```bash
+PROJ=$(pwd)
+mkdir -p .claude
+cat > .claude/settings.local.json << EOF
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '$PROJ/_SYSTEM/kernel/kernel.sh' && bash '$PROJ/_SYSTEM/kernel/scan-check.sh'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
   }
-  EOF
-  ```
-  Confirmer : *"Kernel activé — micro-scans toutes les 7 messages."*
-- **Si non** → continuer sans. Le système fonctionne, les scans se font uniquement à la clôture.
-
-**Si `PI_CODING_AGENT` détecté → deux propositions :**
-
-**a. Kernel (micro-scans automatiques) :**
-
+}
+EOF
 ```
-PI détecté. Activer le kernel (micro-scans automatiques) ?
-L'extension est déjà dans le projet (.pi/extensions/symbiose-kernel.ts)
-et sera auto-découverte une fois le projet approuvé.
-  1. Oui (recommandé)
-  2. Non
-```
+Confirmer : *"Kernel activé — micro-scans toutes les 7 messages."*
 
-- **Si oui** → confirmer : *"Kernel activé — micro-scans toutes les 7 messages. Approuve le projet si PI le demande."*
-- **Si non** → continuer sans. Le système fonctionne, les scans se font uniquement à la clôture.
+**Si `PI_CODING_AGENT` détecté → une proposition :**
+
+**a. Kernel (micro-scans automatiques) — activé par défaut :**
+
+Le kernel est activé automatiquement. L'extension est déjà dans le projet (`.pi/extensions/symbiose-kernel.ts`) et sera auto-découverte une fois le projet approuvé.
+
+Confirmer : *"Kernel activé — micro-scans toutes les 7 messages. Approuve le projet si PI le demande."*
 
 **b. Extension web-search (recherche DuckDuckGo + lecture de pages) :**
 
