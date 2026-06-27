@@ -73,6 +73,9 @@ Dans ma mémoire, parcourir la session. Se poser 3 questions :
 3. **Qu'est-ce qui l'a arrêté ou relancé cette session ?**
    → Qu'est-ce qui a fermé un sujet ou en a ouvert un nouveau.
 
+4. **Qu'est-ce qu'il a répété sans le dire explicitement ?**
+   → Pas ce qu'il a dit — ce qu'il m'a fait faire. Le geste qui traverse ses corrections.
+
 **Répondre en phrases, pas en catégories.** Les étiquettes viennent après.
 
 ### 1b. Comportements observés
