@@ -25,9 +25,8 @@ trigger: close|clôture|cloture|on a fini|closure|closure ritual
 - [ ] Pipeline alpha révisé (section 7)
 - [ ] TRANSFERT mis à jour (section 6)
 - [ ] Kernel closure.sh exécuté (section 8)
-- [ ] Snapshot git commit (section 9)
-- [ ] Push GitHub
-- [ ] Mirror à vérifier (si fichiers _SYSTEM/ modifiés cette session)
+- [ ] Snapshot git commit local (section 9)
+- [ ] Mirror à vérifier (si fichiers _SYSTEM/ modifiés cette session — commit local EN uniquement, jamais push)
 ```
 
 Toutes les cases doivent être cochées avant d'afficher le bloc. Si une étape a été skippée pour une raison valide, la noter explicitement (`~[ ] raison`).

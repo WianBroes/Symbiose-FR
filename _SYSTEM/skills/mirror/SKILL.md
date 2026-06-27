@@ -136,20 +136,10 @@ Confirmer : *"[fichier] traduit et commité dans EN."*
 
 ---
 
-## Commande : `mirror push`
-
-Pousser les commits EN sur GitHub :
-
-```bash
-cd "$EN_ROOT"
-git push origin master
-```
-
----
-
 ## Notes
 
 - Ne jamais écraser un fichier EN sans afficher la traduction et obtenir confirmation.
+- **Le push GitHub (FR ou EN) est toujours à la discrétion de l'utilisateur.** L'IA ne push jamais — ni en clôture, ni après un mirror, ni pour aucune raison. Commits locaux uniquement.
 - Si le fichier EN existant est différent de la traduction → afficher les deux et laisser Wian choisir.
 - MIRROR_STATUS vit dans FR — c'est la source de vérité du tracking.
 - Les fichiers de données personnelles (profil, memory, observations, TRANSFERT) ne sont jamais mirrorés.
