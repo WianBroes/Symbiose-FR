@@ -62,6 +62,29 @@ Règles : max +2 XP par skill par scan. Nouveau skill → XP=1, emoji.
 
 Règles : incrémenter Sessions dans `🔭 En émergence`. Nouveau signal → créer entrée (Sessions: 1 + observation brute).
 
+## Détection ouverte (OBLIGATOIRE)
+
+> Les tableaux ci-dessus listent des signaux **connus**. Mais les vrais signaux sont ceux qu'on n'a pas encore identifiés.
+
+**Après avoir checké les 3 tableaux, se poser :**
+
+> *"Y a-t-il quelque chose dans ces échanges qui ne rentre dans aucune case, mais qui est notable ?"*
+
+Une attitude, une formulation, un mode de pensée, une réaction — qui n'est pas dans les tableaux mais qui pourrait devenir un nouveau signal.
+
+**Si oui :**
+1. Formuler le nouveau signal en une ligne
+2. Ajouter dans `🔭 En émergence` du profil (Sessions: 1)
+3. Noter l'observation brute dans `observations.md`
+
+> Ne pas forcer. Mais ne pas fermer. Les tableaux sont une base, pas une limite.
+
+**Cas typiques qui passent entre les mailles :**
+- Une réaction émotionnelle inattendue (surprise, frustration, admiration)
+- Une métaphore récurrente ("c'est comme...")
+- Un mode de décision (essai-erreur ? planification ? intuition ?)
+- Un rapport à la complexité (simplifie ou complexifie ?)
+
 ---
 
 ## Feedback (début de réponse)
