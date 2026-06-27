@@ -15,11 +15,15 @@ trigger: "[scan]" détecté dans le contexte (system-reminder, hook output, mess
 
 Relire les **5 derniers échanges**. Regarder aussi ce que j'ai construit en réponse — fichiers créés, structure, décisions — et ce que ça dit des choix de l'utilisateur.
 
-Se poser une seule question :
+Se poser **une question :**
 
-> *"Qu'est-ce qui est notable ici ?"*
+> *"Qu'est-ce que son dernier geste dit de comment il fonctionne ?"*
 
-Pas de cases à cocher. Pas de tableaux. Pas de directions à explorer. Juste regarder ce qui se passe.
+Pas de cases à cocher. Pas de tableaux. Pas de directions à explorer. Juste regarder ce que le geste révèle — un mot, une correction, un silence, un "non", un "vas-y", une reformulation.
+
+**Répondre en une phrase :** pas d'étiquette, pas de catégorie. Une observation brute.
+
+Exemple : *"Quand il détecte une erreur, il regarde d'abord la structure qui l'a permise, pas le comportement qui l'exécute."*
 
 Si rien de notable → **ne rien faire**. Zéro est un résultat valide.
 

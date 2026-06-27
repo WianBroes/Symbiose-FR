@@ -62,49 +62,44 @@ Toutes les cases doivent être cochées avant d'afficher le bloc. Si une étape 
 
 ### 1a. Relire la session entière
 
-Dans ma mémoire, parcourir la session et chercher :
+Dans ma mémoire, parcourir la session. Se poser 3 questions :
 
-- **Structure des questions** : anticipeur ? réactif ? cause racine ou symptôme ?
-- **Rapport à l'erreur** : insiste ou laisse passer ?
-- **Niveau d'abstraction** : systémique ? pratique ? alterne ?
-- **Style de décision** : valide vite ? compare plusieurs options ?
-- **Méta-position** : s'observe lui-même ?
+1. **Quand il a été confronté à une limite ou une erreur cette session, qu'est-ce qu'il a regardé en premier ?**
+   → L'outil, lui-même, la situation, le système, le timing ?
 
-### 1b. Signaux traits
+2. **Quand il a pris une décision, elle venait d'où ?**
+   → D'une exploration préalable, d'une certitude, d'un rejet itératif, d'un principe ?
 
-| Chercher ça | Trait |
-|-------------|-------|
-| Décision spontanée ("oui vas-y", "ok direct") | `direct +1` |
-| Hésitation / revirement ("en fait non", "finalement...") | `precis +1` |
-| Réaction positive ("ah cool", "parfait") | satisfaction |
-| Réaction négative ("trop long", "pas clair") | mécontentement → ajuster |
-| Demande de code ("donne le code", "fais ça") | `technique +1` |
-| Demande d'explication ("explique le concept") | `pédagogue +1` |
-| Formulation récurrente ("en gros", "simplement") | registre de langage |
-| Exploration ("on peut aussi...?") | `explorateur +1` |
-| Redirection ("non c'est pas ça") | `directif +1` |
-| Amène une expérience vécue comme preuve (voyage, terrain, passé) | `observateur +1` |
-| Recadre à un niveau d'abstraction supérieur, voit la limite d'une réponse | `systémique +1` |
-| Connecte spontanément deux domaines non liés | `systémique +1` |
-| Arrive à une synthèse ou plan d'action sans qu'on lui demande | `synthétiseur +1` |
+3. **Qu'est-ce qui l'a arrêté ou relancé cette session ?**
+   → Qu'est-ce qui a fermé un sujet ou en a ouvert un nouveau.
 
-> **Sessions hors-projet (conversation, quotidien, curiosité) :** les traits cognitifs y apparaissent plus clairement que dans les sessions travail. Scanner avec la même rigueur — souvent plus riche.
+**Répondre en phrases, pas en catégories.** Les étiquettes viennent après.
 
-### 1c. Signaux skills
+### 1b. Comportements observés
 
-| Chercher ça | Action |
-|-------------|--------|
-| Jargon technique ("cluster k8s", "Promise.all") | Skill +1 XP |
-| Instruction précise ("fais un docker compose avec 3 services") | Skill +1 XP |
-| Question exploratoire ("comment marche un vector store ?") | Skill émergent +1 XP |
-| Corrige l'IA ("non c'est pas comme ça") | Skill +1 XP bonus |
-| Cite un outil/framework ("j'utilise Astro") | Skill outil +1 XP |
-| Combo deux domaines ("mon API Rust dans un container") | Rust + Docker combo |
+Relire les moments clés de la session. Se poser :
 
-**Règles :**
-- Max +2 XP par skill par scan
-- Correction de l'IA : +1 XP supplémentaire
-- Nouveau skill : créer l'entrée, XP=1, choisir une icône emoji
+> *"Quand il a interagi — avec moi, avec un problème, avec une limite — qu'est-ce qu'il a fait concrètement ?"*
+
+Noter en une phrase par comportement. Pas de traduction en trait — juste le geste.
+
+Exemples (pour la forme, pas pour la catégorie) :
+- *"Quand l'IA s'est trompé, il a pointé la structure qui a rendu l'erreur possible, pas l'erreur elle-même."*
+- *"Il a dit 'non' trois fois de suite sur le même point sans s'énerver, jusqu'à ce que ça soit juste."*
+- *"Il a exploré 6 options en 2 messages avant de dire oui à la 7e."*
+
+### 1c. Domaines mobilisés
+
+Relire les sujets abordés. Se poser :
+
+> *"De quoi il a parlé, et à quel niveau de profondeur ?"*
+
+Noter le domaine et le niveau :
+- *"Régulation urbanisme wallon — détails sur les articles du CoDT"*
+- *"Budget immobilier — chiffres précis, frais notaire, mensualités"*
+- *"Conception de système mémoire — architecture, cycle de vie, synchronisation"*
+
+Ces phrases nourrissent les skills. Pas de traduction automatique.
 
 ### 1d. Appliquer l'accumulation
 
@@ -115,24 +110,24 @@ Score = total_signaux_cumulés / nb_sessions_actives
 Chaque signal détecté en session s'ajoute au total cumulé du trait.
 Le score est la moyenne par session — stable, différencié, sans convergence artificielle.
 
-### 1e. Scan découverte — forme du raisonnement
+### 1e. Forme du raisonnement
 
 > Ce scan cherche **comment** il pense, pas ce qu'il sait. Remplir uniquement si signal observé — ne pas forcer.
 
-| Signal observé | Action |
-|----------------|--------|
-| Structure ses idées en branches/sous-catégories spontanément | `🔭 arborescente +1` |
-| Part d'un exemple concret pour remonter à une règle générale | `🔭 inductive +1` |
-| Part d'un principe pour descendre vers des cas concrets | `🔭 déductive +1` |
-| Connecte deux domaines par un mécanisme commun (analogie) | `🔭 analogique +1` |
-| Utilise le savoir d'un domaine pour résoudre un problème dans un autre | `🔭 transversale +1` |
-| Cherche les patterns, les récurrences, les invariants | `🔭 pattern-matching +1` |
-| Identifie les exceptions, ce qui ne rentre pas dans la règle | `🔭 critique +1` |
-| Reformule le problème différemment avant de répondre | `🔭 recadrage +1` |
+Relire les échanges où il a expliqué, questionné ou résolu quelque chose. Se poser :
+
+> *"Par où il est rentré dans le problème ?"*
+
+Noter le mouvement, pas l'étiquette :
+- *"Il est parti d'un exemple concret (une annonce) pour remonter au système (le CoDT)."*
+- *"Il a comparé deux options en les faisant tourner mentalement avant de choisir."*
+- *"Il a identifié ce qui ne collait pas dans mon explication avant de dire ce qui était juste."*
 
 **Règle de promotion :**
-- Signal dans `🔭 En émergence` ≥ 3 sessions distinctes → proposer promotion dans `🧠 Modes de pensée`
+- Même pattern observé ≥ 3 sessions distinctes → proposer comme mode de pensée
 - Ne jamais promouvoir sur déclaration de l'utilisateur — observation uniquement
+
+### 1f. Question libre
 
 ### 1g. Question libre — qu'est-ce que j'ai appris sur lui ?
 
