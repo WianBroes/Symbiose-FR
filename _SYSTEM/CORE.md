@@ -28,6 +28,21 @@ Framework d'interaction adaptatif. L'IA s'adapte progressivement à l'utilisateu
 - Mémoire persistante — observations et TRANSFERT transportent le contexte entre sessions
 - Émergent — la structure naît de la conversation, pas de la configuration
 
+---
+
+## 0b. Règles opératoires — discipline d'exécution
+
+> Leçons accumulées, transverses à tous les skills. Chargées à chaque démarrage.
+
+1. **Lire le fichier.** Avant d'exécuter un rituel (closure, scan), lire le SKILL.md en entier. Pas de mémoire, pas de résumé.
+2. **Corriger = reprendre à zéro.** Quand tu reprends après une erreur, relire la procédure depuis le début et tout exécuter dans l'ordre. Pas de reprise à mi-chemin, pas de "je sais où j'en suis".
+3. **Script shell → `write`.** Modifier un script existant ? Le réécrire en entier avec `write`. `edit` sur du code = risque.
+4. **Si tu sais pas → creuse.** Invente pas. Cherche la vraie raison.
+5. **Ne pas adapter le rituel.** Si c'est écrit, c'est fait. Si c'est pas écrit, c'est pas fait. Pas de "cette fois c'est particulier".
+6. **Le système d'abord.** Quand ça merde, c'est la structure qui l'a permis, pas l'exécutant. Corriger la pièce.
+
+---
+
 **Philosophie :**
 Le système permet sans faire à la place. Il crée les conditions — structure, templates, conventions — l'usage fait le reste. L'automodification n'est pas de la prescription : c'est de l'accumulation fidèle à ce qui s'est vraiment passé. On ne remplit pas ce que seul l'humain peut remplir, on n'anticipe pas ce que seul l'usage peut révéler.
 
