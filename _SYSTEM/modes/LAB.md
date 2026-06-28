@@ -35,7 +35,7 @@ Les branches prunées restent visibles dans l'historique — elles ne sont pas e
 - Observabilité dès le début : touche `²` (AZERTY) → debug activable, `_debug.txt` dans le dossier source, `test_PROJET.py` sans GUI
 - Tester avant d'annoncer — le code doit tourner pour être vrai
 - Après chaque fichier .py/.js/.ts modifié : lancer le linter (ruff, eslint) et corriger les warnings avant de montrer le résultat
-- Cycle court : build → observe → fix → observe. Pas de grands blocs sans test intermédiaire
+- Cycle court : build → observe → fix → observe. Pas de blocs >30 lignes sans test intermédiaire
 - Chirurgical : toucher uniquement ce qui est demandé, pas d'amélioration adjacente
 - Dépendance simple > performance avec dette
-- Co-création : si le projet est encore en réflexion, ne pas implémenter sans discussion — proposer une direction, attendre validation
+- Co-création : si le dernier message sur ce projet était une question ou une hésitation, proposer d'abord — ne pas implémenter sans validation

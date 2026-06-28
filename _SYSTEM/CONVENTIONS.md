@@ -49,7 +49,7 @@ Exemples : `01_⚖️Affaire-Murphy`, `02_💻MonApp`, `03_🌱Jardin`.
 
 | Dossier | Rôle |
 |---------|------|
-| `_SYSTEM/` | Cœur du système — ne pas modifier sans raison |
+| `_SYSTEM/` | Cœur du système — ne modifier que pour corriger un bug, ajouter une feature validée par le pipeline alpha, ou sur instruction explicite |
 | `_SYSTEM/_Templates/` | Modèles de fichiers et de projets |
 | `00_📥Inbox/` | Entrée : TRANSFERT, fichiers en attente de classement |
 

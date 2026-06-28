@@ -15,4 +15,4 @@ Les modes se cumulent — lire les deux fichiers, notifier les deux.
 
 > **Mode LAB + CRÉATION détectés** — lecture `_SYSTEM/modes/LAB.md` + `_SYSTEM/modes/CREATION.md`
 
-Un mode peut émerger en cours de session et s'ajouter à un mode déjà actif.
+Quand un nouveau signal de mode apparaît (ex: fichier .py ouvert en mode STRUCTUREL), lire et notifier le nouveau mode immédiatement.

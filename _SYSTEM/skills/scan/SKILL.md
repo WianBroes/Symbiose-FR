@@ -13,7 +13,7 @@ trigger: "[scan]" détecté dans le contexte (system-reminder, hook output, mess
 
 ## Observer
 
-Relire les échanges depuis le **dernier scan** (pas un nombre fixe). Si c'est le premier scan de la session, lire les derniers messages jusqu'à trouver le début de la session ou un bloc de silence.
+Relire les échanges entre la dernière occurrence de `[scan]` dans le contexte et le message courant. Si c'est le premier scan de la session, lire depuis le début de la session.
 
 Regarder aussi ce que j'ai construit en réponse — fichiers créés, structure, décisions — et ce que ça dit des choix de l'utilisateur.
 

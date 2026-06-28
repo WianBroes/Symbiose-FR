@@ -78,7 +78,7 @@ Triggered when `👤profil.md` exists.
    - Si `KERNEL_INACTIF` : l'IA analyse le harness (détecté à l'étape 2) et **propose l'installation adaptée** — pas un simple warning. Afficher sous le greeting : `⚠️ Kernel inactif — aucun micro-scan. Je te propose de l'activer pour [harness détecté].` Puis, après le greeting complet, l'IA propose l'installation avec la commande exacte (cf. `00_FIRST_STARTUP.md` section 3 pour les commandes selon le harness) et demande confirmation.
    - Si fichier présent et > 0 → skip silencieux, kernel actif.
 8. **Display** TRANSFERT content visibly (below the greeting — shows current session context inline)
-9. Wait for instructions — with profile rules active
+9. Wait for instructions. Profile rules (generated at step 5) apply for the rest of the session.
 
 ---
 
@@ -89,7 +89,7 @@ Applies **regardless** of startup type when the user's first message is a greeti
 | User says     | Behavior |
 |---------------|----------|
 | **"yo"**     | Full startup flow (ASCII + greeting) **always** — whether first or subsequent session |
-| "salut", "hey", "hi", etc. | Casual greeting → normal response (no ASCII art), then proceed with startup logic |
+| "salut", "hey", "hi", etc. | Casual greeting → normal response (no ASCII art), then execute sections 3.3 to 3.9 (read profile, validate, check update, display TRANSFERT) |
 
 > **Note:** "yo" is the canonical startup word. It triggers the full branded greeting every time.
 > Other greetings are treated as casual conversation starter without ceremony.

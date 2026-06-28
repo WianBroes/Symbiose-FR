@@ -45,7 +45,7 @@ Brancher un hook équivalent qui appelle les 2 scripts et injecte `[scan]` dans 
 **Skills (domaine) :**
 - Compétence déjà référencée → +1 XP
 - Nouveau skill → créer l'entrée, XP=1, choisir un emoji
-- Correction de l'IA par l'utilisateur → +1 XP bonus (même si déjà au max)
+- Erreur factuelle, logique erronée, ou formulation incorrecte signalée par l'utilisateur → +1 XP bonus (même si déjà au max)
 - Max **+2 XP** par skill par micro-scan
 
 **Modes de pensée (🔭 En émergence) :**

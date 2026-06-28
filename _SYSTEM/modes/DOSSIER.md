@@ -12,4 +12,4 @@
 
 - Citation verbatim ou marquée `[interprétation probable]` — jamais d'affirmation nue
 - Ne jamais insérer une interprétation IA dans un document comme si c'était un fait
-- Repartir des sources brutes — ne pas faire confiance aux anciens outputs sans vérification
+- Repartir des sources brutes — avant de réutiliser un output IA produit avant la session courante, revérifier la source originale
