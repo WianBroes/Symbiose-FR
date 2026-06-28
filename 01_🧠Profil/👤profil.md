@@ -42,13 +42,13 @@ Stoïcisme — distinguer ce qui dépend de moi / ce qui n'en dépend pas. Le pr
 
 ## 🧬 Traits
 
-| Trait | Score | Signaux | Dernière observation |
-|-------|-------|---------|---------------------|
-| directif | 1.0 | 4 | 2026-06-28 — Décisions claires, valide par l'action ("test les") |
-| systémique | 2.5 | 10 | 2026-06-28 — Questionne les estimations, voit les angles morts, détecte les mauvais calibrages |
-| stratégique | 0.75 | 3 | 2026-06-27 — Approche par couches |
-| explorateur | 0.5 | 2 | 2026-06-28 — "J'ai pas dit non" — ne ferme pas les portes |
-| précis | 1.75 | 7 | 2026-06-28 — Corrige les suppositions, détecte les incohérences système |
+| Trait | Score | Signaux | Sessions | Dernière observation |
+|-------|-------|---------|---------|---------------------|
+| directif | 1.33 | 4 | 4 | 2026-06-28 — Décisions claires, valide par l'action ("test les") |
+| systémique | 3.33 | 10 | 3 | 2026-06-28 — Questionne les estimations, voit les angles morts, détecte les mauvais calibrages |
+| stratégique | 1.0 | 3 | 3 | 2026-06-27 — Approche par couches |
+| explorateur | 1.0 | 2 | 2 | 2026-06-28 — "J'ai pas dit non" — ne ferme pas les portes |
+| précis | 2.33 | 7 | 3 | 2026-06-28 — Corrige les suppositions, détecte les incohérences système |
 
 ## 🎯 Compétences
 
