@@ -57,3 +57,10 @@ type: Symbiose.MemoryLog
 - [macro-scan] 2026-06-28 : [symbiose, high] Suit un diagnostic externe (Dev) dans l'ordre — priorité par l'analyse, pas par l'urgence.
 - [macro-scan] 2026-06-28 : [symbiose, medium] Valide sec et enchaîne — "oui" suffit, pas de retour.
 - [macro-scan] 2026-06-28 : [symbiose, high] Session : 7 chantiers système traités (rôles v2, tests, redondances, entrées, backup, règle, modes supprimés).
+
+## [2026-06-28] — macro-scan (session 7)
+- [micro-scan] 2026-06-28 : [symbiose, medium] Quand un mécanisme ne s'est pas déclenché, Wian remonte la chaîne de causalité lui-même, valide la correction et enchaîne immédiatement.
+- [macro-scan] 2026-06-28 : [symbiose, medium] Il a détecté un écart entre l'attendu (dream lancé) et le réel, remonté la chaîne de causalité jusqu'à la racine (extension non installée).
+- [macro-scan] 2026-06-28 : [symbiose, medium] Il creuse plus profond que la réponse donnée — il veut comprendre pourquoi le système a permis ce trou.
+- [macro-scan] 2026-06-28 : [symbiose, medium] Domaine : conception système Symbiose (kernel, extensions, dream), infrastructure PI (extensions, hooks).
+- [macro-scan] 2026-06-28 : [symbiose, medium] Raisonnement : de l'effet à la cause racine, pas de l'hypothèse à la vérification.

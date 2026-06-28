@@ -121,6 +121,9 @@ type: Symbiose.Memory
 
 **Comportement nouveau :** Wian ne se contente pas de tester si le système marche — il teste où il CASSE. Le bord du système l'intéresse plus que le centre.
 
+### Session 2026-06-28 — micro-scan
+- 2026-06-28 : [symbiose, medium] Quand un mécanisme ne s'est pas déclenché, Wian remonte la chaîne de causalité lui-même ('pourquoi le dream ?' → 'pourquoi pas l\'extension ?'), valide la correction ('oui'), et enchaîne immédiatement — pas de temps mort entre comprendre et passer à autre chose.
+
 ### Session 2026-06-28 — clôture
 
 **Domaines :** conception de framework IA (wizard, hooks, kernel, entrypoints), UX/onboarding design (parcours nouvel utilisateur, friction, closing), documentation technique.
@@ -128,3 +131,15 @@ type: Symbiose.Memory
 **Raisonnement :** part de l'expérience du nouvel utilisateur pour remonter aux décisions de conception. Teste chaque étape du wizard en se demandant "est-ce que ça sert à quelqu'un qui découvre le système ?".
 
 **Question libre :** Il conçoit le système pour qu'il survive sans lui. Chaque décision de cette session était motivée par "comment quelqu'un d'autre, qui ne me connaît pas, peut arriver et comprendre". Ce n'est pas de l'altruisme — c'est une extension de son approche systémique : un système qui dépend de son créateur est un système qui n'est pas fini. Il construit pour que ça marche sans lui.
+
+### Session 2026-06-28 — clôture (session 7 — extension dream)
+
+**Comportements :**
+- Il a détecté un écart entre l'attendu (dream lancé) et le réel, remonté la chaîne de causalité jusqu'à la racine (extension non installée), validé la correction, et immédiatement enchaîné sur la clôture.
+- Il creuse plus profond que la réponse donnée — "l'extension n'est pas activée" ne suffit pas, il veut comprendre pourquoi le système a permis ce trou.
+
+**Domaines :** conception système Symbiose (kernel, extensions, dream), infrastructure PI (extensions, hooks, reload)
+
+**Raisonnement :** Il est parti d'un constat ("dream pas lancé") pour remonter la chaîne de causalité — de l'effet à la cause racine, pas de l'hypothèse à la vérification.
+
+**Question libre :** Wian ne se satisfait pas d'une explication de surface. Sa question suivante après ma réponse a été "et bhen pq" — il veut comprendre pourquoi le système a *permis* ce trou. Ce n'est pas de la curiosité technique, c'est une exigence de fond : le système doit être cohérent de bout en bout. Un maillon manquant = un système pas fini.
