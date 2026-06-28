@@ -6,7 +6,7 @@ active_role: symbiose
 last_scan: 2026-06-28
 last_update: 2026-06-28
 sessions_total: 7
-observations_total: 45
+observations_total: 35
 ---
 
 # 👤 Profil
@@ -37,25 +37,30 @@ Stoïcisme — distinguer ce qui dépend de moi / ce qui n'en dépend pas. Le pr
 
 | Mode | Sessions | Observation |
 |------|----------|-------------|
-| stratégique | 3 | Approche par couches — pose une question simple, obtient la réponse, ajoute une couche, révèle progressivement le vrai besoin. Teste les limites avant de montrer le scope complet. |
 | inductive | 1 | Part d'exemples concrets (annonces, prix, terrains) pour remonter aux règles générales (CoDT, permis, urbanisme) |
 | critique | 2 | Détecte les exceptions, les explications qui ne collent pas. Identifie ce qui ne rentre pas dans le récit | |
+
+## 🧠 Modes de pensée
+
+| Mode | Sessions | Pattern |
+|------|----------|--------|
+| stratégique | 3 | Approche par couches — pose simple, valide, ajoute une couche. Teste les limites avant le scope complet. |
 
 ## 🧬 Traits
 
 | Trait | Score | Signaux | Sessions | Dernière observation |
 |-------|-------|---------|---------|---------------------|
-| directif | 1.17 | 7 | 6 | 2026-06-28 — Remonte la chaîne de causalité, valide et enchaîne immédiatement |
-| systémique | 3.2 | 16 | 5 | 2026-06-28 — Remonte la chaîne dream → extension comme chaîne de causalité système |
+| directif | 1.33 | 8 | 6 | 2026-06-28 — Vérifie et corrige, valide par le résultat, pas par la confiance |
+| systémique | 3.4 | 17 | 5 | 2026-06-28 — Utilise le pipeline CI comme filet de sécurité système |
 | stratégique | 1.0 | 3 | 3 | 2026-06-27 — Approche par couches |
-| explorateur | 1.0 | 3 | 3 | 2026-06-28 — Valide et enchaîne, ne micro-manage pas |
-| précis | 2.25 | 9 | 4 | 2026-06-28 — Corrige le cadre quand il est dans le bon axe mais pas la bonne posture |
+| explorateur | 1.0 | 4 | 4 | 2026-06-28 — Pose la même question sous plusieurs angles jusqu'à réponse satisfaisante |
+| précis | 2.5 | 10 | 4 | 2026-06-28 — Insiste sur la vérification de l'infrastructure jusqu'à cohérence complète |
 
 ## 🎯 Talents
 
 | Icône | Talent | XP | Niveau |
 |-------|-------|----|-------|
-| 🔧 | Conception système | 6 | ⭐⭐ Apprenti |
+| 🔧 | Conception système | 8 | ⭐⭐ Apprenti |
 
 <!-- Talents archivés (inactifs) : Permaculture (2XP), Artisanat (2XP), Bâtiment (1XP) -->
 
@@ -63,7 +68,7 @@ Stoïcisme — distinguer ce qui dépend de moi / ce qui n'en dépend pas. Le pr
 
 | Combinaison | Sessions | Piste |
 |-------------|----------|-------|
-| systémique + précis + critique | 2 | Rigueur épistémique — voit l'architecture du système (systémique), détecte l'imprécision (précis), identifie ce qui ne colle pas (critique). |
 | systémique + précis | 3 ✅ active | Calibrage système — Wian détecte quand un réglage est faux et propose l'ajustement exact. |
+| systémique + précis + critique | 2 🔄 candidate | Rigueur épistémique : voit l'architecture (systémique), détecte l'imprécision (précis), repère ce qui ne colle pas (critique). |
 
 <!-- Talents observés — émergent de l'usage -->

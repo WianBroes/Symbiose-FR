@@ -64,3 +64,15 @@ type: Symbiose.MemoryLog
 - [macro-scan] 2026-06-28 : [symbiose, medium] Il creuse plus profond que la réponse donnée — il veut comprendre pourquoi le système a permis ce trou.
 - [macro-scan] 2026-06-28 : [symbiose, medium] Domaine : conception système Symbiose (kernel, extensions, dream), infrastructure PI (extensions, hooks).
 - [macro-scan] 2026-06-28 : [symbiose, medium] Raisonnement : de l'effet à la cause racine, pas de l'hypothèse à la vérification.
+[2026-06-28] [dream] Consolidation terminée : 45 observations compactées en 35, 0 archivées (low confidence), 10 motifs confirmés, H5 créée.
+[2026-06-28] [micro-scan] [symbiose, high] Utilise le pipeline CI comme filet de sécurité système — push en sachant que ça fail, la correction suit dans le flux.
+
+## [2026-06-28] — macro-scan
+- [macro-scan] [2026-06-28] : [symbiose, high] Comportement : quand il savait que le CI échouait, a demandé la correction et vérifié le résultat — pas le détail de l'erreur.
+- [macro-scan] [2026-06-28] : [symbiose, high] Comportement : a posé 3 fois une question d'infrastructure sous des angles différents jusqu'à réponse satisfaisante.
+- [macro-scan] [2026-06-28] : [symbiose, high] Comportement : a clos immédiatement après validation — pas de micro-gestion.
+- [macro-scan] [2026-06-28] : [symbiose, high] Domaine : infrastructure PI (extensions, hooks, loading cycle).
+- [macro-scan] [2026-06-28] : [symbiose, high] Domaine : CI/CD GitHub Actions (workflow, ShellCheck).
+- [macro-scan] [2026-06-28] : [symbiose, high] Domaine : Shell scripting (SC2034, SC2206).
+- [macro-scan] [2026-06-28] : [symbiose, high] Raisonnement : part d'une certitude (CI fail) → remonte la chaîne scripts → extension → hook.
+- [macro-scan] [2026-06-28] : [symbiose, high] Question libre : Wian utilise la vérification comme mode de pilotage — ne s'arrête pas à 'c'est réparé', remonte jusqu'à cohérence complète. Un maillon non vérifié = un système pas fini.

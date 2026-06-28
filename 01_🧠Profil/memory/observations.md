@@ -5,141 +5,110 @@ type: Symbiose.Memory
 # Observations
 
 > Dernier dream : 2026-06-28
-> Budget : 2.3 KB / 5 KB max
+> Budget : 4.1 KB / 10 KB max
 > Format : `[AAAA-MM-JJ] : [source, confidence] description`
 
 ## 🌳 Arbre d'hypothèses
 
 ### H1: Approche systémique dominante · ✅ confirmé
 - **B1.1** · Voit le problème systémique derrière le cas particulier → extrapole un exemple à l'ensemble du système
-- **B1.2** · Quand ça ne marche pas deux fois → change le système, pas le comportement. La correction est structurelle. ([obs] 2026-06-27)
-- **B1.3** · Conçoit ses outils comme des extensions de sa pensée — le mécanisme doit être aussi fiable qu'un engrenage. ([obs] 2026-06-27)
-- **B1.4** · Conçoit le système en l'utilisant — usage et métaconception ne sont pas séparés. ([obs] 2026-06-27)
-- **B1.5** · Part d'un exemple concret pour remonter au problème systémique. ([obs] 2026-06-27)
+- **B1.2** · 2 échecs → change le système, pas le comportement. La correction est structurelle.
+- **B1.3** · Conçoit ses outils comme des extensions de sa pensée — fiabilité mécanique
+- **B1.4** · Conçoit le système en l'utilisant — usage et métaconception inséparables
+- **B1.5** · Raisonnement : part du concret → remonte au problème systémique
+- **B1.6** · Remonte la chaîne de causalité de l'effet à la cause racine (dream pas lancé → extension pas installée)
+- **B1.7** · Conçoit le système pour qu'il survive sans lui — chaque décision motivée par le parcours nouvel utilisateur
 - **→ Insight** : Présenter un cas concret d'abord, pas une règle générale. Wian teste, observe, puis abstrait.
 
 ### H2: Rigueur épistémique élevée · ✅ confirmé
-- **B2.1** · Exige l'exactitude — ne laisse pas passer une formulation imprécise, même dans une règle qu'il a lui-même inspirée. ([obs] 2026-06-27)
-- **B2.2** · Quand une règle est trop vague → la cite textuellement pour montrer pourquoi elle tient pas, puis attend la reformulation. ([obs] 2026-06-27)
-- **B2.3** · Domaine : prompt engineering — précision des consignes, formulation actionnable. ([obs] 2026-06-27)
-- **B2.4** · Feedback : kernel/microscan doit être infrastructure par défaut, pas optionnel — ne pas laisser les fondations en option. ([obs] 2026-06-27)
-- **→ Insight** : Formulation chirurgicale ou rien. Wian lit chaque mot. "Optionnel" = vague, "par défaut" = actionnable.
+- **B2.1** · Exige l'exactitude — ne laisse pas passer une formulation imprécise, même dans ses propres règles
+- **B2.2** · Règle vague → citation textuelle + attend reformulation
+- **B2.3** · Domaine : prompt engineering — précision des consignes, formulation actionnable
+- **B2.4** · Feedback : infrastructure par défaut, pas optionnel ("kernel par défaut")
+- **B2.5** · Corrige le cadre avant le contenu — si bon axe mais mauvaise posture, redresse le cadre, pas le détail
+- **B2.6** · Démantele les mécanismes cosmétiques : "le switch n'existe pas" → vrai problème = contradictions entre rôles
+- **→ Insight** : Formulation chirurgicale ou rien. "Optionnel" = vague, "par défaut" = actionnable.
 
 ### H3: Apprentissage par itération et pattern recognition · 🔬 en test
-- **B3.1** · Enseigne par itération — fait la même chose jusqu'à ce que le pattern soit visible. ([obs] 2026-06-27)
-- **B3.2** · Co-conception : émergence guidée, pas de structure pré-imposée. Les patterns émergent de l'usage. ([obs] 2026-06-27)
-- **B3.3** · Approche urbanisme : teste les limites juridiques par couches avant de révéler le vrai besoin. ([obs] 2026-06-27)
-- **→ Insight** : Wian valide un pattern en le voyant se répéter. Une démonstration unique ne suffit pas.
+- **B3.1** · Enseigne par itération — répète jusqu'à ce que le pattern soit visible
+- **B3.2** · Co-conception : émergence guidée, pas de structure pré-imposée
+- **B3.3** · Approche urbanisme : teste les limites juridiques par couches avant de révéler le vrai besoin
+- **B3.4** · Suit un diagnostic externe (Dev) dans l'ordre — priorité donnée par l'analyse, pas par l'urgence
+- **B3.5** · Part de démonstrations concrètes (tests A/B/C/D) → remonte aux principes du framework
+- **→ Insight** : Wian valide un pattern en le voyant se répéter. Une démo unique ne suffit pas.
 
 ### H4: Profil maker/constructeur · 🔬 en test
-- **B4.1** · Certifié permaculture, artiste multi-disciplinaire (menuiserie, peinture, sculpture). ([obs] 2026-06-27)
-- **B4.2** · Ateliers et terre sont le vrai besoin, l'habitation est utilitaire. ([obs] 2026-06-27)
-- **B4.3** · Approche maker de la vie : construit, répare, transforme. Pragmatique — parle budget, caravane, calendrier. ([obs] 2026-06-27)
-- **B4.4** · A besoin de comprendre le paysage complet avant d'agir — territoire, règles, options, budget. ([obs] 2026-06-27)
+- **B4.1** · Certifié permaculture, multi-disciplinaire (menuiserie, peinture, sculpture)
+- **B4.2** · Ateliers et terre = vrai besoin. Habitation = utilitaire. Pragmatique (budget, caravane, calendrier)
+- **B4.3** · A besoin du paysage complet avant d'agir — territoire, règles, options, budget
 - **→ Insight** : Cadrer les réponses par le concret (coût, faisabilité, calendrier) avant la théorie.
+
+### H5: Test aux limites (border thinker) · 🔬 en test [NOUVEAU]
+- **B5.1** · Le bord du système l'intéresse plus que le centre — teste où ça casse, pas où ça marche
+- **B5.2** · Teste les limites par des edge cases (protokine, simulation 50 messages) plutôt que par des démos
+- **B5.3** · Ne fait pas confiance aux résultats sans les vérifier lui-même — demande une preuve visible
+- **B5.4** · Valide par l'action : "test les", "déclenche les" — pas de validation théorique
+- **→ Insight** : Présenter les limites et les cas d'échec en premier. Wian valide par les bords, pas par le centre.
 
 ## Observations brutes
 
-### Cluster systémique
-- 2026-06-27 : [symbiose] Conçoit le système en l'utilisant. Usage et métaconception ne sont pas séparés.
-- 2026-06-27 : [symbiose] Quand quelque chose ne marche pas deux fois → change le système, pas le comportement.
-- 2026-06-27 : [symbiose] Conçoit ses outils comme des extensions de sa pensée — fiabilité mécanique.
-- 2026-06-27 : Raisonnement : part d'un exemple concret pour remonter au problème systémique.
-- 2026-06-27 : Feedback kernel : infrastructure par défaut, pas optionnel.
+### Systémique
+- 2026-06-27 : [symbiose] Conçoit le système en l'utilisant — usage et métaconception inséparables
+- 2026-06-27 : [symbiose] 2 échecs → change le système, pas le comportement
+- 2026-06-27 : [symbiose] Outils = extensions de pensée, fiabilité mécanique
+- 2026-06-27 : [symbiose] Raisonnement : concret → systémique
+- 2026-06-27 : [symbiose] Kernel par défaut, pas optionnel
+- 2026-06-28 : [symbiose, high] Remonte causalité effet → cause racine (dream → extension)
+- 2026-06-28 : [symbiose, high] Conçoit pour survivre sans lui — parcours nouvel utilisateur
 
-### Cluster précision
-- 2026-06-27 : [symbiose] Ne laisse pas passer une formulation imprécise — même dans ses propres règles.
-- 2026-06-27 : Règle trop vague → cite textuellement + attend reformulation.
-- 2026-06-27 : Domaine : prompt engineering — précision des consignes, formulation actionnable.
-- 2026-06-27 : Correction closure : chaque clôture complète, sans garde, sans question. Wian gère le rythme.
+### Précision & cadre
+- 2026-06-27 : [symbiose] Ne laisse pas passer l'imprécision — même dans ses propres règles
+- 2026-06-27 : [symbiose] Règle vague → citation + reformulation attendue
+- 2026-06-27 : [symbiose] Prompt engineering — formulations actionnables
+- 2026-06-27 : [symbiose] Closure : complète, sans garde, sans question
+- 2026-06-28 : [symbiose, high] Bon axe, mauvaise posture → corrige le cadre, pas le contenu
+- 2026-06-28 : [symbiose, high] Démantele cosmétique : "le switch n'existe pas" → contradiction réelle
 
-### Cluster maker
-- 2026-06-27 : Session exploration urbanisme hangar — approche itérative, teste les limites par couches.
-- 2026-06-27 : Profil maker : certifié permaculture, multi-disciplinaire (menuiserie, peinture, sculpture).
-- 2026-06-27 : Ateliers et terre = vrai besoin. Habitation = utilitaire. Pragmatique (budget, caravane, calendrier).
+### Test & validation aux limites
+- 2026-06-28 : [symbiose, high] Vérifie avant de croire — demande preuve visible
+- 2026-06-28 : [symbiose, high] Valide par l'action : "test les", "déclenche les"
+- 2026-06-28 : [symbiose, high] Teste les limites par edge cases, pas par démos
+- 2026-06-28 : [symbiose, high] Le bord du système > le centre
+- 2026-06-28 : [symbiose, high] "J'ai pas dit non" — portes ouvertes
+- 2026-06-28 : [symbiose, high] "J'aurais tendance à tout prendre" — accepte en bloc
+- 2026-06-28 : [symbiose, medium] Suit diagnostic externe dans l'ordre — priorité par analyse
 
-### Cluster co-conception & pédagogie
-- 2026-06-27 : Co-conception poches profil — closure détecte les clusters, dream consolide, validation utilisateur obligatoire.
-- 2026-06-27 : Enseigne par itération — répète jusqu'à ce que le pattern soit visible.
-- 2026-06-27 : Wian gère le rythme — ne pas anticiper, ne pas décider seul.
+### Profil & contexte
+- 2026-06-27 : [symbiose] Certifié permaculture, multi-disciplinaire (menuiserie, peinture, sculpture)
+- 2026-06-27 : [symbiose] Ateliers/terre = vrai besoin. Habitation = utilitaire
+- 2026-06-27 : [symbiose] Pragmatique : budget, caravane, calendrier
+- 2026-06-28 : [symbiose, high] A besoin du paysage complet avant d'agir
 
-### Session 2026-06-28
-- 2026-06-28 : [symbiose, high] Wian ne fait pas confiance aux résultats sans les vérifier lui-même.
-- 2026-06-28 : [symbiose, high] Approche par couches — lance petit, valide, puis étend.
-- 2026-06-28 : [symbiose, high] Teste la confiance de l'IA : "a oue t'es certain ?"
-- 2026-06-28 : [symbiose, high] Quand l'IA affirme un résultat, demande une preuve visible.
-- 2026-06-28 : [symbiose, high] "J'ai pas dit non" — ne ferme pas les portes, les laisse ouvertes.
-- 2026-06-28 : [symbiose, high] Questionne les estimations et voit des angles non considérés.
-- 2026-06-28 : [symbiose, high] Détecte le mauvais calibrage du dream — ajuste sans critiquer.
-- 2026-06-28 : [symbiose, high] "J'aurais tendence a tout prendre" — accepte les propositions en bloc.
-- 2026-06-28 : [symbiose, high] Valide par l'action : "test les", "déclenche les".
-- 2026-06-28 : [symbiose, high] Raisonnement : part du concret (recherche) → remonte au structurel (implémente).
+### Co-conception & rythme
+- 2026-06-27 : [symbiose] Poches : closure détecte, dream consolide, validation utilisateur
+- 2026-06-27 : [symbiose] Enseigne par itération — répète jusqu'à pattern visible
+- 2026-06-27 : [symbiose] Wian gère le rythme — ne pas anticiper, ne pas décider seul
+- 2026-06-28 : [symbiose, high] Approche par couches — lance petit, valide, étend
+- 2026-06-28 : [symbiose, medium] Architecture claire → confiance sur l'exécution
+- 2026-06-28 : [symbiose, medium] Respect du protocole = signal en soi
 
-### Session 2026-06-28 (suite)
-- 2026-06-28 : [symbiose, medium] Wian ne laisse pas passer une procédure mal exécutée même si l'intention était bonne — le respect du protocole est un signal en soi.
-
-- 2026-06-28 : [symbiose, high] Quand la proposition est dans le bon axe mais pas le bon cadre, il corrige le cadre — pas le contenu.
-- 2026-06-28 : [symbiose, high] Démantele le "switch de rôle" en une phrase — le switch n'existe pas, c'est un cumul. Redirige vers le vrai problème : les contradictions entre rôles.
-- 2026-06-28 : [symbiose, medium] Une fois le cadre corrigé, valide et enchaîne — pas de micro-gestion, pas de retour.
-- 2026-06-28 : [symbiose, medium] Suit la liste de Dev dans l'ordre, un chantier à la fois — priorité donnée par le diagnostic, pas par l'urgence.
-
-### Session 2026-06-28 (suite) — macro-scan
-
-**Comportements :**
-- Corrige le cadre avant le contenu — quand la proposition est dans le bon axe mais pas la bonne posture, il redresse le cadre, pas le détail.
-- Démantele les mécanismes cosmétiques en une phrase — "le switch n'existe pas" → le vrai problème est la contradiction entre rôles.
-- Suit un diagnostic externe (Dev) dans l'ordre, sans en sauter ni en ajouter — la priorité est donnée par l'analyse, pas par l'urgence.
-- Valide sec et enchaîne — "oui" suffit, pas de retour en arrière, pas de micro-gestion.
-
-**Domaines :** conception de framework IA (système de rôles, modes), tests et validation système, shell scripting (backup), architecture markdown-pure.
-
-**Raisonnement :** part d'un diagnostic technique (analyse de Dev) → exécute les correctifs un par un dans l'ordre → valide par le test.
-
-**Question libre :** Wian n'a pas besoin de comprendre un système pour juger de sa qualité — il détecte les coutures qui vont craquer par instinct structurel. Le "switch" cosmétique, il l'a vu avant même de l'utiliser. Ce qui l'intéresse c'est la mécanique réelle, pas la présentation.
-
-### Session 2026-06-28 — scan (wizard first startup)
-- 2026-06-28 : [symbiose, medium] Quand il conçoit un point d'entrée, il pense aussi à la sortie — le closing du wizard doit être utile, pas juste décoratif. Rediriger vers `02_🧬Symbiose/` pour la suite.
-
-### Session 2026-06-28 — scan (wizard first startup)
-- 2026-06-28 : [symbiose, medium] Après avoir construit un correctif, ne vérifie pas le code — vérifie le parcours d'un nouvel utilisateur de zéro à prêt. Pense l'expérience d'autrui, pas seulement la sienne.
-- 2026-06-28 : [symbiose, medium] Conçoit les chemins de repli avant l'échec — "si pas de sub-agent, propose d'installer". Pas de cul-de-sac.
-- 2026-06-28 : [symbiose, medium] Valide le système en simulant le point de vue de quelqu'un qui ne le connaît pas.
+### Design framework
+- 2026-06-28 : [symbiose, high] Points d'entrée = aussi sorties — closing utile, pas décoratif
+- 2026-06-28 : [symbiose, medium] Après correctif : vérifie le parcours utilisateur, pas le code
+- 2026-06-28 : [symbiose, medium] Conçoit les chemins de repli avant l'échec — pas de cul-de-sac
+- 2026-06-28 : [symbiose, medium] Valide le système en simulant le point de vue du novice
+- 2026-06-28 : [symbiose, high] Question libre : construit pour que ça marche sans lui
+- 2026-06-28 : [symbiose, high] Utilise le pipeline CI comme filet de sécurité système — push en sachant que ça fail, la correction suit
 
 ### Session 2026-06-28 — clôture
 
 **Comportements :**
-- Quand la preuve est présentée, il valide sec et passe à la question suivante — ne s'arrête pas sur la confirmation.
-- Il teste les limites du système par des edge cases (protokine, simulation 50 messages) plutôt que de demander une démo.
-- Il clarifie quand l'IA interprète mal son intention ("les data des roles sont partagé") — reformule jusqu'à ce que ça colle.
-- Une fois l'architecture claire, il dit "modifie ce qui doit l'être" — pas de micro-management, confiance sur l'exécution.
+- Comportement : Quand il savait que le CI échouait, il n'a pas demandé le détail de l'erreur — il a demandé la correction et vérifié le résultat.
+- Comportement : A posé 3 fois une question d'infrastructure sous des angles différents jusqu'à avoir une réponse satisfaisante.
+- Comportement : A clos immédiatement après validation de l'infrastructure — pas de micro-gestion après le feu vert.
 
-**Domaines :** architecture système IA, design de framework, rôles/mémoires persistantes, protocole de test.
+**Domaines :** Infrastructure PI (extensions, hooks, loading cycle), CI/CD GitHub Actions (workflow, ShellCheck), Shell scripting (SC2034, SC2206)
 
-**Raisonnement :** part de démonstrations concrètes (tests A/B/C/D, duel Kairos) pour remonter aux principes du framework.
+**Raisonnement :** Part d'une certitude (CI fail) → demande vérification → remonte la chaîne : scripts ShellCheck → extension kernel → hook PI. Chaque réponse ouvre la question d'infrastructure suivante.
 
-**Question libre :** Wian cherche à savoir jusqu'où on peut façonner l'IA sans la modifier en profondeur. La réponse qu'il construit est : pas besoin de modifier — le cadre fait le travail. Mais il ne s'arrête pas là : il veut savoir comment ce cadre se transmet, comment il évolue, et comment il s'incarne dans des rôles distincts. La session n'a pas répondu à "est-ce que ça marche" mais à "comment on rend ça transmissible et modulaire".
-
-**Comportement nouveau :** Wian ne se contente pas de tester si le système marche — il teste où il CASSE. Le bord du système l'intéresse plus que le centre.
-
-### Session 2026-06-28 — micro-scan
-- 2026-06-28 : [symbiose, medium] Quand un mécanisme ne s'est pas déclenché, Wian remonte la chaîne de causalité lui-même ('pourquoi le dream ?' → 'pourquoi pas l\'extension ?'), valide la correction ('oui'), et enchaîne immédiatement — pas de temps mort entre comprendre et passer à autre chose.
-
-### Session 2026-06-28 — clôture
-
-**Domaines :** conception de framework IA (wizard, hooks, kernel, entrypoints), UX/onboarding design (parcours nouvel utilisateur, friction, closing), documentation technique.
-
-**Raisonnement :** part de l'expérience du nouvel utilisateur pour remonter aux décisions de conception. Teste chaque étape du wizard en se demandant "est-ce que ça sert à quelqu'un qui découvre le système ?".
-
-**Question libre :** Il conçoit le système pour qu'il survive sans lui. Chaque décision de cette session était motivée par "comment quelqu'un d'autre, qui ne me connaît pas, peut arriver et comprendre". Ce n'est pas de l'altruisme — c'est une extension de son approche systémique : un système qui dépend de son créateur est un système qui n'est pas fini. Il construit pour que ça marche sans lui.
-
-### Session 2026-06-28 — clôture (session 7 — extension dream)
-
-**Comportements :**
-- Il a détecté un écart entre l'attendu (dream lancé) et le réel, remonté la chaîne de causalité jusqu'à la racine (extension non installée), validé la correction, et immédiatement enchaîné sur la clôture.
-- Il creuse plus profond que la réponse donnée — "l'extension n'est pas activée" ne suffit pas, il veut comprendre pourquoi le système a permis ce trou.
-
-**Domaines :** conception système Symbiose (kernel, extensions, dream), infrastructure PI (extensions, hooks, reload)
-
-**Raisonnement :** Il est parti d'un constat ("dream pas lancé") pour remonter la chaîne de causalité — de l'effet à la cause racine, pas de l'hypothèse à la vérification.
-
-**Question libre :** Wian ne se satisfait pas d'une explication de surface. Sa question suivante après ma réponse a été "et bhen pq" — il veut comprendre pourquoi le système a *permis* ce trou. Ce n'est pas de la curiosité technique, c'est une exigence de fond : le système doit être cohérent de bout en bout. Un maillon manquant = un système pas fini.
+**Question libre :** Wian utilise la vérification comme mode de pilotage. Il ne s'arrête pas à 'c'est réparé' — il remonte la chaîne jusqu'à ce que le système soit cohérent de bout en bout. Un maillon non vérifié = un système pas fini. Ce n'est pas du scepticisme, c'est une exigence de complétude.
