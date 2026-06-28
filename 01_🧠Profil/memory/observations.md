@@ -78,6 +78,25 @@ type: Symbiose.Memory
 ### Session 2026-06-28 (suite)
 - 2026-06-28 : [symbiose, medium] Wian ne laisse pas passer une procédure mal exécutée même si l'intention était bonne — le respect du protocole est un signal en soi.
 
+- 2026-06-28 : [symbiose, high] Quand la proposition est dans le bon axe mais pas le bon cadre, il corrige le cadre — pas le contenu.
+- 2026-06-28 : [symbiose, high] Démantele le "switch de rôle" en une phrase — le switch n'existe pas, c'est un cumul. Redirige vers le vrai problème : les contradictions entre rôles.
+- 2026-06-28 : [symbiose, medium] Une fois le cadre corrigé, valide et enchaîne — pas de micro-gestion, pas de retour.
+- 2026-06-28 : [symbiose, medium] Suit la liste de Dev dans l'ordre, un chantier à la fois — priorité donnée par le diagnostic, pas par l'urgence.
+
+### Session 2026-06-28 (suite) — macro-scan
+
+**Comportements :**
+- Corrige le cadre avant le contenu — quand la proposition est dans le bon axe mais pas la bonne posture, il redresse le cadre, pas le détail.
+- Démantele les mécanismes cosmétiques en une phrase — "le switch n'existe pas" → le vrai problème est la contradiction entre rôles.
+- Suit un diagnostic externe (Dev) dans l'ordre, sans en sauter ni en ajouter — la priorité est donnée par l'analyse, pas par l'urgence.
+- Valide sec et enchaîne — "oui" suffit, pas de retour en arrière, pas de micro-gestion.
+
+**Domaines :** conception de framework IA (système de rôles, modes), tests et validation système, shell scripting (backup), architecture markdown-pure.
+
+**Raisonnement :** part d'un diagnostic technique (analyse de Dev) → exécute les correctifs un par un dans l'ordre → valide par le test.
+
+**Question libre :** Wian n'a pas besoin de comprendre un système pour juger de sa qualité — il détecte les coutures qui vont craquer par instinct structurel. Le "switch" cosmétique, il l'a vu avant même de l'utiliser. Ce qui l'intéresse c'est la mécanique réelle, pas la présentation.
+
 ### Session 2026-06-28 — clôture
 
 **Comportements :**

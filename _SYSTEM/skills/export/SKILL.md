@@ -26,7 +26,6 @@ _SYSTEM/startup_ascii.md
 _SYSTEM/analyse.md
 _SYSTEM/skills/
 _SYSTEM/_Templates/
-_SYSTEM/modes/
 _SYSTEM/pi-extensions/
 .gitignore
 ```
@@ -53,7 +52,6 @@ Exporte `01_🧠Profil/` pour migration vers une nouvelle machine ou un nouvel o
   👤profil.md
   memory/
     observations.md
-    modes.md
   profile/
     (tous les fichiers)
 ```
@@ -97,7 +95,7 @@ cp _SYSTEM/AUTOSTART.md _SYSTEM/CORE.md _SYSTEM/CONVENTIONS.md \
    _SYSTEM/startup_ascii.md _SYSTEM/analyse.md "$DEST/_SYSTEM/"
 cp -r _SYSTEM/skills "$DEST/_SYSTEM/"
 cp -r _SYSTEM/_Templates "$DEST/_SYSTEM/"
-cp -r _SYSTEM/modes "$DEST/_SYSTEM/"
+# _SYSTEM/modes/ supprimé (fin de vie)
 cp -r _SYSTEM/pi-extensions "$DEST/_SYSTEM/"
 ```
 

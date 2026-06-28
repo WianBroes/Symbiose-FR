@@ -5,8 +5,8 @@ format: okf-v0.1
 active_role: symbiose
 last_scan: 2026-06-28
 last_update: 2026-06-28
-sessions_total: 6
-observations_total: 42
+sessions_total: 5
+observations_total: 38
 ---
 
 # 👤 Profil
@@ -45,11 +45,11 @@ Stoïcisme — distinguer ce qui dépend de moi / ce qui n'en dépend pas. Le pr
 
 | Trait | Score | Signaux | Sessions | Dernière observation |
 |-------|-------|---------|---------|---------------------|
-| directif | 1.2 | 6 | 5 | 2026-06-28 — Valide par l'action, suit la liste de Dev sans dévier |
-| systémique | 3.0 | 12 | 4 | 2026-06-28 — Démantele les mécanismes cosmétiques, voit le vrai problème structurel |
+| directif | 1.33 | 4 | 4 | 2026-06-28 — Décisions claires, valide par l'action ("test les") |
+| systémique | 3.33 | 10 | 3 | 2026-06-28 — Questionne les estimations, voit les angles morts, détecte les mauvais calibrages |
 | stratégique | 1.0 | 3 | 3 | 2026-06-27 — Approche par couches |
-| explorateur | 1.0 | 3 | 3 | 2026-06-28 — Valide et enchaîne, ne micro-manage pas |
-| précis | 2.25 | 9 | 4 | 2026-06-28 — Corrige le cadre quand il est dans le bon axe mais pas la bonne posture |
+| explorateur | 1.0 | 2 | 2 | 2026-06-28 — "J'ai pas dit non" — ne ferme pas les portes |
+| précis | 2.33 | 7 | 3 | 2026-06-28 — Corrige les suppositions, détecte les incohérences système |
 
 ## 🎯 Compétences
 

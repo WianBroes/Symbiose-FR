@@ -17,7 +17,7 @@ Open a [GitHub issue](https://github.com/WianBroes/Symbiose-FR/issues) with:
 
 ## 📐 Rules
 
-- **Structure**: respect `_SYSTEM/` organization (CORE.md, skills/, kernel/, modes/)
+- **Structure**: respect `_SYSTEM/` organization (CORE.md, skills/, kernel/)
 - **.md files**: explain why, not what
 - **Behavior**: don't break the startup sequence (`AUTOSTART.md` → `CORE.md`)
 - **Memory**: don't touch `01_🧠Profil/` in PRs — it's user-specific and gitignored

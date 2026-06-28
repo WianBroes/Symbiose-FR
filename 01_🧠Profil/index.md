@@ -8,5 +8,5 @@ type: Symbiose.Sommaire
 
 - `👤profil.md` — Profil utilisateur, machine, traits, compétences
 - `memory/observations.md` — Observations cumulées session par session
-- `memory/modes.md` — Historique des modes et sessions
+- `memory/observations.md` — Observations cumulées session par session
 - `log.md` — Historique des modifications

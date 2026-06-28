@@ -3,6 +3,7 @@
 | Rôle | Description | Créé le | Appels |
 |------|-------------|---------|--------|
 | [symbiose](symbiose.md) | IA générale du système. Voix par défaut. | 2026-06-28 | 4 |
+| [dev](dev.md) | Dev paresseux malin. Connaît le code, sa simplicité, ses chemins courts. Inspiré Ponytail. | 2026-06-28 | 0 |
 
 ---
 

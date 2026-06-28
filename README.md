@@ -76,7 +76,7 @@ Symbiose/                  ← ce que tu télécharges sur git
     ├── AUTOSTART.md       ← séquence de démarrage
     ├── kernel/            ← compteur mécanique multi-outils
     ├── skills/            ← modules chargeables à la demande
-    ├── modes/             ← comportements contextuels (LAB, STRUCTUREL…)
+    ├── tests/             ← tests d'intégrité du framework
     └── pi-extensions/     ← extensions optionnelles pour PI
 
 ⬇️ Créés au premier démarrage (gitignorés — ne jamais committer) :

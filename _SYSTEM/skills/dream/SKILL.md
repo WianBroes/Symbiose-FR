@@ -30,9 +30,8 @@ trigger: auto (dream_requested flag) | manuel ("fais un dream", "consolide les o
 
 1. Lire `01_🧠Profil/memory/observations.md` — arbre d'hypothèses 🌳 + observations brutes
 2. Lire `01_🧠Profil/👤profil.md` — section 🧬 Traits, scores actuels
-3. Lire `01_🧠Profil/memory/modes.md` — historique des modes
-4. Lire `01_🧠Profil/👤profil.md` — section 🔭 En émergence (signaux modes de pensée accumulés)
-5. Lire `01_🧠Profil/👤profil.md` — section ⚡ Synergies (synergies candidates + sessions)
+3. Lire `01_🧠Profil/👤profil.md` — section 🔭 En émergence (signaux modes de pensée accumulés)
+4. Lire `01_🧠Profil/👤profil.md` — section ⚡ Synergies (synergies candidates + sessions)
 
 ### Phase 1b — Mettre à jour l'arbre d'hypothèses
 

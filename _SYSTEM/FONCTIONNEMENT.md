@@ -63,7 +63,7 @@ Le profil émerge de l'usage — il n'est pas rempli à la main.
 ├── 👤profil.md        ← Machine + Utilisateur + 🧬 Traits + 🎯 Compétences
 └── memory/
     ├── observations.md ← signaux bruts accumulés session après session
-    └── modes.md        ← historique des modes dominants par session
+    └── observations.md  ← observations sur l'utilisateur
 ```
 
 **Cycle d'adaptation :**
@@ -98,7 +98,7 @@ L'IA a une voix par défaut (Symbiose) et peut en adopter d'autres à la demande
 - Le `active_role` est stocké dans `👤profil.md`
 - Chaque rôle a sa voix (fichier .md) et sa mémoire (`memory/observations.md`)
 - Tous les rôles partagent le profil utilisateur — ils savent qui tu es
-- On peut **incarner** un rôle (changer la voix de la session) ou l'**invoquer** en subagent (tâche isolée)
+- On peut **charger** un rôle focus (ajouter ses règles à Symbiose, jamais à la place) ou l'**invoquer** en subagent (voix pure, tâche isolée, mémoire propre)
 - À la clôture, la mémoire du rôle actif est sauvegardée
 
 ---
@@ -120,22 +120,6 @@ _SYSTEM/skills/
 
 ---
 
-## Modes
-
-Auto-détectés par les signaux de session. Chaque mode suggère un niveau d'autonomie.
-
-| Mode | Signal détecté | Autonomie |
-|------|---------------|-----------|
-| LAB | fichiers .py/.js/.ts, shell, builds | AUTONOME |
-| STRUCTUREL | uniquement .md, réorganisation | SÉCURISÉ |
-| DOSSIER | sources à croiser, analyse | SÉCURISÉ |
-| CRÉATION | design, écriture libre | AUTONOME |
-| META | questions sur Symbiose lui-même | CRITIQUE |
-
-Les modes se combinent. L'utilisateur peut override à tout moment.
-
----
-
 ## Pipeline alpha
 
 Toute évolution du système suit un cycle de vie formalisé :
@@ -151,4 +135,4 @@ Géré dans `_SYSTEM/alpha/`. Évite les modifications non contrôlées du cœur
 ## Reset
 
 Supprimer `01_🧠Profil/👤profil.md` → le wizard se relance à la prochaine session.
-Le système (skills, modes, kernel) survit. Seul le profil utilisateur est recréé.
+Le système (skills, kernel) survit. Seul le profil utilisateur est recréé.

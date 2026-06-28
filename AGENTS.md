@@ -65,20 +65,8 @@ Exemples :
 
 ## Skills disponibles
 
-> Skills chargés à la demande. Lire `SKILL.md` du skill correspondant dès que le trigger est détecté.
-> Format : `_SYSTEM/skills/[nom]/SKILL.md`
-
-| Skill | Fichier | Triggers |
-|-------|---------|---------|
-| **scan** | `_SYSTEM/skills/scan/SKILL.md` | `[scan]` détecté dans system-reminder — **automatique, priorité maximale** |
-| **import** | `_SYSTEM/skills/import/SKILL.md` | "importer", "indexer", "traiter l'inbox", "ajouter ces docs", fichiers dans `00_📥Inbox/` |
-| **export** | `_SYSTEM/skills/export/SKILL.md` | "exporter", "export framework", "export profil", "backup", "préparer pour GitHub", migration vers nouvelle machine |
-| **closure** | `_SYSTEM/skills/closure/SKILL.md` | "close", "clôture", "on a fini", "closure ritual" |
-| **dream** | `_SYSTEM/skills/dream/SKILL.md` | "fais un dream", "consolide les observations", "nettoie la memoire" |
-| **new-project** | `_SYSTEM/skills/new-project/SKILL.md` | "nouveau projet", "ajouter un dossier", "créer un projet", "nouveau dossier" |
-| **update** | `_SYSTEM/skills/update/SKILL.md` | "update", "mise à jour", "mettre à jour", "check update" |
-| **role** | `_SYSTEM/skills/role/SKILL.md` | "passe en mode [rôle]", "nouveau rôle", "demande à [rôle]" — voix spécialisées avec mémoire propre |
-| **mirror** | `_SYSTEM/skills/mirror/SKILL.md` | "mirror", "mirror check", "mirror [fichier]", "synchroniser EN", "traduire [fichier]" |
+> Voir `_SYSTEM/skills/_INDEX.md` pour la liste complète (déclencheurs + descriptions).
+> Chargés à la demande : l'IA lit le `SKILL.md` correspondant dès que le trigger est détecté.
 
 ---
 

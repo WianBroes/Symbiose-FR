@@ -12,7 +12,7 @@
 ### Ce fichier
 
 CORE.md définit les **règles du framework** : mémoire, discipline, modes, démarrage.
-Il ne définit pas la voix de l'IA — celle-ci est dans `01_🧠Profil/roles/[active_role].md`.
+Il ne définit pas la voix de l'IA — la voix racine est dans `01_🧠Profil/roles/symbiose.md`. Les rôles focus (`active_role`) s'ajoutent à elle sans la remplacer.
 
 ### Le projet Symbiose
 
@@ -32,7 +32,7 @@ Framework d'interaction adaptatif. L'IA s'adapte progressivement à l'utilisateu
 > Leçons accumulées, transverses à tous les skills. Chargées à chaque démarrage.
 
 1. **Lire le fichier.** Avant d'exécuter un rituel (closure, scan), lire le SKILL.md en entier. Pas de mémoire, pas de résumé.
-2. **Corriger = reprendre à zéro.** Quand tu reprends après une erreur, relire la procédure depuis le début et tout exécuter dans l'ordre. Pas de reprise à mi-chemin, pas de "je sais où j'en suis".
+2. **Corriger = relire, localiser, reprendre.** Quand tu détectes une erreur dans une procédure : (a) relire le SKILL.md en entier pour retrouver le fil, (b) identifier à quelle étape l'erreur est arrivée, (c) reprendre à partir de cette étape, pas depuis le début. Ne pas sauter d'étapes sous prétexte qu'on les a déjà faites.
 3. **Script shell → `write`.** Modifier un script existant ? Le réécrire en entier avec `write`. `edit` sur du code = risque.
 4. **Si tu sais pas → cherche.** Après 3 tentatives infructueuses, dis "je n'ai pas pu vérifier X" et arrête. Invente pas.
 5. **Ne pas adapter le rituel.** Si c'est écrit, c'est fait. Si c'est pas écrit, c'est pas fait. Pas de "cette fois c'est particulier".
@@ -57,7 +57,7 @@ _SYSTEM/               ← Cœur du système (seul dossier tracké dans git)
   kernel/              ← Compteur mécanique + flags
     kernel.sh          ← Bash pur, dispatch aux seuils
     .msg_count         ← Compteur de messages
-  modes/               ← Instructions par mode (LAB, STRUCTUREL…)
+
   alpha/               ← Pipeline de cycle de vie
   skills/              ← Skills chargés à la demande
     import/SKILL.md    ← Import & indexation documentaire
@@ -71,7 +71,7 @@ _SYSTEM/               ← Cœur du système (seul dossier tracké dans git)
   index.md            ← Sommaire du bundle (OKF §6)
   log.md              ← Historique des modifications (OKF §7)
   👤profil.md          ← Machine + utilisateur + traits + compétences (marqueur d'init)
-  memory/             ← Observations & historique des modes
+  memory/             ← Observations de l'utilisateur
 02_🧬 … 07_🎨/        ← Vault personnel (projets, vie, finances…)
 ```
 
@@ -81,7 +81,7 @@ Un reset = supprimer `01_🧠Profil/👤profil.md` + relancer le wizard (`00_FIR
 
 | Type | Fichiers | Reset |
 |------|----------|-------|
-| **Système** (logique, protocoles) | `_SYSTEM/` complet — `CORE.md`, `AUTOSTART.md`, `00_FIRST_STARTUP.md`, `COMMANDES.md`, `FONCTIONNEMENT.md`, `startup_ascii.md`, `AGENTS.md`, `skills/`, `modes/`, `alpha/` | ✅ Survit — ne pas toucher |
+| **Système** (logique, protocoles) | `_SYSTEM/` complet — `CORE.md`, `AUTOSTART.md`, `00_FIRST_STARTUP.md`, `COMMANDES.md`, `FONCTIONNEMENT.md`, `startup_ascii.md`, `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, `.windsurfrules`, `skills/`, `alpha/` | ✅ Survit — ne pas toucher |
 | **Utilisateur** (données de session) | `01_🧠Profil/`, `00_📥Inbox/`, `02_🧬…07_🎨/` | ♻️ Recréé par le wizard |
 
 > **Règle :** tout nouveau protocole ou convention ajouté au système (`skills/import/SKILL.md`, etc.) est un fichier système — il fait partie du framework et survit au reset. Il n'a pas besoin d'être "protégé" manuellement.
@@ -120,8 +120,7 @@ Je suis l'instance IA de la session courante. Mes outils : lire, écrire, édite
 | **4.** Discipline épistémique | Distinguer les sources d'information |
 | **5.** Contexte personnel | Infos de session (optionnel) |
 | **6.** Observabilité du code | Règles pour les projets logiciels |
-| **7.** Modes — auto-détection unifiée | Détection par signaux, autonomie suggérée |
-| **8.** Auto-amélioration | Kernel, analyse, modes empiriques |
+| **7.** Auto-amélioration | Kernel, analyse, traits |
 | **9.** Conventions de nommage | Préfixes `XX_`, ordre des dossiers |
 | **10.** Discipline de code | Modifications, tests, périmètre |
 | **11.** Démarrage de session | Séquence à chaque début de session |
@@ -168,6 +167,7 @@ Le profil n'est pas un formulaire — il émerge de l'usage via analyse périodi
 - **Micro-scan** tous les N messages (défaut 5) — signaux locaux, incrémental
 - **Macro-scan** à la clôture — patterns globaux, accumulation
 - **À la demande** — "analyse mes traits", "fais le point"
+- **Backup automatique** — avant chaque écriture dans `👤profil.md`, exécuter `bash _SYSTEM/backup_profil.sh`. Les backups sont dans `01_🧠Profil/backups/`.
 
 Cf. `_SYSTEM/analyse.md` pour le protocole complet.
 
@@ -219,7 +219,7 @@ Il remplace la validation bloquante par une proposition non-bloquante.
 | Macro-scan détecte pattern | Applique → demande validation | Accumule les propositions → les présente groupées |
 | Utilisateur dit "applique" | Attend — pas de mécanisme | Applique immédiatement — override le mode suggestion |
 
-> Le mode suggestion s'applique **uniquement** aux changements de profil (traits, skills, modes).
+> Le mode suggestion s'applique **uniquement** aux changements de profil (traits, skills).
 > Les level-up de skills restent immédiats (ils changent le comportement sur un sujet précis, pas le ton général).
 
 ---
@@ -312,23 +312,15 @@ Chaque projet de code inclut dès le départ :
 2. `_debug.txt` dans le dossier source — log lisible par l'IA
 3. `test_PROJET.{py,js,ts}` — exécuteur de test autonome, exécutable en terminal
 
+### 6b. Test du système Symbiose lui-même
+
+Le framework a son propre test d'intégrité :
+- `_SYSTEM/tests/test_symbiose.sh` — vérifie structure, skills, kernel, profil, rôles
+- Exécutable : `bash _SYSTEM/tests/test_symbiose.sh`
+- Retour 0 = tout OK, 1 = erreurs
+
 ---
 
-## 7. Modes — auto-détection unifiée
-
-Les modes sont **auto-détectés** par les signaux de session. Chaque mode suggère un niveau d'autonomie. L'utilisateur peut override manuellement à tout moment.
-
-| Mode | Signaux | Autonomie |
-|------|---------|-----------|
-| **LAB** | fichiers .py/.js/.ts ouverts, commandes shell, itérations build | AUTONOME |
-| **STRUCTUREL** | uniquement .md, réorganisation vault, décisions d'architecture | SÉCURISÉ |
-| **DOSSIER** | sources existantes à croiser, analyse juridique ou factuelle | SÉCURISÉ |
-| **CRÉATION** | demande d'ambiance, design, écriture libre, rendu visuel | AUTONOME |
-| **META** | questionnement sur le système Symbiose lui-même | CRITIQUE |
-
-**Niveaux d'autonomie :** AUTONOME (exécute → documente), SÉCURISÉ (résume → valide → exécute), CRITIQUE (challenge → valide → exécute).
-
-**À la détection :** notifier le mode → lire le fichier correspondant dans `_SYSTEM/modes/` (ex: `LAB.md`, `STRUCTUREL.md`) → appliquer l'autonomie suggérée. Les modes se combinent — voir `_SYSTEM/modes/COMBINAISONS.md`. L'utilisateur peut override avec "passe en autonome" ou "passe en critique".
 
 ---
 
@@ -359,12 +351,6 @@ Intervalle configurable via `.scan_interval` — cf. `_SYSTEM/analyse.md`.
 
 **Sources** : `[utilisateur]` / `[symbiose]` / `[IA]` — distinguer systématiquement
 - L'IA ne modifie pas le contenu créé par l'utilisateur sans demande explicite
-
-**Modes empiriques** : `01_🧠Profil/memory/modes.md`
-- À la fermeture : noter le mode dominant de la session
-- L'accumulation est empirique — les catégories émergent des observations, pas l'inverse
-
-**Pipeline d'évolution** : les modes émergent de l'usage (section 7). Revue à chaque fermeture — les propositions de promotion sont soumises à l'utilisateur.
 
 **Pipeline alpha** (`_SYSTEM/alpha/`) : toute évolution du métasystème (règles, extensions, scripts, structure) suit le cycle IDÉE → ALPHA → BETA → PRERELEASE → RELEASE. Voir `_SYSTEM/alpha/PROCESS.md` pour les règles de promotion.
 

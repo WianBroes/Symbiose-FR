@@ -42,3 +42,18 @@ type: Symbiose.MemoryLog
 - [macro-scan] 2026-06-28 : [symbiose, high] Raisonnement par démonstrations concrètes → principes généraux.
 - [macro-scan] 2026-06-28 : [symbiose, high] Le bord du système l'intéresse plus que le centre.
 - [macro-scan] 2026-06-28 : [symbiose, medium] Wian ne se contente pas de tester si ça marche — il teste où ça casse.
+
+## [2026-06-28] — micro-scan
+- [micro-scan] 2026-06-28 : [symbiose, high] Quand la proposition est dans le bon axe mais pas le bon cadre, il corrige le cadre — pas le contenu.
+
+## [2026-06-28] — micro-scan
+- [micro-scan] 2026-06-28 : [symbiose, high] Démantele le "switch de rôle" en une phrase — le switch n'existe pas, c'est un cumul. Redirige vers le vrai problème : les contradictions entre rôles.
+- [micro-scan] 2026-06-28 : [symbiose, medium] Une fois le cadre corrigé, valide et enchaîne — pas de micro-gestion, pas de retour.
+- [micro-scan] 2026-06-28 : [symbiose, medium] Suit la liste de Dev dans l'ordre, un chantier à la fois — priorité donnée par le diagnostic, pas par l'urgence.
+
+## [2026-06-28] — macro-scan
+- [macro-scan] 2026-06-28 : [symbiose, high] Corrige le cadre avant le contenu — redresse la posture, pas le détail.
+- [macro-scan] 2026-06-28 : [symbiose, high] Démantele les mécanismes cosmétiques en une phrase — "le switch n'existe pas".
+- [macro-scan] 2026-06-28 : [symbiose, high] Suit un diagnostic externe (Dev) dans l'ordre — priorité par l'analyse, pas par l'urgence.
+- [macro-scan] 2026-06-28 : [symbiose, medium] Valide sec et enchaîne — "oui" suffit, pas de retour.
+- [macro-scan] 2026-06-28 : [symbiose, high] Session : 7 chantiers système traités (rôles v2, tests, redondances, entrées, backup, règle, modes supprimés).

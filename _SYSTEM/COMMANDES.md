@@ -48,24 +48,15 @@
 
 | Ce que vous dites | Effet |
 |-------------------|-------|
-| "passe en mode [nom]" | Incarne le rôle — l'IA change de voix (DA, secrétaire…) |
-| "reviens [nom]" | Revient au rôle précédent |
+| "charge [nom]" | Ajoute un rôle focus à Symbiose (règles en +, jamais contre) |
+| "parle comme [nom]" | Adopte le ton du rôle sans ses règles (référence légère) |
+| "reviens normal" | Retire le focus, retour à Symbiose seul |
 | "demande à [nom]" | Invoque un rôle en subagent (tâche isolée) |
 | "nouveau rôle : [nom]" | Crée un nouveau rôle avec sa voix et sa mémoire |
 | "quels sont mes rôles" | Liste les rôles disponibles |
 
 Par défaut : rôle **Symbiose** (créé au premier démarrage).
 Les rôles partagent le profil utilisateur mais ont chacun leur mémoire.
-
-## Modes
-
-| Ce que vous dites | Effet |
-|-------------------|-------|
-| "passe en autonome" | Mode AUTONOME — l'IA exécute puis documente |
-| "passe en sécurisé" | Mode SÉCURISÉ — résume → valide → exécute |
-| "passe en critique" | Mode CRITIQUE — challenge → valide → exécute |
-
-Les modes sont aussi auto-détectés par les signaux de session (fichiers ouverts, type de tâche).
 
 ---
 

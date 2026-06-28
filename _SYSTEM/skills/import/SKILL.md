@@ -31,7 +31,6 @@ Fusionner dans `01_🧠Profil/` :
 
 **`memory/`** :
 - `observations.md` → **append** (les observations s'accumulent, ne pas écraser)
-- `modes.md` → **append**
 
 Nettoyer l'inbox après import réussi.
 

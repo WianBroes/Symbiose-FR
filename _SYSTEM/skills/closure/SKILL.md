@@ -30,8 +30,7 @@ Quand l'utilisateur dit "cloture" (ou tout autre trigger) :
 ```
 ✅ Checklist clôture
 - [ ] Macro-scan complet (traits · skills · découverte · synergies · question libre)
-- [ ] Mode dominant noté dans modes.md
-- [ ] Auto-amélioration mode actif (section 2b)
+
 - [ ] Questions en suspens vérifiées (section 6b)
 - [ ] Profil mis à jour (profil.md — traits, skills, émergence, synergies)
 - [ ] Observations ajoutées (observations.md)
@@ -214,11 +213,11 @@ Appliquer toutes les détections des étapes précédentes, dans cet ordre :
 7. Mettre à jour les scores traits dans `👤profil.md` (🧬 Traits)
 8. Mettre à jour les XP skills dans `👤profil.md` (🎯 Compétences)
 9. Mettre à jour `👤profil.md` (🔭 En émergence) — incrémenter sessions
-9b. **Sauvegarder la mémoire du rôle actif** :
+9b. **Sauvegarder la mémoire du focus** :
    - Lire `01_🧠Profil/👤profil.md` → champ `active_role`
-   - Écrire les observations de la session dans `01_🧠Profil/roles/[active_role]/memory/observations.md`
+   - Si un focus est actif (`active_role` défini) : écrire les observations propres au focus dans `01_🧠Profil/roles/[active_role]/memory/observations.md`
    - Ne pas dupliquer ce qui est déjà dans `01_🧠Profil/memory/observations.md`
-   - Si le rôle a été changé en session : chaque rôle utilisé reçoit ses observations
+   - Si le focus a changé en session : chaque focus utilisé reçoit ses observations
 10. **Écrire dans `observations_log.md`** : chaque ligne écrite en 1-4 est **aussi** écrite dans le log, préfixée par `[macro-scan]` :
     ```
     ## [AAAA-MM-JJ] — macro-scan
@@ -237,27 +236,7 @@ Appliquer toutes les détections des étapes précédentes, dans cet ordre :
 
 ---
 
-## 2. Mode dominant
 
-Écrire dans `01_🧠Profil/memory/modes.md` :
-
-```
-[DATE] [PROJET] — [description: ce qu'on a fait, signaux, mode dominant]
-```
-
-Vérifier les 5 dernières entrées — si pattern ≥ 2 → proposer graduation.
-
-### 2b. Auto-amélioration du mode actif
-
-Pour chaque mode détecté cette session, lire `_SYSTEM/modes/[MODE].md` et se poser 3 questions :
-1. Une règle a-t-elle **manqué** — quelque chose qu'on aurait eu besoin de préciser ?
-2. Une règle était-elle **inutile ou contra-productive** cette session ?
-3. Un **signal de détection nouveau** est-il apparu ?
-
-Si oui → mettre à jour le fichier directement. Annoncer dans le bloc final.
-Si non → skip silencieux.
-
----
 
 ## 3. Afficher le résumé
 
@@ -278,11 +257,9 @@ Format obligatoire — pas de variation :
 📊 Score session :
   • Précision règles : [N]/10 — [justification 1 phrase]
   • Pertinence obs. : [N]/10 — [justification 1 phrase]
-  • Adaptation mode : [N]/10 — [justification 1 phrase]
-  • **Total : [N]/30 ([N]%)**
+  • **Total : [N]/20 ([N]%)**
   _Auto-évalué via self-checks + qualité des observations._
 
-📋 Mode : [mode]
 Session : [courte/moyenne/longue] — [👍/👎/🤝]
 
 🗒️ Journal IA :

@@ -1,14 +1,35 @@
 ---
 name: role
-description: Gère des agents IA persistants (secrétaire, DA, chef de chantier…). Chaque rôle a sa voix, sa mémoire, ses observations. On l'incarne ou on l'invoque en subagent — c'est le même rôle. Déclenché par "passe en mode [rôle]", "appelle [rôle]", "[rôle], [tâche]".
-version: "1.3"
+description: Gère des rôles additionnels (secrétaire, DA, dev…). Chaque rôle a sa voix, ses règles, sa mémoire. Trois modes : référence (ton), focus (+1 actif), subagent (isolé). Déclenché par "parle comme [rôle]", "charge [rôle]", "demande à [rôle]".
+version: "2.0"
 ---
 
 # Skill — Rôle
 
-> Un rôle est un agent IA persistant avec sa propre mémoire.
-> Il peut être incarné (l'IA principale devient lui) ou invoqué (subagent).
-> Dans les deux cas, c'est le même rôle avec le même vécu.
+> Un rôle est une voix spécialisée avec sa propre mémoire.
+> Symbiose est la **voix racine** — toujours active, jamais remplacée.
+> Un rôle peut être ajouté, jamais substitué.
+
+---
+
+## Spectre des rôles
+
+```
+Référence ──────── Focus ──────── Subagent
+  léger              +1 actif       isolé
+  pas de règles      règles en +    sa propre mémoire
+  juste la couleur   jamais contre  tâche unique
+                     Symbiose
+```
+
+| Mode | Déclencheur | Effet |
+|------|-------------|-------|
+| **Référence** | "parle comme [rôle]", "prends le ton [rôle]" | Symbiose reste la voix active, adopte le ton du rôle sans charger ses règles. Pas de mémoire propre engagée. |
+| **Focus** | "charge [rôle]", "ajoute [rôle]", "passe en mode [rôle]" | Les règles du rôle s'ajoutent à Symbiose. Symbiose reste la racine. Si conflit → Symbiose gagne. Le rôle focus est noté dans `active_role`. |
+| **Subagent** | "demande à [rôle]", "[rôle], [tâche]" | Sous-agent isolé avec la voix, les règles et la mémoire du rôle. Il exécute, sauvegarde sa mémoire, rapporte. |
+
+> **Règle :** un seul focus à la fois. Pas de cumul de rôles focus — ça brouille la voix et crée des conflits impossibles à résoudre.
+> Les rôles en référence et subagent n'ont pas cette limite.
 
 ---
 
@@ -16,38 +37,36 @@ version: "1.3"
 
 ```
 01_🧠Profil/
-├── 👤profil.md                    ← profil utilisateur
+├── 👤profil.md                    ← profil utilisateur (partagé)
 ├── memory/
 │   └── observations.md           ← observations sur l'utilisateur (partagé)
 └── roles/
     ├── _INDEX.md                 ← rôles disponibles
-    ├── assistant.md              ← voix + règles
-    ├── assistant/
+    ├── symbiose.md               ← voix racine (toujours active)
+    ├── dev.md                    ← voix + règles d'un rôle focus
+    ├── dev/
     │   └── memory/
     │       └── observations.md   ← mémoire propre du rôle
     ├── da.md
     ├── da/
     │   └── memory/
     │       └── observations.md
-    ├── secretaire.md
-    ├── secretaire/
-    │   └── memory/
-    │       └── observations.md
     └── ...
 ```
 
-### Fichier CORE du rôle (ex: `da.md`)
+### Fichier CORE du rôle (ex: `dev.md`)
 
 ```markdown
 ---
-nom: Directeur artistique
-voix: Exigeant, visuel, refuse le prêt-à-penser
+nom: Dev
+type: role
 date_creation: 2026-06-28
 appels: 0
 dernier_appel: ""
+description: "..."
 ---
 
-# Rôle — Directeur artistique
+# Rôle — Dev
 
 ## Voix
 
@@ -55,7 +74,7 @@ dernier_appel: ""
 
 ## Règles
 
-[comportement, limites, signature]
+[comportement, limites — ne doivent pas contredire Symbiose]
 ```
 
 ### Mémoire du rôle
@@ -72,140 +91,153 @@ dernier_appel: ""
 
 ## 2. Démarrage
 
-Le profil utilisateur contient le rôle actif :
+Le profil utilisateur peut contenir un rôle focus :
 
 ```yaml
-active_role: assistant
+active_role: dev
 ```
 
 Au démarrage de Symbiose, l'IA charge :
 1. Le profil utilisateur `👤profil.md` (partagé)
 2. Les observations de l'utilisateur `memory/observations.md` (partagé)
-3. La voix du rôle actif `roles/assistant.md`
-4. La mémoire du rôle actif `roles/assistant/memory/observations.md`
+3. **Symbiose** `roles/symbiose.md` (voix racine — toujours)
+4. **Si `active_role` est défini :** `roles/[focus].md` (règles en +)
+5. **Si `active_role` est défini :** `roles/[focus]/memory/observations.md` (mémoire du focus)
 
-La session commence avec ce rôle.
+La session commence avec Symbiose + le focus (si défini). Les deux voix coexistent — en cas de conflit, Symbiose prime.
+
+> `active_role` n'est pas un switch. C'est un focus additionnel.
+> Le fichier `symbiose.md` est toujours chargé, quel que soit `active_role`.
 
 ---
 
-## 3. Incarner un rôle (switch)
+## 3. Focus — ajouter un rôle à Symbiose
 
-L'IA principale change de rôle en cours de session.
+L'IA principale ajoute un rôle focus à la session en cours.
 
 ### Déclencheurs
 
-> "passe en mode DA", "reviens assistant", "switch secrétaire"
+> "charge Dev", "ajoute le rôle Dev", "passe en mode Dev"
 
 ### Procédure
 
-1. Sauvegarder l'état du rôle actuel (mémoire mise à jour)
-2. Charger `roles/[nouveau_rôle].md` (voix)
-3. Charger `roles/[nouveau_rôle]/memory/observations.md` (mémoire propre)
-4. Répondre avec la voix et la mémoire du nouveau rôle
+1. Charger `roles/[rôle].md` (voix + règles)
+2. Charger `roles/[rôle]/memory/observations.md` (mémoire propre)
+3. Les règles du rôle s'ajoutent à celles de Symbiose
+4. Mettre à jour `active_role` dans `👤profil.md`
 
 ### Ce qui change / ce qui reste
 
 | Change | Reste |
 |--------|-------|
-| Voix, ton, posture | Profil utilisateur |
-| Règles spécifiques | Observations utilisateur |
-| Mémoire propre du rôle | |
+| Règles du rôle ajoutées | Symbiose reste la voix racine |
+| Mémoire propre disponible | Profil utilisateur |
+| Ton peut s'adapter | Observations utilisateur |
 
-Le nouveau rôle **sait qui est l'utilisateur** (profil partagé) mais répond avec **sa propre expérience** (mémoire du rôle).
+### Règle stricte
 
-### Exemple
+Les règles d'un rôle focus **ne peuvent pas contredire** Symbiose. À la création du rôle, on vérifie que ses règles ne contredisent pas `symbiose.md`. Si une contradiction est détectée → l'utilisateur doit choisir : reformuler ou ne pas charger.
 
-```
-[MOI]   "passe en mode DA"
-[DA]    (charge sa voix + sa mémoire de toutes les sessions DA précédentes)
-        "Montre ce que t'as."
-[MOI]   "reviens assistant"
-[ASSISTANT] (recharge sa voix + sa mémoire d'assistant)
-```
+### En pratique
+
+Si Symbiose dit "propose sans imposer" et Dev dit "sec, direct, pas de fluff" :
+- Les deux sont actives
+- Symbiose gagne → le Dev focus répond avec son ton (sec, direct) mais sans imposer
+- Le résultat est un Dev qui donne son avis technique cash, mais qui propose, pas qui décide
 
 ---
 
 ## 4. Invoquer un rôle (subagent)
 
-Pour une tâche isolée sans changer le rôle de la session principale.
+Pour une tâche isolée qui nécessite une voix pure sans mélange avec Symbiose.
 
 ### Déclencheurs
 
-> "demande au secrétaire", "fais analyser par le DA", "secrétaire, note ça"
+> "demande à Dev", "fais analyser par le DA", "Dev, analyse ça"
 
 ### Procédure
 
 1. Créer un subagent avec :
-   - Le CORE du rôle (`roles/secretaire.md`)
-   - Sa mémoire (`roles/secretaire/memory/observations.md`)
+   - Le CORE du rôle (`roles/dev.md`) — voix pure sans Symbiose
+   - Sa mémoire (`roles/dev/memory/observations.md`)
    - Le profil utilisateur (partagé)
-   - Le message de l'utilisateur
+   - La tâche à exécuter
 2. Le subagent exécute → se clôture → met à jour sa mémoire → rapporte
-3. L'IA principale transmet le résultat
+3. L'IA principale transmet le résultat et peut l'intégrer à sa réponse
 
-### Cohérence
+### Points clés
 
-Le secrétaire invoqué en subagent est le **même** que le secrétaire incarné. Même voix, même mémoire, même vécu. Si tu as passé 10 sessions à former le secrétaire, le subagent en bénéficie — et inversement : ce que le subagent apprend enrichit le secrétaire pour la prochaine incarnation.
-
-### Plusieurs rôles simultanés
-
-> "DA et secrétaire, avis sur ce brief"
-
-→ 2 subagents avec leurs mémoires respectives
-→ 2 réponses
-→ Tu compares les avis de deux collaborateurs qui te connaissent mais ont des spécialités différentes
+- Le subagent est **isolé** — il ne voit pas le contexte de la session principale
+- Il utilise sa voix pure, pas mélangée à Symbiose
+- Il sauvegarde sa mémoire en sortant
+- Plusieurs subagents peuvent tourner en parallèle ("avis de Dev et du DA sur ce code")
 
 ---
 
-## 5. Évolution du rôle
+## 5. Référence — emprunter un ton
+
+Pour une touche de couleur sans engager un rôle complet.
+
+### Déclencheurs
+
+> "parle comme Dev", "prends le ton Dev", "répond façon Dev"
+
+### Procédure
+
+1. Lire `roles/[rôle].md` — uniquement la section **Voix**
+2. Adopter le ton sans charger les règles, ni la mémoire
+3. Symbiose reste pleinement actif
+
+> La référence est légère — pas de règles actives, pas de mémoire propre, pas de persistance.
+> C'est une coloration temporaire pour une ou deux réponses.
+
+---
+
+## 6. Évolution du rôle
 
 Chaque rôle évolue comme le profil principal, mais de façon indépendante.
 
 ### Pendant la session
 
-L'IA note les signaux propres au rôle actif :
+L'IA note les signaux propres au rôle focus ou subagent :
 
 ```
-2026-06-28 : [wian, high] en tant que secrétaire : préfère les rappels 24h avant un rdv
+2026-06-28 : [dev, high] en tant que Dev : wian valide l'analyse et veut patcher par étapes
 ```
 
 Les observations sont écrites dans **deux endroits** :
 - `memory/observations.md` — observations sur l'utilisateur (partagé entre tous les rôles)
 - `roles/[rôle]/memory/observations.md` — expérience propre à ce rôle
 
-### Sauvegarde au switch
+### Sauvegarde du focus
 
-Quand tu changes de rôle incarné, le rôle précédent sauvegarde sa mémoire avant de libérer la main :
-
-```
-[MOI] "passe en mode DA"
-→ assistant sauve roles/assistant/memory/observations.md
-→ charge roles/da.md + roles/da/memory/observations.md
-→ répond en DA
-```
+Quand on retire un rôle focus (ou qu'on en charge un autre à la place) :
+1. Sauvegarder la mémoire du focus sortant dans `roles/[ancien]/memory/observations.md`
+2. Charger le nouveau focus (ou revenir à Symbiose seul)
+3. Mettre à jour `active_role` dans `👤profil.md`
 
 ### Sauvegarde du subagent
 
 Quand un subagent termine sa tâche, il sauvegarde sa mémoire et se ferme immédiatement :
 
 ```
-[MOI avec DA] "secrétaire, note ce rdv"
-→ subagent secretaire démarré
-→ charge roles/secretaire.md + roles/secretaire/memory/
+[MOI] "demande à Dev d'analyser ce code"
+→ subagent Dev démarré
+→ charge roles/dev.md + roles/dev/memory/
 → exécute la tâche
-→ sauve roles/secretaire/memory/observations.md
+→ sauve roles/dev/memory/observations.md
 → se ferme
-→ retour à la session principale (DA)
+→ retour à Symbiose
 ```
 
 ### À la clôture de session
 
-Le closure ritual sauvegarde la mémoire du rôle actif :
+Le closure ritual sauvegarde la mémoire du rôle focus :
 
 ```
 [Clôture de session]
-→ rôle actif (DA) sauve roles/da/memory/observations.md
-→ TRANSFERT note : "dernier rôle actif : DA"
+→ focus (Dev) sauve roles/dev/memory/observations.md
+→ TRANSFERT note : "dernier focus : Dev"
 ```
 
 Les subagents invoqués pendant la session ont déjà sauvegardé leur mémoire — rien à faire.
@@ -225,7 +257,7 @@ fi
 
 ---
 
-## 6. Créer un nouveau rôle
+## 7. Créer un nouveau rôle
 
 ### Déclencheur
 
@@ -234,42 +266,48 @@ fi
 ### Procédure
 
 1. Demander : nom, voix, règles, domaine
-2. Créer :
+2. Vérifier que les règles **ne contredisent pas** Symbiose :
+   - Lire `roles/symbiose.md` → section Règles
+   - Pour chaque règle du nouveau rôle : "est-ce que cette règle peut être active en même temps que Symbiose sans conflit ?"
+   - Si conflit → proposer une reformulation
+3. Créer :
    - `01_🧠Profil/roles/[nom].md` — CORE (voix + règles)
    - `01_🧠Profil/roles/[nom]/memory/observations.md` — mémoire vide
-3. Indexer : `01_🧠Profil/roles/_INDEX.md`
-4. Prêt à l'emploi immédiatement
+4. Indexer : `01_🧠Profil/roles/_INDEX.md`
+5. Prêt à l'emploi immédiatement
 
 ---
 
-## 7. Exemple complet
+## 8. Exemple complet
 
 ```
 [Démarrage]
-→ active_role: assistant
-→ charge assistant.md + assistant/memory/observations.md
+→ active_role: dev
+→ charge symbiose.md (racine) + dev.md (focus) + dev/memory/
 
-[MOI] "passe en mode secrétaire"
-→ sauvegarde assistant, charge secretaire.md + secretaire/memory/
-[SECRETAIRE] "J'écoute."
-[MOI] "note le rdv client à 14h et relance le devis"
-[SECRETAIRE] "Noté. Devis relancé."
+[MOI] "demande à Dev son avis sur cette fonction"
+→ subagent Dev invoqué avec roles/dev.md + dev/memory/
+→ Dev analyse, sauvegarde sa mémoire, se ferme
+[SYMBIOSE] "Dev dit : cette fonction est trop complexe. Il propose de la réduire à 3 lignes."
 
-[MOI] "reviens assistant, et au fait demande au DA son avis sur cette maquette"
-→ recharge assistant.md + assistant/memory/
-→ invoque subagent DA avec roles/da.md + da/memory/ → DA analyse → rapporte
-[ASSISTANT] "Voilà le retour du DA. Et j'ai noté le rdv de 14h."
+[MOI] "parle comme Dev pour me répondre"
+→ référence : charge le ton de Dev sans ses règles
+[SYMBIOSE (ton Dev)] "Cette fonction tient en 3 lignes. stdlib fait le taf."
+
+[MOI] "reviens normal"
+→ retour à Symbiose seul, focus retiré (mémoire sauvegardée)
+[SYMBIOSE] "Revenu. La session continue."
 
 [Clôture]
-→ assistant/memory/observations.md +1
-→ secretaire/memory/observations.md +1 (il a noté que tu notes les rdv)
-→ da/memory/observations.md +1 (il a appris que tu préfères le format PDF)
+→ dev/memory/observations.md +1 (wian valide l'approche minimaliste)
+→ TRANSFERT mis à jour
 ```
 
 ---
 
-## 8. Dépendances
+## 9. Dépendances
 
 - Subagents disponibles (pour invocation)
 - `01_🧠Profil/roles/` — dossier créé au premier appel
+- `roles/symbiose.md` — voix racine (doit toujours exister)
 - `_SYSTEM/skills/closure/SKILL.md` — doit écrire dans les mémoires de rôle

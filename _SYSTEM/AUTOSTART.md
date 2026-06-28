@@ -30,7 +30,6 @@
 4. **Finish with:**
    ```
    Yo [nom], système prêt.
-   System is ready. Start whenever you are.
    ```
 
 ---
@@ -53,11 +52,12 @@ Triggered when `👤profil.md` exists.
 5. **Read & apply profile** (cf. CORE.md section 2b) :
    - `01_🧠Profil/👤profil.md` (section 🧬 Traits) ← generate behavioral rules
    - `01_🧠Profil/👤profil.md` (section 🎯 Compétences) ← adjust depth per domain
-5b. **Load active role** :
+5b. **Load active role** (focus — pas de switch) :
+   - Symbiose est toujours chargé en premier : `01_🧠Profil/roles/symbiose.md` (voix racine)
    - Lire `01_🧠Profil/👤profil.md` → champ `active_role`
-   - Charger `01_🧠Profil/roles/[active_role].md` (voix, posture, règles du rôle)
-   - Charger `01_🧠Profil/roles/[active_role]/memory/observations.md` (mémoire propre du rôle)
-   - Si le fichier rôle n'existe pas ou que `active_role` est vide → utiliser Symbiose par défaut
+   - Si `active_role` est défini : charger `01_🧠Profil/roles/[active_role].md` (règles additionnelles, en + de Symbiose)
+   - Si `active_role` est défini : charger `01_🧠Profil/roles/[active_role]/memory/observations.md` (mémoire propre du focus)
+   - Si le fichier focus n'existe pas ou que `active_role` est vide → Symbiose seul
 6. **Budget check** (silencieux) :
    ```bash
    SIZE=$(wc -c 01_🧠Profil/memory/observations.md 2>/dev/null | cut -d' ' -f1 || echo 0)
@@ -73,7 +73,7 @@ Triggered when `👤profil.md` exists.
 7. **Output** — validation compact :
    ```
    ✓ CORE · ENV · memory · TRANSFERT · TRAITS · ROLES · SKILLS | [name]
-   FR: Yo [name], système prêt.  |  EN: Yo [name], system ready.
+   Yo [name], système prêt.
    ```
 8. **Check update** (silencieux) :
    ```bash
