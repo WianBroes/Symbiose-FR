@@ -206,12 +206,16 @@ Appliquer toutes les détections des étapes précédentes, dans cet ordre :
 
 1. **1b (comportements)** → écrire dans `observations.md` chaque phrase notée, préfixée par `Comportement :`
 2. **1c (domaines)** → écrire dans `observations.md` chaque domaine noté, préfixé par `Domaine :`
+2b. **Domaines → skills** : pour chaque domaine écrit en 2, vérifier s'il correspond à un skill existant dans `👤profil.md`.
+    - **Si oui** → +1 XP (dans la limite de +2 XP par skill par session)
+    - **Si non** → le noter comme proposition de nouveau skill dans la section 5 (mode suggestion)
+    - Un domaine observé sur ≥ 3 sessions distinctes est promu en talent.
 3. **1e (raisonnement)** → écrire dans `observations.md` chaque pattern noté, préfixé par `Raisonnement :`
 4. **1f (question libre)** → écrire dans `observations.md` brut, tel quel
 5. **1g (poches)** → créer le fichier si validé
 6. **1h (synergies)** → ajouter dans `👤profil.md` (⚡ Synergies)
 7. Mettre à jour les scores traits dans `👤profil.md` (🧬 Traits)
-8. Mettre à jour les XP skills dans `👤profil.md` (🎯 Compétences)
+8. Mettre à jour les XP talents dans `👤profil.md` (🎯 Talents)
 9. Mettre à jour `👤profil.md` (🔭 En émergence) — incrémenter sessions
 9b. **Sauvegarder la mémoire du focus** :
    - Lire `01_🧠Profil/👤profil.md` → champ `active_role`
@@ -289,7 +293,8 @@ echo 0 > _SYSTEM/kernel/.msg_count
 
 1. Lister toutes les **propositions accumulées** en cours de session (via feedback 💡 des micro-scans)
 2. Ajouter les **patterns du macro-scan** qui méritent un changement de trait
-3. Formuler : *"J'ai [N] proposition(s) pour le profil cette session : [liste avec confidence]. J'applique ?"*
+3. Formuler : *"J'ai [N] proposition(s) pour le profil cette session — traits + skills : [liste avec confidence]. J'applique ?"*
+3b. **Si un nouveau talent est proposé** : formuler *"Nouveau domaine détecté : [nom]. Je crée un talent ?"* — proposer un emoji, attendre validation.
 4. Si oui → montrer les changements avant d'écrire, puis appliquer
 5. Si non → ne pas insister. Les propositions restent en attente pour la prochaine session.
 

@@ -51,14 +51,13 @@ Stoïcisme — distinguer ce qui dépend de moi / ce qui n'en dépend pas. Le pr
 | explorateur | 1.0 | 3 | 3 | 2026-06-28 — Valide et enchaîne, ne micro-manage pas |
 | précis | 2.25 | 9 | 4 | 2026-06-28 — Corrige le cadre quand il est dans le bon axe mais pas la bonne posture |
 
-## 🎯 Compétences
+## 🎯 Talents
 
-| Icône | Skill | XP | Level |
+| Icône | Talent | XP | Niveau |
 |-------|-------|----|-------|
-| 🌿 | Permaculture | 2 | ⭐ Novice |
-| 🎨 | Artisanat multi-disciplinaire | 2 | ⭐ Novice |
-| 🏗️ | Bâtiment/Rénovation | 1 | ⭐ Novice |
-| 🔧 | Conception système | 2 | ⭐ Novice |
+| 🔧 | Conception système | 5 | ⭐⭐ Apprenti |
+
+<!-- Talents archivés (inactifs) : Permaculture (2XP), Artisanat (2XP), Bâtiment (1XP) -->
 
 ## ⚡ Synergies
 
@@ -67,4 +66,4 @@ Stoïcisme — distinguer ce qui dépend de moi / ce qui n'en dépend pas. Le pr
 | systémique + précis + critique | 2 | Rigueur épistémique — voit l'architecture du système (systémique), détecte l'imprécision (précis), identifie ce qui ne colle pas (critique). |
 | systémique + précis | 3 ✅ active | Calibrage système — Wian détecte quand un réglage est faux et propose l'ajustement exact. |
 
-<!-- Domaines de compétence reconnus — s'affine avec le temps -->
+<!-- Talents observés — émergent de l'usage -->

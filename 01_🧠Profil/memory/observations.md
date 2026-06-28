@@ -123,4 +123,8 @@ type: Symbiose.Memory
 
 ### Session 2026-06-28 — clôture
 
+**Domaines :** conception de framework IA (wizard, hooks, kernel, entrypoints), UX/onboarding design (parcours nouvel utilisateur, friction, closing), documentation technique.
+
+**Raisonnement :** part de l'expérience du nouvel utilisateur pour remonter aux décisions de conception. Teste chaque étape du wizard en se demandant "est-ce que ça sert à quelqu'un qui découvre le système ?".
+
 **Question libre :** Il conçoit le système pour qu'il survive sans lui. Chaque décision de cette session était motivée par "comment quelqu'un d'autre, qui ne me connaît pas, peut arriver et comprendre". Ce n'est pas de l'altruisme — c'est une extension de son approche systémique : un système qui dépend de son créateur est un système qui n'est pas fini. Il construit pour que ça marche sans lui.

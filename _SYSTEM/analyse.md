@@ -62,11 +62,11 @@ Brancher un hook équivalent qui appelle les 2 scripts et injecte `[scan]` dans 
 - Comportement déjà référencé dans le profil → +1 signal
 - Comportement nouveau → créer l'entrée (score 0.5, 1 signal)
 
-**Skills (domaine) :**
-- Compétence déjà référencée → +1 XP
-- Nouveau skill → créer l'entrée, XP=1, choisir un emoji
+**Talents (domaine) :**
+- Talent déjà référencé → +1 XP
+- Nouveau talent → créer l'entrée, XP=1, choisir un emoji
 - Erreur factuelle, logique erronée, ou formulation incorrecte signalée par l'utilisateur → +1 XP bonus (même si déjà au max)
-- Max **+2 XP** par skill par micro-scan
+- Max **+2 XP** par talent par micro-scan
 
 **Modes de pensée (🔭 En émergence) :**
 - Mode de pensée déjà vu → +1 session
@@ -75,9 +75,9 @@ Brancher un hook équivalent qui appelle les 2 scripts et injecte `[scan]` dans 
 
 ### 1c. Level-up
 
-Si un skill atteint un nouveau niveau → appliquer immédiatement :
+Si un talent atteint un nouveau niveau → appliquer immédiatement :
 - Le nouveau niveau change mon comportement pour ce sujet **dès la prochaine réponse**
-- Je régénère les règles actives pour ce skill et je les applique sur le champ
+- Je régénère les règles actives pour ce talent et je les applique sur le champ
 
 ### 1d. Écriture dans observations_log.md
 
