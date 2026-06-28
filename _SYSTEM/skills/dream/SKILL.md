@@ -17,6 +17,7 @@ trigger: auto (dream_requested flag) | manuel ("fais un dream", "consolide les o
 | Mode | Condition |
 |------|-----------|
 | **Automatique (clôture)** | Toutes les 10 clôtures, via `_SYSTEM/kernel/closure.sh` → `.dream_requested` |
+| **Automatique (mémoire pleine)** | Quand `observations.md` > 5 000 bytes, via micro-scan (section 1e de `analyse.md`) → `.dream_requested` |
 | **Manuel** | Utilisateur dit "fais un dream", "consolide", "nettoie la memoire" |
 
 ---
@@ -91,7 +92,17 @@ Chercher dans TOUTES les observations (pas juste les récentes) :
 2. Supprimer les doublons stricts (mot pour mot)
 3. Compacter les formulations : une ligne par observation, max 200 caractères
 4. Convertir les dates relatives en dates absolues (ex: "la semaine dernière" → "2026-06-11")
-5. Lossless : le résultat doit contenir AU MOINS autant d'information que l'original
+5. **Filtrage par confidence** :
+   - Les observations `low` qui n'ont pas été confirmées depuis le dernier dream sont **proposées à l'archivage** (déplacées dans `observations_log.md` uniquement)
+   - Les observations `medium` qui n'ont pas été ré-observées depuis 2+ dreams sont **déclassées en `low`**
+   - Les observations `high` sont **toujours conservées**
+   - Les patterns `🔬 en test` consolidés depuis ≥ 3 sessions passent en `✅ confirmé`
+6. Lossless : le résultat doit contenir AU MOINS autant d'information que l'original
+7. **Mise à jour de `observations_log.md`** : après le compact, ajouter une entrée dans le log :
+   ```
+   ## [AAAA-MM-JJ] — dream
+   - [dream] Consolidation terminée : [N] observations compactées en [M], [K] archivées (low confidence), [P] motifs confirmés.
+   ```
 
 ### Phase 4 — Mise à jour & notification
 

@@ -213,6 +213,13 @@ Appliquer toutes les détections des étapes précédentes, dans cet ordre :
 7. Mettre à jour les scores traits dans `👤profil.md` (🧬 Traits)
 8. Mettre à jour les XP skills dans `👤profil.md` (🎯 Compétences)
 9. Mettre à jour `👤profil.md` (🔭 En émergence) — incrémenter sessions
+10. **Écrire dans `observations_log.md`** : chaque ligne écrite en 1-4 est **aussi** écrite dans le log, préfixée par `[macro-scan]` :
+    ```
+    ## [AAAA-MM-JJ] — macro-scan
+    - [macro-scan] [AAAA-MM-JJ] : [source, confidence] description
+    ```
+    > Le log est append-only. Chaque macro-scan ajoute une section datée.
+    > Le compact (`observations.md`) peut changer, le log ne change jamais.
 
 > C'est ici que tout ce qui a été détecté en 1b-1h est écrit. Si une détection n'a pas encore été écrite, elle l'est maintenant. **Pas de détection sans trace écrite.**
 
@@ -262,6 +269,13 @@ Format obligatoire — pas de variation :
   [icône] [nom]  Lv.[n]  +[n] XP  [description]
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📊 Score session :
+  • Précision règles : [N]/10 — [justification 1 phrase]
+  • Pertinence obs. : [N]/10 — [justification 1 phrase]
+  • Adaptation mode : [N]/10 — [justification 1 phrase]
+  • **Total : [N]/30 ([N]%)**
+  _Auto-évalué via self-checks + qualité des observations._
+
 📋 Mode : [mode]
 Session : [courte/moyenne/longue] — [👍/👎/🤝]
 
@@ -273,6 +287,8 @@ Session : [courte/moyenne/longue] — [👍/👎/🤝]
 ```
 
 > Le journal IA est vide si la session n'a pas produit de décisions notables. Ne pas forcer.
+> Le score session est auto-évalué : basé sur les self-checks (précision), la pertinence des observations écrites (pertinence), et
+> l'adéquation du comportement au mode détecté (adaptation). La tendance sur plusieurs sessions est plus parlante que le score isolé.
 
 ---
 
@@ -284,12 +300,18 @@ echo 0 > _SYSTEM/kernel/.msg_count
 
 ---
 
-## 5. Profil — proposer (ne pas imposer)
+## 5. Profil — mode suggestion
 
-Demander : *"J'ai [N] observation(s) qui pourraient enrichir le profil : [liste]. Je les prépare ?"*
+> Application du mode suggestion défini dans `_SYSTEM/analyse.md` §3b.
 
-Si oui → montrer les changements avant d'écrire.
-Si non → ne pas insister.
+1. Lister toutes les **propositions accumulées** en cours de session (via feedback 💡 des micro-scans)
+2. Ajouter les **patterns du macro-scan** qui méritent un changement de trait
+3. Formuler : *"J'ai [N] proposition(s) pour le profil cette session : [liste avec confidence]. J'applique ?"*
+4. Si oui → montrer les changements avant d'écrire, puis appliquer
+5. Si non → ne pas insister. Les propositions restent en attente pour la prochaine session.
+
+> Le mode suggestion remplace l'ancien "proposer (ne pas imposer)".
+> La différence : les propositions sont accumulées en continu dans la session, pas seulement à la clôture.
 
 ---
 
@@ -368,12 +390,15 @@ Toutes les 10 clôtures, `.dream_requested` est posé → l'IA lance un dream de
 
 ---
 
-## 9. Snapshot
+## 9. Snapshot — profil + système
 
 ```bash
 git add [fichiers _SYSTEM/ modifiés]
+git add [fichiers 01_🧠Profil/ modifiés]
 git diff --cached --quiet || git commit -m "session close YYYY-MM-DD" --quiet
 ```
 
-> `.claude/` et `01_🧠Profil/` sont gitignorés — ne pas les inclure.
+> `01_🧠Profil/` n'est plus exclu du snapshot — les commits de profil permettent de revenir en arrière
+> sur un changement de trait ou une consolidation de dream qui ne conviendrait pas.
+> `.gitignore` mis à jour en conséquence.
 > Si pas de git → skip silencieux.

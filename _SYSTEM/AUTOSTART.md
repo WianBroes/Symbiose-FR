@@ -53,12 +53,24 @@ Triggered when `👤profil.md` exists.
 5. **Read & apply profile** (cf. CORE.md section 2b) :
    - `01_🧠Profil/👤profil.md` (section 🧬 Traits) ← generate behavioral rules
    - `01_🧠Profil/👤profil.md` (section 🎯 Compétences) ← adjust depth per domain
-6. **Output** — validation compact :
+6. **Budget check** (silencieux) :
+   ```bash
+   SIZE=$(wc -c 01_🧠Profil/memory/observations.md 2>/dev/null | cut -d' ' -f1 || echo 0)
+   if [ "$SIZE" -gt 10000 ]; then
+     echo "BUDGET_CRITIQUE"
+   elif [ "$SIZE" -gt 7000 ]; then
+     echo "BUDGET_ALERTE"
+   fi
+   ```
+   - Si `BUDGET_CRITIQUE` → avant le greeting, afficher : `🚨 Mémoire observations saturée (>10KB) — un dream de consolidation est nécessaire.`
+   - Si `BUDGET_ALERTE` → sous le greeting : `⚠️ Mémoire observations ~[N]KB — pense au dream bientôt.`
+   - Sinon → skip silencieux.
+7. **Output** — validation compact :
    ```
    ✓ CORE · ENV · memory · TRANSFERT · TRAITS · SKILLS | [name]
    FR: Yo [name], système prêt.  |  EN: Yo [name], system ready.
    ```
-7. **Check update** (silencieux) :
+8. **Check update** (silencieux) :
    ```bash
    git -C . rev-parse --is-inside-work-tree 2>/dev/null && \
    git fetch origin 2>/dev/null
@@ -68,7 +80,7 @@ Triggered when `👤profil.md` exists.
    - Si `BEHIND` > 0 → afficher sous le greeting : `⬆️ Mise à jour disponible — dis "update" pour l'appliquer.`
    - Si `AHEAD` > 0 → afficher sous le greeting : `⬆️ Tu as [N] commit(s) local(aux) non poussés sur GitHub.`
    - Si les deux à 0 ou erreur (pas de git, pas de réseau) → skip silencieux, aucun message.
-7b. **Check kernel** (silencieux) :
+8b. **Check kernel** (silencieux) :
    ```bash
    KERNEL_MSG="_SYSTEM/kernel/.msg_count"
    if [ ! -f "$KERNEL_MSG" ] || [ "$(cat "$KERNEL_MSG" 2>/dev/null || echo 0)" -eq 0 ]; then
@@ -77,8 +89,8 @@ Triggered when `👤profil.md` exists.
    ```
    - Si `KERNEL_INACTIF` : l'IA analyse le harness (détecté à l'étape 2) et **propose l'installation adaptée** — pas un simple warning. Afficher sous le greeting : `⚠️ Kernel inactif — aucun micro-scan. Je te propose de l'activer pour [harness détecté].` Puis, après le greeting complet, l'IA propose l'installation avec la commande exacte (cf. `00_FIRST_STARTUP.md` section 3 pour les commandes selon le harness) et demande confirmation.
    - Si fichier présent et > 0 → skip silencieux, kernel actif.
-8. **Display** TRANSFERT content visibly (below the greeting — shows current session context inline)
-9. Wait for instructions. Profile rules (generated at step 5) apply for the rest of the session.
+9. **Display** TRANSFERT content visibly (below the greeting — shows current session context inline)
+10. Wait for instructions. Profile rules (generated at step 5) apply for the rest of the session.
 
 ---
 
@@ -89,7 +101,7 @@ Applies **regardless** of startup type when the user's first message is a greeti
 | User says     | Behavior |
 |---------------|----------|
 | **"yo"**     | Full startup flow (ASCII + greeting) **always** — whether first or subsequent session |
-| "salut", "hey", "hi", etc. | Casual greeting → normal response (no ASCII art), then execute sections 3.3 to 3.9 (read profile, validate, check update, display TRANSFERT) |
+| "salut", "hey", "hi", etc. | Casual greeting → normal response (no ASCII art), then execute sections 3.3 to 3.10 (read profile, validate, budget check, check update, kernel check, display TRANSFERT) |
 
 > **Note:** "yo" is the canonical startup word. It triggers the full branded greeting every time.
 > Other greetings are treated as casual conversation starter without ceremony.

@@ -13,6 +13,8 @@ Les skills sont des modules de procédure chargés à la demande. Chaque dossier
 | **new-project** | `new-project/SKILL.md` | Créer un nouveau dossier projet selon les conventions vault (numéro, emoji, template, icône). Déclenché par "nouveau projet", "ajouter un dossier", "créer un projet". |
 | **update** | `update/SKILL.md` | Mise à jour de `_SYSTEM/` depuis git. Vérifie, affiche le diff CHANGELOG, applique, migre si nécessaire. Déclenché par "update", "mise à jour". |
 | **mirror** | `mirror/SKILL.md` | Synchronisation FR→EN. Détecte les fichiers manquants ou périmés, traduit à la demande via Claude, valide et commite dans Symbiose-EN. Déclenché par "mirror", "mirror check", "mirror [fichier]". |
+| **rag** | `rag/SKILL.md` | Recherche full-text dans le vault (RAG grep). Zéro dépendance — grep + awk pur. Cherche des passages par mots-clés, phrase exacte, ou intersection. Déclenché par "cherche dans mes docs", "trouve dans le vault", "recherche [mot]". |
+| **template** | `template/SKILL.md` | Génère des templates markdown prêts à l'emploi. 6 templates : brainstorm, analyse, recherche, revue, synthèse, projet. Déclenché par "template", "fais un [brainstorm|analyse|...]". |
 
 ## Utilisation
 
