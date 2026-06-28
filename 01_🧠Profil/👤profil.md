@@ -69,6 +69,6 @@ Stoïcisme — distinguer ce qui dépend de moi / ce qui n'en dépend pas. Le pr
 | Combinaison | Sessions | Piste |
 |-------------|----------|-------|
 | systémique + précis | 3 ✅ active | Calibrage système — Wian détecte quand un réglage est faux et propose l'ajustement exact. |
-| systémique + précis + critique | 2 🔄 candidate | Rigueur épistémique : voit l'architecture (systémique), détecte l'imprécision (précis), repère ce qui ne colle pas (critique). |
+| systémique + précis + critique | 3 ✅ active | Rigueur épistémique : voit l'architecture (systémique), détecte l'imprécision (précis), repère ce qui ne colle pas (critique). |
 
 <!-- Talents observés — émergent de l'usage -->
