@@ -70,10 +70,36 @@ Le profil émerge de l'usage — il n'est pas rempli à la main.
 1. L'IA observe des signaux pendant la session (style, domaine, rythme)
 2. Micro-scan tous les 7 messages → écrit dans `observations.md`
 3. Macro-scan à la clôture → consolide dans `👤profil.md` (Traits + Compétences)
-4. Au démarrage suivant → l'IA lit le profil et adapte son comportement
+4. Au démarrage suivant → l'IA lit le profil + le rôle actif et adapte son comportement
 
 **Traits** — comportement (direct, technique, concis…) → modifient le ton et la forme
 **Compétences** — domaines (code, droit, finance…) → modifient la profondeur
+
+---
+
+## Rôles IA
+
+L'IA a une voix par défaut (Symbiose) et peut en adopter d'autres à la demande.
+
+```
+01_🧠Profil/
+└── roles/
+    ├── _INDEX.md         ← rôles disponibles
+    ├── symbiose.md       ← voix par défaut (créée au premier démarrage)
+    ├── symbiose/
+    │   └── memory/
+    │       └── observations.md  ← mémoire propre du rôle
+    ├── da.md             ← rôles spécialisés (créés à la demande)
+    ├── da/memory/...
+    └── ...
+```
+
+**Fonctionnement :**
+- Le `active_role` est stocké dans `👤profil.md`
+- Chaque rôle a sa voix (fichier .md) et sa mémoire (`memory/observations.md`)
+- Tous les rôles partagent le profil utilisateur — ils savent qui tu es
+- On peut **incarner** un rôle (changer la voix de la session) ou l'**invoquer** en subagent (tâche isolée)
+- À la clôture, la mémoire du rôle actif est sauvegardée
 
 ---
 
@@ -88,7 +114,8 @@ _SYSTEM/skills/
 ├── export/SKILL.md
 ├── closure/SKILL.md
 ├── dream/SKILL.md
-└── new-project/SKILL.md
+├── new-project/SKILL.md
+└── role/SKILL.md      ← rôles IA (voix, mémoire, invocation)
 ```
 
 ---

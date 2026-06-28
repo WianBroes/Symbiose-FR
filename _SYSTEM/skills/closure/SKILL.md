@@ -35,6 +35,7 @@ Quand l'utilisateur dit "cloture" (ou tout autre trigger) :
 - [ ] Questions en suspens vérifiées (section 6b)
 - [ ] Profil mis à jour (profil.md — traits, skills, émergence, synergies)
 - [ ] Observations ajoutées (observations.md)
+- [ ] Mémoire du rôle actif sauvegardée (roles/[active_role]/memory/)
 - [ ] Pipeline alpha révisé (section 7)
 - [ ] TRANSFERT mis à jour (section 6)
 - [ ] Kernel closure.sh exécuté (section 8)
@@ -213,6 +214,11 @@ Appliquer toutes les détections des étapes précédentes, dans cet ordre :
 7. Mettre à jour les scores traits dans `👤profil.md` (🧬 Traits)
 8. Mettre à jour les XP skills dans `👤profil.md` (🎯 Compétences)
 9. Mettre à jour `👤profil.md` (🔭 En émergence) — incrémenter sessions
+9b. **Sauvegarder la mémoire du rôle actif** :
+   - Lire `01_🧠Profil/👤profil.md` → champ `active_role`
+   - Écrire les observations de la session dans `01_🧠Profil/roles/[active_role]/memory/observations.md`
+   - Ne pas dupliquer ce qui est déjà dans `01_🧠Profil/memory/observations.md`
+   - Si le rôle a été changé en session : chaque rôle utilisé reçoit ses observations
 10. **Écrire dans `observations_log.md`** : chaque ligne écrite en 1-4 est **aussi** écrite dans le log, préfixée par `[macro-scan]` :
     ```
     ## [AAAA-MM-JJ] — macro-scan

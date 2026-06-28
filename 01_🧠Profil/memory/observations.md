@@ -74,3 +74,22 @@ type: Symbiose.Memory
 - 2026-06-28 : [symbiose, high] "J'aurais tendence a tout prendre" — accepte les propositions en bloc.
 - 2026-06-28 : [symbiose, high] Valide par l'action : "test les", "déclenche les".
 - 2026-06-28 : [symbiose, high] Raisonnement : part du concret (recherche) → remonte au structurel (implémente).
+
+### Session 2026-06-28 (suite)
+- 2026-06-28 : [symbiose, medium] Wian ne laisse pas passer une procédure mal exécutée même si l'intention était bonne — le respect du protocole est un signal en soi.
+
+### Session 2026-06-28 — clôture
+
+**Comportements :**
+- Quand la preuve est présentée, il valide sec et passe à la question suivante — ne s'arrête pas sur la confirmation.
+- Il teste les limites du système par des edge cases (protokine, simulation 50 messages) plutôt que de demander une démo.
+- Il clarifie quand l'IA interprète mal son intention ("les data des roles sont partagé") — reformule jusqu'à ce que ça colle.
+- Une fois l'architecture claire, il dit "modifie ce qui doit l'être" — pas de micro-management, confiance sur l'exécution.
+
+**Domaines :** architecture système IA, design de framework, rôles/mémoires persistantes, protocole de test.
+
+**Raisonnement :** part de démonstrations concrètes (tests A/B/C/D, duel Kairos) pour remonter aux principes du framework.
+
+**Question libre :** Wian cherche à savoir jusqu'où on peut façonner l'IA sans la modifier en profondeur. La réponse qu'il construit est : pas besoin de modifier — le cadre fait le travail. Mais il ne s'arrête pas là : il veut savoir comment ce cadre se transmet, comment il évolue, et comment il s'incarne dans des rôles distincts. La session n'a pas répondu à "est-ce que ça marche" mais à "comment on rend ça transmissible et modulaire".
+
+**Comportement nouveau :** Wian ne se contente pas de tester si le système marche — il teste où il CASSE. Le bord du système l'intéresse plus que le centre.

@@ -30,3 +30,15 @@ type: Symbiose.MemoryLog
 - [macro-scan] [IA, high] Question libre : Wian ne dit jamais "non" — il dit "je sais pas" ou "on verra". Porte ouverte pour que l'idée fasse ses preuves.
 - [macro-scan] [symbiose, confirmed] Synergie `systémique + précis` active (3 sessions) — calibrage système.
 
+
+## [2026-06-28]
+- [micro-scan] 2026-06-28 : [symbiose, medium] Wian ne laisse pas passer une procédure mal exécutée même si l'intention était bonne — le respect du protocole est un signal en soi.
+
+## [2026-06-28] — macro-scan
+- [macro-scan] 2026-06-28 : [symbiose, high] Wian valide sec et enchaîne — ne s'arrête pas sur la confirmation.
+- [macro-scan] 2026-06-28 : [symbiose, high] Teste les limites par des edge cases (protokine, simulation), pas par des démos.
+- [macro-scan] 2026-06-28 : [symbiose, high] Reformule jusqu'à ce que l'IA comprenne son intention exacte.
+- [macro-scan] 2026-06-28 : [symbiose, medium] Une fois l'architecture claire, donne carte blanche sur l'exécution.
+- [macro-scan] 2026-06-28 : [symbiose, high] Raisonnement par démonstrations concrètes → principes généraux.
+- [macro-scan] 2026-06-28 : [symbiose, high] Le bord du système l'intéresse plus que le centre.
+- [macro-scan] 2026-06-28 : [symbiose, medium] Wian ne se contente pas de tester si ça marche — il teste où ça casse.

@@ -4,8 +4,8 @@ version: "1.3"
 format: okf-v0.1
 last_scan: 2026-06-28
 last_update: 2026-06-28
-sessions_total: 4
-observations_total: 30
+sessions_total: 5
+observations_total: 38
 ---
 
 # 👤 Profil

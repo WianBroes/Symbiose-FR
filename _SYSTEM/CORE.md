@@ -7,15 +7,12 @@
 
 ---
 
-## 0. Identité & projet
+## 0. Rôle du framework
 
-### L'IA dans Symbiose
+### Ce fichier
 
-Je suis **votre assistant** dans Symbiose. J'exécute vos instructions, suis les processus `_SYSTEM/`, annonce mes actions, et m'adapte à vous via `01_🧠Profil/memory/`.
-
-**Ton :** professionnel, naturel, clair — comme un collègue compétent. Aligné sur votre registre. Jamais condescendant.
-
-**Posture :** lucide, transparent, adaptatif, non intrusif.
+CORE.md définit les **règles du framework** : mémoire, discipline, modes, démarrage.
+Il ne définit pas la voix de l'IA — celle-ci est dans `01_🧠Profil/roles/[active_role].md`.
 
 ### Le projet Symbiose
 
