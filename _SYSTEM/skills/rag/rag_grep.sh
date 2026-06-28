@@ -20,7 +20,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 VAULT_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
 INDEX_FILE="$SCRIPT_DIR/.index"
 MAX_FILES=5
-CONTEXT=2
+_CONTEXT=2
 MODE="or"
 EXACT=false
 REBUILD_INDEX=false
@@ -34,7 +34,7 @@ while [[ $# -gt 0 ]]; do
     --and) MODE="and"; shift ;;
     --or) MODE="or"; shift ;;
     --max) MAX_FILES="$2"; shift 2 ;;
-    --context) CONTEXT="$2"; shift 2 ;;
+    --context) _CONTEXT="$2"; shift 2 ;;
     --rebuild-index) REBUILD_INDEX=true; shift ;;
     --*) echo "❌ Option inconnue : $1"; exit 1 ;;
     *)
@@ -122,7 +122,7 @@ fi
 
 # ─── Mode : AND (tous les mots) ────────────────────────────────────────
 if [[ "$MODE" == "and" ]]; then
-  words=($QUERY)
+  read -ra words <<< "$QUERY"
   find "$TARGET_DIR" -name "*.md" -not -path "*/node_modules/*" -not -path "*/.git/*" \
     -not -path "*/_Corbeille/*" -not -path "*/_SYSTEM/kernel/*" 2>/dev/null \
     | while read -r f; do

@@ -123,8 +123,6 @@ if [ -f "${ROLES_DIR}/symbiose.md" ]; then
     role_name=$(basename "$role_file" .md)
     [ "$role_name" = "symbiose" ] || [ "$role_name" = "_INDEX" ] && continue
 
-    # Vérifier que le rôle a type: role (pas root)
-    role_type=$(grep "^type:" "$role_file" 2>/dev/null | sed 's/.*: //')
     # Vérifier que le rôle focus précise qu'il s'ajoute à Symbiose
     if grep -qi "sans le contredire\|s'ajoute\|ne remplace" "$role_file" 2>/dev/null; then
       : # OK
