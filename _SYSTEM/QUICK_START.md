@@ -13,7 +13,6 @@ Ouvre un terminal dans le dossier du projet et tape :
 | **PI** | `pi` |
 | **Claude Code** | `claude` |
 | **Codex CLI** | `codex` |
-| **Cursor** | `cursor .` |
 | **Continue.dev** | Ouvre le dossier dans VS Code avec l'extension |
 | **Autre** | Lance ton outil dans ce dossier |
 
@@ -26,7 +25,7 @@ Le système détecte que c'est ta première session et :
 ```
 1. Demande ta langue préférée
 2. Scanne ta machine (OS, RAM, CPU)
-3. Identifie ton outil (PI, Claude Code…)
+3. Identifie ton outil (PI, Claude Code, Codex CLI…)
 4. Te souhaite la bienvenue
 5. Te demande ton nom et ton profil
 6. Crée ton profil

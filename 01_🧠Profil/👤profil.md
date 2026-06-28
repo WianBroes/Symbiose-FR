@@ -46,7 +46,7 @@ Stoïcisme — distinguer ce qui dépend de moi / ce qui n'en dépend pas. Le pr
 | Trait | Score | Signaux | Sessions | Dernière observation |
 |-------|-------|---------|---------|---------------------|
 | directif | 1.2 | 6 | 5 | 2026-06-28 — Valide par l'action, suit la liste de Dev sans dévier |
-| systémique | 3.0 | 12 | 4 | 2026-06-28 — Démantele les mécanismes cosmétiques, voit le vrai problème structurel |
+| systémique | 3.75 | 15 | 4 | 2026-06-28 — Conçoit les chemins de repli avant l'échec, pas de cul-de-sac |
 | stratégique | 1.0 | 3 | 3 | 2026-06-27 — Approche par couches |
 | explorateur | 1.0 | 3 | 3 | 2026-06-28 — Valide et enchaîne, ne micro-manage pas |
 | précis | 2.25 | 9 | 4 | 2026-06-28 — Corrige le cadre quand il est dans le bon axe mais pas la bonne posture |

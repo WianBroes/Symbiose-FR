@@ -16,7 +16,7 @@ Tu le poses dans un dossier, tu lances ton outil IA dedans, et le système :
 
 - 🔄 **Se souvient** du contexte entre les sessions
 - 🧠 **S'adapte** progressivement à ta façon de travailler
-- 🔌 **Fonctionne avec** PI, Claude Code, Codex CLI, Cursor, Continue.dev…
+- 🔌 **Fonctionne avec** PI, Claude Code, Codex CLI…
 - 📦 **Est réinitialisable** — clé en main pour un autre utilisateur
 
 > **Idée centrale :** le système vit dans des fichiers `.md`, pas dans l'outil.
@@ -31,7 +31,7 @@ Clique sur **Download ZIP** en haut de cette page et décompresse le dossier.
 *(ou `git clone` si tu sais ce que c'est)*
 
 **2. Ouvre-le avec ton outil IA**
-Lance ton outil IA (Claude Code, PI, Cursor, Codex CLI…) dans le dossier Symbiose.
+Lance ton outil IA (PI, Claude Code, Codex CLI…) dans le dossier Symbiose.
 
 **3. Dis "yo"**
 Le système prend le relais — il se configure, te demande ton prénom, et c'est parti.

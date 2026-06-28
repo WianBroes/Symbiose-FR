@@ -21,7 +21,7 @@ Framework d'interaction adaptatif. L'IA s'adapte progressivement à l'utilisateu
 **Principes :**
 - Personnalisation progressive — le système apprend de vous, pas l'inverse
 - Transmissible — peut être réinitialisé pour un autre utilisateur
-- Indépendant de l'outil — fonctionne avec PI, Claude Code, Codex CLI, Continue.dev, Cursor, etc.
+- Indépendant de l'outil — fonctionne avec PI, Claude Code, Codex CLI…
 - Mémoire persistante — observations et TRANSFERT transportent le contexte entre sessions
 - Émergent — la structure naît de la conversation, pas de la configuration
 
@@ -81,7 +81,7 @@ Un reset = supprimer `01_🧠Profil/👤profil.md` + relancer le wizard (`00_FIR
 
 | Type | Fichiers | Reset |
 |------|----------|-------|
-| **Système** (logique, protocoles) | `_SYSTEM/` complet — `CORE.md`, `AUTOSTART.md`, `00_FIRST_STARTUP.md`, `COMMANDES.md`, `FONCTIONNEMENT.md`, `startup_ascii.md`, `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, `.windsurfrules`, `skills/`, `alpha/` | ✅ Survit — ne pas toucher |
+| **Système** (logique, protocoles) | `_SYSTEM/` complet — `CORE.md`, `AUTOSTART.md`, `00_FIRST_STARTUP.md`, `COMMANDES.md`, `FONCTIONNEMENT.md`, `startup_ascii.md`, `AGENTS.md`, `CLAUDE.md`, `skills/`, `alpha/`, `entrypoints/` | ✅ Survit — ne pas toucher |
 | **Utilisateur** (données de session) | `01_🧠Profil/`, `00_📥Inbox/`, `02_🧬…07_🎨/` | ♻️ Recréé par le wizard |
 
 > **Règle :** tout nouveau protocole ou convention ajouté au système (`skills/import/SKILL.md`, etc.) est un fichier système — il fait partie du framework et survit au reset. Il n'a pas besoin d'être "protégé" manuellement.
@@ -433,4 +433,4 @@ Séquence complète définie dans **`_SYSTEM/AUTOSTART.md`**.
 - Séquence normale (ascii art → identité → environnement → mémoire → TRANSFERT)
 
 > Voir `_SYSTEM/AUTOSTART.md` pour la séquence complète.
-> `AGENTS.md` est le standard ouvert (supporté par PI, Claude Code, Codex CLI, Cursor…).
+> `AGENTS.md` est le standard ouvert (supporté par PI, Claude Code, Codex CLI…).

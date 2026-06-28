@@ -10,7 +10,7 @@
 Utilisateur
     │
     ▼
-AGENTS.md ──── point d'entrée universel (PI, Claude Code, Cursor, Codex…)
+AGENTS.md ──── point d'entrée universel (PI, Claude Code, Codex CLI…)
     │
     ▼
 AUTOSTART.md ── séquence de démarrage

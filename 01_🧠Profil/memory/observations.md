@@ -97,6 +97,14 @@ type: Symbiose.Memory
 
 **Question libre :** Wian n'a pas besoin de comprendre un système pour juger de sa qualité — il détecte les coutures qui vont craquer par instinct structurel. Le "switch" cosmétique, il l'a vu avant même de l'utiliser. Ce qui l'intéresse c'est la mécanique réelle, pas la présentation.
 
+### Session 2026-06-28 — scan (wizard first startup)
+- 2026-06-28 : [symbiose, medium] Quand il conçoit un point d'entrée, il pense aussi à la sortie — le closing du wizard doit être utile, pas juste décoratif. Rediriger vers `02_🧬Symbiose/` pour la suite.
+
+### Session 2026-06-28 — scan (wizard first startup)
+- 2026-06-28 : [symbiose, medium] Après avoir construit un correctif, ne vérifie pas le code — vérifie le parcours d'un nouvel utilisateur de zéro à prêt. Pense l'expérience d'autrui, pas seulement la sienne.
+- 2026-06-28 : [symbiose, medium] Conçoit les chemins de repli avant l'échec — "si pas de sub-agent, propose d'installer". Pas de cul-de-sac.
+- 2026-06-28 : [symbiose, medium] Valide le système en simulant le point de vue de quelqu'un qui ne le connaît pas.
+
 ### Session 2026-06-28 — clôture
 
 **Comportements :**
@@ -112,3 +120,7 @@ type: Symbiose.Memory
 **Question libre :** Wian cherche à savoir jusqu'où on peut façonner l'IA sans la modifier en profondeur. La réponse qu'il construit est : pas besoin de modifier — le cadre fait le travail. Mais il ne s'arrête pas là : il veut savoir comment ce cadre se transmet, comment il évolue, et comment il s'incarne dans des rôles distincts. La session n'a pas répondu à "est-ce que ça marche" mais à "comment on rend ça transmissible et modulaire".
 
 **Comportement nouveau :** Wian ne se contente pas de tester si le système marche — il teste où il CASSE. Le bord du système l'intéresse plus que le centre.
+
+### Session 2026-06-28 — clôture
+
+**Question libre :** Il conçoit le système pour qu'il survive sans lui. Chaque décision de cette session était motivée par "comment quelqu'un d'autre, qui ne me connaît pas, peut arriver et comprendre". Ce n'est pas de l'altruisme — c'est une extension de son approche systémique : un système qui dépend de son créateur est un système qui n'est pas fini. Il construit pour que ça marche sans lui.
